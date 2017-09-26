@@ -1,0 +1,114 @@
+//
+//  LoginController.swift
+//  CineBul
+//
+//  Created by Baran on 1.05.2017.
+//  Copyright © 2017 CaWeb. All rights reserved.
+//
+
+import UIKit
+
+class LoginController: BaseController{
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.keyboardEvents()
+        self.addTappedTo()
+        self.fullBlackImage()
+        self.renderigSozlesmesi()
+        self.textFieldsProperties()
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true // for navigation bar hide
+    }
+    override func viewWillLayoutSubviews() {
+        self.radiusSettings()
+        self.textFieldsFrontEnd()
+    }
+    
+    
+    private func addTappedTo(){
+        debugPrint("addTappedTo")
+        
+        nameTextField.tapAction = { [weak self] in
+            guard let strongself = self else { return }
+            strongself.renderigKullanici()
+        }
+        
+        mailTextField.tapAction = { [weak self] in
+            guard let strongself = self else { return }
+            strongself.renderigEmail()
+        }
+        
+        passTextField.tapAction = { [weak self] in
+            guard let strongself = self else { return }
+            strongself.renderigGsm()
+        }
+        
+        againPasswordTextField.tapAction = { [weak self] in
+            guard let strongself = self else { return }
+            strongself.renderigAgainPassword()
+        }
+        
+    }
+    
+    
+    func renderigSozlesmesi() {
+        self.kullaniciSozButton.setTitleColor(UIColor.gray.withAlphaComponent(0.7), for: .normal)
+        
+        self.kullaniciSozButton.titleLabel?.numberOfLines = 1
+        self.kullaniciSozButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.kullaniciSozButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        self.kullaniciSozButton.contentHorizontalAlignment = .left
+    }
+    
+    
+    private func radiusSettings(){
+        
+        kayıtOlButton.layer.cornerRadius = self.kayıtOlButton.frame.height / 2
+        girisYapButton.layer.cornerRadius = self.girisYapButton.frame.height / 2
+        
+    }
+    
+    @IBAction func haydiBaslayalimButtonAction(_ sender: Any) {
+       self.textFieldRegexHelp()
+        
+    }
+    
+    @IBAction func loginWithFacebookAction(_ sender: Any) {
+
+    }
+  
+    @IBAction func kullaniciSozlesmesiAction(_ sender: Any) {
+       
+    }
+    
+    
+    
+    @IBOutlet weak var kullaniciSozlesmesiImageView: UIImageView!
+    @IBOutlet weak var againPassImageView: UIImageView!
+    @IBOutlet weak var girisYapButton: UIButton!
+    @IBOutlet weak var kayıtOlButton: UIButton!
+    @IBOutlet weak var gsmImageView: UIImageView!
+    @IBOutlet weak var emailImageView: UIImageView!
+    @IBOutlet weak var isimIconUIimageView: UIImageView!
+    @IBOutlet weak var nameTextField: AnimatedTextInput!
+    @IBOutlet weak var mailTextField: AnimatedTextInput!
+    @IBOutlet weak var passTextField: AnimatedTextInput!
+    @IBOutlet weak var againPasswordTextField: AnimatedTextInput!
+    @IBOutlet weak var faceBookİleBaglanButton: UIButton!
+    @IBOutlet weak var kullaniciSozButton: UIButton!
+    
+}
+
+
+
+
+
