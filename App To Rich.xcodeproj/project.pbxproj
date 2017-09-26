@@ -12,6 +12,7 @@
 		223F85FF1F7AA7250073A455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F85FD1F7AA7250073A455 /* Main.storyboard */; };
 		223F86011F7AA7250073A455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223F86001F7AA7250073A455 /* Assets.xcassets */; };
 		223F86041F7AA7250073A455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F86021F7AA7250073A455 /* LaunchScreen.storyboard */; };
+		A984557EB48F3A4A79676B63 /* Pods_App_To_Rich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		223F86001F7AA7250073A455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223F86031F7AA7250073A455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		223F86051F7AA7250073A455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_To_Rich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814A38D98AC56540CFA308BB /* Pods-App To Rich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App To Rich.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App To Rich/Pods-App To Rich.debug.xcconfig"; sourceTree = "<group>"; };
+		83973B83222039C49BB80BE0 /* Pods-App To Rich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App To Rich.release.xcconfig"; path = "Pods/Target Support Files/Pods-App To Rich/Pods-App To Rich.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A984557EB48F3A4A79676B63 /* Pods_App_To_Rich.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				223F85F81F7AA7250073A455 /* App To Rich */,
 				223F85F71F7AA7250073A455 /* Products */,
+				3ED229D09396E91F0B72FC92 /* Pods */,
+				4B54A1F869AA23A4EDFBD688 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "App To Rich";
 			sourceTree = "<group>";
 		};
+		3ED229D09396E91F0B72FC92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				814A38D98AC56540CFA308BB /* Pods-App To Rich.debug.xcconfig */,
+				83973B83222039C49BB80BE0 /* Pods-App To Rich.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4B54A1F869AA23A4EDFBD688 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223F86081F7AA7260073A455 /* Build configuration list for PBXNativeTarget "App To Rich" */;
 			buildPhases = (
+				8BBB0DB0F8EF70C9DCF2DD23 /* [CP] Check Pods Manifest.lock */,
 				223F85F21F7AA7250073A455 /* Sources */,
 				223F85F31F7AA7250073A455 /* Frameworks */,
 				223F85F41F7AA7250073A455 /* Resources */,
+				B7714476991ED41E723FDF00 /* [CP] Embed Pods Frameworks */,
+				F4B8B063D4722FBE4005E6A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BBB0DB0F8EF70C9DCF2DD23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7714476991ED41E723FDF00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App To Rich/Pods-App To Rich-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4B8B063D4722FBE4005E6A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App To Rich/Pods-App To Rich-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		223F85F21F7AA7250073A455 /* Sources */ = {
@@ -259,10 +334,12 @@
 		};
 		223F86091F7AA7260073A455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 814A38D98AC56540CFA308BB /* Pods-App To Rich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BXR3K72MAT;
 				INFOPLIST_FILE = "App To Rich/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bd.App-To-Rich";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +349,12 @@
 		};
 		223F860A1F7AA7260073A455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83973B83222039C49BB80BE0 /* Pods-App To Rich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BXR3K72MAT;
 				INFOPLIST_FILE = "App To Rich/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bd.App-To-Rich";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +381,7 @@
 				223F860A1F7AA7260073A455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
