@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22221CD81F7B0D0900788007 /* ChildUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221CD71F7B0D0900788007 /* ChildUserCell.swift */; };
 		223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F85F91F7AA7250073A455 /* AppDelegate.swift */; };
 		223F85FC1F7AA7250073A455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F85FB1F7AA7250073A455 /* ViewController.swift */; };
 		223F85FF1F7AA7250073A455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F85FD1F7AA7250073A455 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22221CD71F7B0D0900788007 /* ChildUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildUserCell.swift; sourceTree = "<group>"; };
 		223F85F61F7AA7250073A455 /* App To Rich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App To Rich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223F85F91F7AA7250073A455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223F85FB1F7AA7250073A455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22221CD51F7B0CD500788007 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		22221CD61F7B0CDE00788007 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22221CD71F7B0D0900788007 /* ChildUserCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		223F85ED1F7AA7240073A455 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +108,8 @@
 		223F85F81F7AA7250073A455 /* App To Rich */ = {
 			isa = PBXGroup;
 			children = (
+				22221CD51F7B0CD500788007 /* Model */,
+				22221CD61F7B0CDE00788007 /* View */,
 				950095151F7B08C000D7EBEC /* Util */,
 				9500950F1F7B049E00D7EBEC /* Conroller Class */,
 				950095081F7B033100D7EBEC /* Extension */,
@@ -343,6 +362,7 @@
 				950094F31F7B019500D7EBEC /* LoginController.swift in Sources */,
 				9500950A1F7B033900D7EBEC /* RegexClass.swift in Sources */,
 				223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */,
+				22221CD81F7B0D0900788007 /* ChildUserCell.swift in Sources */,
 				950095001F7B020E00D7EBEC /* AnimatedTextField.swift in Sources */,
 				950095071F7B027800D7EBEC /* UIFontExtension.swift in Sources */,
 				9500950E1F7B045E00D7EBEC /* Reachability.swift in Sources */,
