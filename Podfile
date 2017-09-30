@@ -7,5 +7,6 @@ target 'App To Rich' do
 
   # Pods for App To Rich
     pod 'Alamofire', '~> 4.5'
+    pod 'AKSideMenu'
 
 end

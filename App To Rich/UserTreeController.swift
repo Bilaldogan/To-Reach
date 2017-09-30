@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserTreeController: BaseController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        self.tableView.delegate = self
@@ -21,9 +24,9 @@ class ViewController: UIViewController {
 
 
 }
-extension ViewController: UITableViewDataSource,UITableViewDelegate {
+extension UserTreeController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ChildUserCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "childUserCell", for: indexPath) as? ChildUserCell {
             return cell
         }
         return UITableViewCell()

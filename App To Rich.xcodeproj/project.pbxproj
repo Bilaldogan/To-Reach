@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22156DC61F7EDFFF0073D36C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DC51F7EDFFF0073D36C /* RootViewController.swift */; };
+		22156DC81F7EE9290073D36C /* RigtMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DC71F7EE9290073D36C /* RigtMenuController.swift */; };
 		22221CD81F7B0D0900788007 /* ChildUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221CD71F7B0D0900788007 /* ChildUserCell.swift */; };
 		223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F85F91F7AA7250073A455 /* AppDelegate.swift */; };
-		223F85FC1F7AA7250073A455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F85FB1F7AA7250073A455 /* ViewController.swift */; };
+		223F85FC1F7AA7250073A455 /* UserTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F85FB1F7AA7250073A455 /* UserTreeController.swift */; };
 		223F85FF1F7AA7250073A455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F85FD1F7AA7250073A455 /* Main.storyboard */; };
 		223F86011F7AA7250073A455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223F86001F7AA7250073A455 /* Assets.xcassets */; };
 		223F86041F7AA7250073A455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F86021F7AA7250073A455 /* LaunchScreen.storyboard */; };
+		228F11E61F7C6564002E8C97 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E51F7C6564002E8C97 /* MainController.swift */; };
+		228F11E81F7C663A002E8C97 /* AdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E71F7C663A002E8C97 /* AdvertCell.swift */; };
+		228F11EA1F7C6A32002E8C97 /* AdvertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E91F7C6A32002E8C97 /* AdvertModel.swift */; };
+		22E0B65B1F7FFB9100CD2566 /* AccounDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */; };
+		22E0B65E1F8015C200CD2566 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E0B65D1F8015C200CD2566 /* CustomButton.swift */; };
 		950094F31F7B019500D7EBEC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950094F21F7B019500D7EBEC /* LoginController.swift */; };
 		950094FF1F7B020E00D7EBEC /* AnimatedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950094F81F7B020E00D7EBEC /* AnimatedLine.swift */; };
 		950095001F7B020E00D7EBEC /* AnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950094F91F7B020E00D7EBEC /* AnimatedTextField.swift */; };
@@ -32,14 +39,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22156DC51F7EDFFF0073D36C /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		22156DC71F7EE9290073D36C /* RigtMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RigtMenuController.swift; sourceTree = "<group>"; };
 		22221CD71F7B0D0900788007 /* ChildUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildUserCell.swift; sourceTree = "<group>"; };
 		223F85F61F7AA7250073A455 /* App To Rich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App To Rich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223F85F91F7AA7250073A455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		223F85FB1F7AA7250073A455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		223F85FB1F7AA7250073A455 /* UserTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTreeController.swift; sourceTree = "<group>"; };
 		223F85FE1F7AA7250073A455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		223F86001F7AA7250073A455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223F86031F7AA7250073A455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		223F86051F7AA7250073A455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228F11E51F7C6564002E8C97 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		228F11E71F7C663A002E8C97 /* AdvertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertCell.swift; sourceTree = "<group>"; };
+		228F11E91F7C6A32002E8C97 /* AdvertModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertModel.swift; sourceTree = "<group>"; };
+		22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccounDetailController.swift; sourceTree = "<group>"; };
+		22E0B65D1F8015C200CD2566 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_To_Rich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814A38D98AC56540CFA308BB /* Pods-App To Rich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App To Rich.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App To Rich/Pods-App To Rich.debug.xcconfig"; sourceTree = "<group>"; };
 		83973B83222039C49BB80BE0 /* Pods-App To Rich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App To Rich.release.xcconfig"; path = "Pods/Target Support Files/Pods-App To Rich/Pods-App To Rich.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,9 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22156DC41F7EDF910073D36C /* MenuControllers */ = {
+			isa = PBXGroup;
+			children = (
+				22156DC51F7EDFFF0073D36C /* RootViewController.swift */,
+				22156DC71F7EE9290073D36C /* RigtMenuController.swift */,
+			);
+			name = MenuControllers;
+			sourceTree = "<group>";
+		};
 		22221CD51F7B0CD500788007 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				228F11E91F7C6A32002E8C97 /* AdvertModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -82,7 +106,8 @@
 		22221CD61F7B0CDE00788007 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				22221CD71F7B0D0900788007 /* ChildUserCell.swift */,
+				22E0B65C1F8015A400CD2566 /* Custom Designable UI */,
+				228F11EB1F7C6B83002E8C97 /* TableViewCells */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -115,13 +140,29 @@
 				950095081F7B033100D7EBEC /* Extension */,
 				950094F41F7B01D200D7EBEC /* Framework's */,
 				223F85F91F7AA7250073A455 /* AppDelegate.swift */,
-				223F85FB1F7AA7250073A455 /* ViewController.swift */,
 				223F85FD1F7AA7250073A455 /* Main.storyboard */,
 				223F86001F7AA7250073A455 /* Assets.xcassets */,
 				223F86021F7AA7250073A455 /* LaunchScreen.storyboard */,
 				223F86051F7AA7250073A455 /* Info.plist */,
 			);
 			path = "App To Rich";
+			sourceTree = "<group>";
+		};
+		228F11EB1F7C6B83002E8C97 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				22221CD71F7B0D0900788007 /* ChildUserCell.swift */,
+				228F11E71F7C663A002E8C97 /* AdvertCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		22E0B65C1F8015A400CD2566 /* Custom Designable UI */ = {
+			isa = PBXGroup;
+			children = (
+				22E0B65D1F8015C200CD2566 /* CustomButton.swift */,
+			);
+			name = "Custom Designable UI";
 			sourceTree = "<group>";
 		};
 		3ED229D09396E91F0B72FC92 /* Pods */ = {
@@ -153,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				9500950C1F7B045100D7EBEC /* Reachability */,
+				9500950D1F7B045E00D7EBEC /* Reachability.swift */,
 				9500950B1F7B043C00D7EBEC /* Animated Text Field */,
 			);
 			name = "Github Framework's";
@@ -185,7 +227,6 @@
 		9500950C1F7B045100D7EBEC /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				9500950D1F7B045E00D7EBEC /* Reachability.swift */,
 			);
 			name = Reachability;
 			sourceTree = "<group>";
@@ -193,6 +234,10 @@
 		9500950F1F7B049E00D7EBEC /* Conroller Class */ = {
 			isa = PBXGroup;
 			children = (
+				22156DC41F7EDF910073D36C /* MenuControllers */,
+				228F11E51F7C6564002E8C97 /* MainController.swift */,
+				22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */,
+				223F85FB1F7AA7250073A455 /* UserTreeController.swift */,
 				9500951B1F7B0AF200D7EBEC /* Base Controller Class */,
 				950095181F7B0A7000D7EBEC /* Login Controller Classes */,
 			);
@@ -352,16 +397,23 @@
 				950095041F7B020E00D7EBEC /* AnimatedTextView.swift in Sources */,
 				950095031F7B020E00D7EBEC /* AnimatedTextInputStyle.swift in Sources */,
 				950095121F7B04C400D7EBEC /* BaseController.swift in Sources */,
+				22E0B65E1F8015C200CD2566 /* CustomButton.swift in Sources */,
 				950095011F7B020E00D7EBEC /* AnimatedTextInput.swift in Sources */,
 				950095021F7B020E00D7EBEC /* AnimatedTextInputFieldConfigurator.swift in Sources */,
+				228F11E61F7C6564002E8C97 /* MainController.swift in Sources */,
 				950094FF1F7B020E00D7EBEC /* AnimatedLine.swift in Sources */,
+				22156DC81F7EE9290073D36C /* RigtMenuController.swift in Sources */,
 				950095171F7B08CA00D7EBEC /* ColorUtil.swift in Sources */,
 				9500951A1F7B0A8900D7EBEC /* LCExtension.swift in Sources */,
-				223F85FC1F7AA7250073A455 /* ViewController.swift in Sources */,
+				223F85FC1F7AA7250073A455 /* UserTreeController.swift in Sources */,
 				950095051F7B020E00D7EBEC /* UIViewExtensions.swift in Sources */,
 				950094F31F7B019500D7EBEC /* LoginController.swift in Sources */,
+				228F11E81F7C663A002E8C97 /* AdvertCell.swift in Sources */,
+				22E0B65B1F7FFB9100CD2566 /* AccounDetailController.swift in Sources */,
+				22156DC61F7EDFFF0073D36C /* RootViewController.swift in Sources */,
 				9500950A1F7B033900D7EBEC /* RegexClass.swift in Sources */,
 				223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */,
+				228F11EA1F7C6A32002E8C97 /* AdvertModel.swift in Sources */,
 				22221CD81F7B0D0900788007 /* ChildUserCell.swift in Sources */,
 				950095001F7B020E00D7EBEC /* AnimatedTextField.swift in Sources */,
 				950095071F7B027800D7EBEC /* UIFontExtension.swift in Sources */,

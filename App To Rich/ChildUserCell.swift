@@ -22,7 +22,8 @@ class ChildUserCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.imgViewChild.layer.cornerRadius = self.imgViewChild.frame.size.width / 2
+        self.imgViewChild.layoutIfNeeded()
+        self.imgViewChild.layer.cornerRadius = self.imgViewChild.bounds.width / 2.0
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
