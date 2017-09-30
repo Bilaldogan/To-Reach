@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GYH-7Q-sdE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uh7-RX-rPf">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -991,7 +991,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxx-WS-F46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="-576"/>
+            <point key="canvasLocation" x="-700" y="-661"/>
+        </scene>
+        <!--Advert Controller-->
+        <scene sceneID="aRU-xX-C62">
+            <objects>
+                <viewController id="uh7-RX-rPf" customClass="AdvertController" customModule="App_To_Rich" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SlY-bJ-ADF"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fn-hh-Qei"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ebJ-6d-OCI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NC-jJ-7G6">
+                                <rect key="frame" x="0.0" y="90" width="414" height="646"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5NC-jJ-7G6" secondAttribute="trailing" id="EkY-Xa-jto"/>
+                            <constraint firstItem="5NC-jJ-7G6" firstAttribute="top" secondItem="SlY-bJ-ADF" secondAttribute="bottom" constant="70" id="ctk-NH-D6V"/>
+                            <constraint firstItem="5NC-jJ-7G6" firstAttribute="leading" secondItem="ebJ-6d-OCI" secondAttribute="leading" id="oU2-Om-3tb"/>
+                            <constraint firstItem="0fn-hh-Qei" firstAttribute="top" secondItem="5NC-jJ-7G6" secondAttribute="bottom" id="rtO-B7-QLd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="5NC-jJ-7G6" id="x7L-ab-vhb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVE-h6-LyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-1386"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="iEb-oQ-8Iy">
