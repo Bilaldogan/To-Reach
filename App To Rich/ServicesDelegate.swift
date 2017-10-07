@@ -10,8 +10,12 @@ import Foundation
 
 
 protocol RegisterServiceDelegate {
-    
     func getRegisterService(response : RegisterServiceResponseModel)
     func getError()
+}
+
+protocol LoginServiceDelegate {
     
+    func getLoginService(response : RegisterServiceResponseModel)
+    func getError()
 }

@@ -13,5 +13,5 @@ struct HttpAdress {
     static let staticLink : String = "http://www.apptorich.com/AppToRichService.asmx?op="
     
     static let registerServiceLink : String = "UserAddService"
-    
+    static let loginServiceLink : String = "LoginService"
 }

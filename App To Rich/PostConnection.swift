@@ -10,7 +10,7 @@ import Foundation
 import SWXMLHash
 
 
-class PostConnection
+class PostConnection 
 {
     
     var delegate : ConnectionDelegate?
@@ -53,4 +53,5 @@ class PostConnection
             
             }.resume()
     }
+   
 }

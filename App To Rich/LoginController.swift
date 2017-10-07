@@ -15,7 +15,6 @@ class LoginController: BaseController{
         self.keyboardEvents()
         self.addTappedTo()
         self.fullBlackImage()
-        self.renderigSozlesmesi()
         self.textFieldsProperties()
 
     }
@@ -35,11 +34,6 @@ class LoginController: BaseController{
     private func addTappedTo(){
         debugPrint("addTappedTo")
         
-        nameTextField.tapAction = { [weak self] in
-            guard let strongself = self else { return }
-            strongself.renderigKullanici()
-        }
-        
         mailTextField.tapAction = { [weak self] in
             guard let strongself = self else { return }
             strongself.renderigEmail()
@@ -50,65 +44,30 @@ class LoginController: BaseController{
             strongself.renderigGsm()
         }
         
-        againPasswordTextField.tapAction = { [weak self] in
-            guard let strongself = self else { return }
-            strongself.renderigAgainPassword()
-        }
-        
     }
     
-    func renderigSozlesmesi() {
-        self.kullaniciSozButton.setTitleColor(UIColor.gray.withAlphaComponent(0.7), for: .normal)
-        self.kullaniciSozButton.titleLabel?.numberOfLines = 1
-        self.kullaniciSozButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        self.kullaniciSozButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-        self.kullaniciSozButton.contentHorizontalAlignment = .left
-    }
+    
     
     
     private func radiusSettings(){
-        
-        kayıtOlButton.layer.cornerRadius = self.kayıtOlButton.frame.height / 2
-        girisYapButton.layer.cornerRadius = self.girisYapButton.frame.height / 2
-        
+        self.loginButton.layer.cornerRadius = self.loginButton.frame.height / 2
     }
     
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        self.textFieldRegexHelp()
+        
+    }
     @IBAction func haydiBaslayalimButtonAction(_ sender: Any) {
-       self.textFieldRegexHelp()
-        registerService.serviceDelegate = self
-        var sendModel : RegisterServiceSendData = RegisterServiceSendData()
-        sendModel.UserEmail = "baran1@hotmail.com"
-        sendModel.UserName = "Baran araoğuz"
-        sendModel.UserPass = "baran1994"
-        sendModel.MacId = "sfkljsdkfjlsdöçfsdfsdkfjsdfjsdfjkds"
-        sendModel.OneSignalId = "dsçkfjslkfjlskdfjsdlkfj"
-        
-        registerService.dispatchGetService(model: sendModel)
-    }
-    
-    @IBAction func loginWithFacebookAction(_ sender: Any) {
-        
-    }
-  
-    @IBAction func kullaniciSozlesmesiAction(_ sender: Any) {
        
     }
     
-    
-    @IBOutlet weak var kullaniciSozlesmesiImageView: UIImageView!
-    @IBOutlet weak var againPassImageView: UIImageView!
-    @IBOutlet weak var girisYapButton: UIButton!
-    @IBOutlet weak var kayıtOlButton: UIButton!
     @IBOutlet weak var gsmImageView: UIImageView!
     @IBOutlet weak var emailImageView: UIImageView!
-    @IBOutlet weak var isimIconUIimageView: UIImageView!
-    @IBOutlet weak var nameTextField: AnimatedTextInput!
+    
     @IBOutlet weak var mailTextField: AnimatedTextInput!
     @IBOutlet weak var passTextField: AnimatedTextInput!
-    @IBOutlet weak var againPasswordTextField: AnimatedTextInput!
-    @IBOutlet weak var faceBookİleBaglanButton: UIButton!
-    @IBOutlet weak var kullaniciSozButton: UIButton!
     
+    @IBOutlet weak var loginButton: UIButton!
     //Service Veriable 
     var registerService : RegisterService = RegisterService()
 
@@ -121,6 +80,8 @@ extension LoginController : RegisterServiceDelegate {
     }
     func getRegisterService(response: RegisterServiceResponseModel) {
         print(response)
+        performSegue(withIdentifier: "loginTorRootVC", sender: nil)
+        
     }
     
 }

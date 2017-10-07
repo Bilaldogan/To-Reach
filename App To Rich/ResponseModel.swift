@@ -20,3 +20,19 @@ struct RegisterServiceResponseModel {
     
 }
 
+struct UserProfileServiceResponseModel {
+    var subProfiles : [SubProfileModel] = []
+    var coins : Double = 0
+    var refNo : String = ""
+    var userName : String = ""
+    var email : String = ""
+    var _id : Int = 0
+    var message : String = ""
+}
+
+struct SubProfileModel {
+    var _id : Int = 0
+    var userName : String = ""
+    var count : Int = 0
+}
+

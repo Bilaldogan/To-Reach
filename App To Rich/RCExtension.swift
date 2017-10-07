@@ -1,5 +1,5 @@
 //
-//  LCExtension.swift
+//  RCExtension.swift
 //  App To Rich
 //
 //  Created by Baran on 27.09.2017.
@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 // For Support Functions
-extension LoginController {
+extension RegisterController {
     
     //For haydi başlayalım function
     internal func textFieldRegexHelp() {
         let isNetAvaible = self.hasConnectivity()
         if isNetAvaible{
-            if  mailTextField.text! == "" || passTextField.text! == "" {
+            if nameTextField.text! == "" || mailTextField.text! == "" || passTextField.text! == "" || againPasswordTextField.text! == ""{
                 self.dismissKeyboard()
                 //Popup çağır
             }
@@ -28,12 +28,20 @@ extension LoginController {
                 self.dismissKeyboard()
                 //Popup çağır
             }
+            else if  passTextField.text! !=  againPasswordTextField.text!{
+                self.dismissKeyboard()
+                //Popup çağır
+            }
             else{
                 self.dismissKeyboard()
                 registerService.serviceDelegate = self
                 var sendModel : RegisterServiceSendData = RegisterServiceSendData()
                 sendModel.UserEmail = mailTextField.text!
+                sendModel.UserName = nameTextField.text!
                 sendModel.UserPass = passTextField.text!
+                sendModel.MacId = UIDevice.current.identifierForVendor!.uuidString
+                sendModel.OneSignalId = "dsçkfjslkfjlskdfjsdlkfj"
+                
                 registerService.dispatchGetService(model: sendModel)
             }
         }
@@ -45,30 +53,44 @@ extension LoginController {
     
     //TextField Animated Function'ss
     internal func renderigKullanici() {
+        isimIconUIimageView.imageViewRendering(imageNamed: "kullanici", imageColor: ColorUtil.pinkColor)
         emailImageView.imageViewRendering(imageNamed: "at", imageColor: UIColor.gray.withAlphaComponent(0.7))
         gsmImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
+        againPassImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
     }
     internal func renderigEmail() {
+        isimIconUIimageView.imageViewRendering(imageNamed: "kullanici", imageColor: UIColor.gray.withAlphaComponent(0.7))
         emailImageView.imageViewRendering(imageNamed: "at", imageColor: ColorUtil.pinkColor)
         gsmImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
+        againPassImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
     }
     internal func renderigGsm() {
+        isimIconUIimageView.imageViewRendering(imageNamed: "kullanici", imageColor: UIColor.gray.withAlphaComponent(0.7))
         emailImageView.imageViewRendering(imageNamed: "at", imageColor: UIColor.gray.withAlphaComponent(0.7))
         gsmImageView.imageViewRendering(imageNamed: "kilit", imageColor: ColorUtil.pinkColor)
+        againPassImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
     }
     internal func renderigAgainPassword() {
+        isimIconUIimageView.imageViewRendering(imageNamed: "kullanici", imageColor: UIColor.gray.withAlphaComponent(0.7))
         emailImageView.imageViewRendering(imageNamed: "at", imageColor: UIColor.gray.withAlphaComponent(0.7))
         gsmImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
+        againPassImageView.imageViewRendering(imageNamed: "kilit", imageColor: ColorUtil.pinkColor)
         
     }
     internal func fullBlackImage(){
-    
+        isimIconUIimageView.imageViewRendering(imageNamed: "kullanici", imageColor: UIColor.gray.withAlphaComponent(0.7))
         emailImageView.imageViewRendering(imageNamed: "at", imageColor: UIColor.gray.withAlphaComponent(0.7))
         gsmImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
-      
+        againPassImageView.imageViewRendering(imageNamed: "kilit", imageColor: UIColor.gray.withAlphaComponent(0.7))
     }
     
     internal func textFieldsProperties(){
+        nameTextField.backgroundColor = UIColor.clear
+        nameTextField.accessibilityLabel = "standard_text_input"
+        nameTextField.placeHolderText = "İsim"
+        nameTextField.textColor = UIColor.white
+        nameTextField.type = .standard
+        nameTextField.style = CustomTextInputStyle()
         
         
         mailTextField.backgroundColor = UIColor.clear
@@ -86,11 +108,18 @@ extension LoginController {
         passTextField.style = CustomTextInputStyle()
         
         
-       
+        againPasswordTextField.backgroundColor = UIColor.clear
+        againPasswordTextField.placeHolderText = "Tekrar şifriniz"
+        againPasswordTextField.textColor = UIColor.white
+        againPasswordTextField.type = .password(toggleable: false)
+        againPasswordTextField.style = CustomTextInputStyle()
         
         
     }
     internal func textFieldsFrontEnd(){
+        
+        nameTextField.style.marginPosition = self.isimIconUIimageView.frame.width
+        nameTextField.contentInset = UIEdgeInsetsMake(22.5, 0, 0, 0)
         
         mailTextField.style.marginPosition = self.emailImageView.frame.width
         mailTextField.contentInset = UIEdgeInsetsMake(22.5, 0, 0, 0)
@@ -98,12 +127,18 @@ extension LoginController {
         passTextField.style.marginPosition = self.gsmImageView.frame.width
         passTextField.contentInset = UIEdgeInsetsMake(22.5, 0, 0, 0)
         
+        againPasswordTextField.style.marginPosition = self.againPassImageView.frame.width
+        againPasswordTextField.contentInset = UIEdgeInsetsMake(22.5, 0, 0, 0)
+        
+        nameTextField.addResponsiveFont(fontSize: 13)
+        nameTextField.style.placeholderSelfPosition = 22.5 + (self.isimIconUIimageView.frame.height / 4)
         passTextField.addResponsiveFont(fontSize: 13)
+        passTextField.style.placeholderSelfPosition = 22.5 + (self.againPassImageView.frame.height / 4)
         mailTextField.addResponsiveFont(fontSize: 13)
+        mailTextField.style.placeholderSelfPosition = 22.5 + (self.againPassImageView.frame.height / 4)
+        againPasswordTextField.addResponsiveFont(fontSize: 13)
+        againPasswordTextField.style.placeholderSelfPosition = 22.5 + (self.againPassImageView.frame.height / 4)
         
-        mailTextField.style.placeholderSelfPosition = 22.5 + (self.emailImageView.frame.height / 4)
-        
-        passTextField.style.placeholderSelfPosition = 22.5 + (self.emailImageView.frame.height / 4)
     }
     
     ///Keyboard Action Function'ss
