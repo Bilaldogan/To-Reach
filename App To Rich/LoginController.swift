@@ -67,7 +67,7 @@ class LoginController: BaseController{
     
     
     private func radiusSettings(){
-        
+       
         kayıtOlButton.layer.cornerRadius = self.kayıtOlButton.frame.height / 2
         girisYapButton.layer.cornerRadius = self.girisYapButton.frame.height / 2
         
