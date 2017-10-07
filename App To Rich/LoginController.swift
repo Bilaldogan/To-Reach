@@ -57,10 +57,8 @@ class LoginController: BaseController{
         
     }
     
-    
     func renderigSozlesmesi() {
         self.kullaniciSozButton.setTitleColor(UIColor.gray.withAlphaComponent(0.7), for: .normal)
-        
         self.kullaniciSozButton.titleLabel?.numberOfLines = 1
         self.kullaniciSozButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.kullaniciSozButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
@@ -87,7 +85,6 @@ class LoginController: BaseController{
     @IBAction func kullaniciSozlesmesiAction(_ sender: Any) {
        
     }
-    
     
     
     @IBOutlet weak var kullaniciSozlesmesiImageView: UIImageView!

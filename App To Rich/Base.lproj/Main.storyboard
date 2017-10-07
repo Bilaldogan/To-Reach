@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -821,14 +821,22 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGG-GA-BhX">
                                         <rect key="frame" x="44.666666666666657" y="228.33333333333331" width="324.66666666666663" height="68"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-l2-RC5" customClass="AnimatedTextInput" customModule="App_To_Rich" customModuleProvider="target">
+                                                <rect key="frame" x="29" y="0.0" width="295.66666666666663" height="68"/>
+                                                <color key="backgroundColor" white="0.7807477679" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="at" translatesAutoresizingMaskIntoConstraints="NO" id="hdH-rf-iO1">
-                                                <rect key="frame" x="0.0" y="22" width="37.000000000000007" height="41"/>
+                                                <rect key="frame" x="0.0" y="22" width="28.000000000000007" height="41"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="1W5-l2-RC5" firstAttribute="top" secondItem="wGG-GA-BhX" secondAttribute="top" id="4A4-RR-WNq"/>
+                                            <constraint firstAttribute="bottom" secondItem="1W5-l2-RC5" secondAttribute="bottom" id="J9z-vq-zkn"/>
+                                            <constraint firstItem="1W5-l2-RC5" firstAttribute="leading" secondItem="hdH-rf-iO1" secondAttribute="trailing" constant="1" id="QE4-Fn-cOj"/>
                                             <constraint firstItem="hdH-rf-iO1" firstAttribute="leading" secondItem="wGG-GA-BhX" secondAttribute="leading" id="aDt-bg-kpW"/>
                                             <constraint firstAttribute="bottom" secondItem="hdH-rf-iO1" secondAttribute="bottom" constant="5" id="fWK-tj-cxq"/>
                                             <constraint firstItem="hdH-rf-iO1" firstAttribute="top" secondItem="wGG-GA-BhX" secondAttribute="top" constant="22.5" id="nSt-wZ-aiN"/>
+                                            <constraint firstAttribute="trailing" secondItem="1W5-l2-RC5" secondAttribute="trailing" id="tNK-LN-pNg"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qni-fn-Lxe">
@@ -881,10 +889,6 @@
                                         <color key="textColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-l2-RC5" customClass="AnimatedTextInput" customModule="App_To_Rich" customModuleProvider="target">
-                                        <rect key="frame" x="83" y="234" width="295.66666666666669" height="68"/>
-                                        <color key="backgroundColor" white="0.7807477679" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -892,7 +896,6 @@
                                     <constraint firstItem="JOE-9C-ZRU" firstAttribute="height" secondItem="CyM-JE-IwJ" secondAttribute="height" multiplier="0.074" id="3cz-cB-oeb"/>
                                     <constraint firstItem="zqh-et-gju" firstAttribute="centerX" secondItem="CyM-JE-IwJ" secondAttribute="centerX" id="3uQ-st-Jlx"/>
                                     <constraint firstItem="j5B-1p-GMz" firstAttribute="height" secondItem="CyM-JE-IwJ" secondAttribute="height" multiplier="0.07" id="4Rc-2z-wpy"/>
-                                    <constraint firstItem="1W5-l2-RC5" firstAttribute="top" secondItem="CyM-JE-IwJ" secondAttribute="top" constant="234" id="4WP-2D-3lK"/>
                                     <constraint firstItem="ysu-Pa-OaP" firstAttribute="leading" secondItem="zqh-et-gju" secondAttribute="leading" constant="2" id="4aJ-FT-BbU"/>
                                     <constraint firstItem="Qni-fn-Lxe" firstAttribute="width" secondItem="CyM-JE-IwJ" secondAttribute="width" multiplier="0.785" id="4oO-Oi-hx8"/>
                                     <constraint firstItem="zqh-et-gju" firstAttribute="top" secondItem="Qni-fn-Lxe" secondAttribute="bottom" constant="2.5" id="53n-s8-odj"/>
@@ -902,7 +905,6 @@
                                     <constraint firstItem="wGG-GA-BhX" firstAttribute="top" secondItem="c8t-9x-KuC" secondAttribute="bottom" constant="2.5" id="CBt-XY-4SV"/>
                                     <constraint firstItem="sLY-me-ZFG" firstAttribute="centerX" secondItem="CyM-JE-IwJ" secondAttribute="centerX" id="FGF-Aw-iWX"/>
                                     <constraint firstItem="sLY-me-ZFG" firstAttribute="width" secondItem="CyM-JE-IwJ" secondAttribute="width" multiplier="0.4" id="H4g-pK-7vg"/>
-                                    <constraint firstAttribute="bottom" secondItem="1W5-l2-RC5" secondAttribute="bottom" constant="340.66666666666657" id="J0l-Yh-HX9"/>
                                     <constraint firstItem="zqh-et-gju" firstAttribute="height" secondItem="CyM-JE-IwJ" secondAttribute="height" multiplier="0.105" id="KbK-zH-GXs"/>
                                     <constraint firstItem="c8t-9x-KuC" firstAttribute="width" secondItem="CyM-JE-IwJ" secondAttribute="width" multiplier="0.785" id="LdU-UE-np5"/>
                                     <constraint firstAttribute="bottom" secondItem="JOE-9C-ZRU" secondAttribute="bottom" constant="20" id="M4z-Vz-Q4n"/>
@@ -921,16 +923,14 @@
                                     <constraint firstItem="c8t-9x-KuC" firstAttribute="height" secondItem="CyM-JE-IwJ" secondAttribute="height" multiplier="0.105" id="dfa-jV-pV8"/>
                                     <constraint firstItem="JOE-9C-ZRU" firstAttribute="width" secondItem="CyM-JE-IwJ" secondAttribute="width" multiplier="0.785" id="di8-j8-5o7"/>
                                     <constraint firstItem="Qni-fn-Lxe" firstAttribute="top" secondItem="wGG-GA-BhX" secondAttribute="bottom" constant="2.5" id="eZY-jL-Kcc"/>
-                                    <constraint firstItem="1W5-l2-RC5" firstAttribute="leading" secondItem="hdH-rf-iO1" secondAttribute="trailing" constant="1.5" id="f1L-n3-KQp"/>
                                     <constraint firstItem="wGG-GA-BhX" firstAttribute="height" secondItem="CyM-JE-IwJ" secondAttribute="height" multiplier="0.105" id="g9Y-KD-tW0"/>
-                                    <constraint firstAttribute="trailing" secondItem="1W5-l2-RC5" secondAttribute="trailing" constant="35.333333333333258" id="hcE-J5-xLN"/>
+                                    <constraint firstItem="1W5-l2-RC5" firstAttribute="width" secondItem="Gm2-Hj-eCm" secondAttribute="width" id="gbz-tv-kKv"/>
                                     <constraint firstItem="Qni-fn-Lxe" firstAttribute="height" secondItem="CyM-JE-IwJ" secondAttribute="height" multiplier="0.105" id="id6-AH-Osd"/>
                                     <constraint firstItem="ysu-Pa-OaP" firstAttribute="height" secondItem="CyM-JE-IwJ" secondAttribute="height" multiplier="0.05" id="lVb-GX-qjf"/>
                                     <constraint firstItem="wGG-GA-BhX" firstAttribute="centerX" secondItem="CyM-JE-IwJ" secondAttribute="centerX" id="mbO-Yf-o84"/>
                                     <constraint firstItem="sLY-me-ZFG" firstAttribute="top" secondItem="j5B-1p-GMz" secondAttribute="bottom" constant="25" id="n3f-c4-mBJ"/>
                                     <constraint firstItem="j5B-1p-GMz" firstAttribute="top" secondItem="zqh-et-gju" secondAttribute="bottom" constant="15" id="pDi-gz-87n"/>
                                     <constraint firstItem="ysu-Pa-OaP" firstAttribute="width" secondItem="CyM-JE-IwJ" secondAttribute="width" multiplier="0.065" id="t4h-w1-9Ds"/>
-                                    <constraint firstItem="1W5-l2-RC5" firstAttribute="width" secondItem="CyM-JE-IwJ" secondAttribute="width" multiplier="0.91" constant="-81.073333333333267" id="tyg-kg-s01"/>
                                     <constraint firstItem="ysu-Pa-OaP" firstAttribute="top" secondItem="zqh-et-gju" secondAttribute="bottom" constant="15" id="xVp-Ci-pSA"/>
                                 </constraints>
                             </view>
@@ -991,7 +991,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxx-WS-F46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="-661"/>
+            <point key="canvasLocation" x="-700" y="-661.14130434782612"/>
         </scene>
         <!--Advert Controller-->
         <scene sceneID="aRU-xX-C62">
