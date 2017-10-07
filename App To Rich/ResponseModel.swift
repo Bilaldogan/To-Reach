@@ -20,3 +20,18 @@ struct RegisterServiceResponseModel {
     
 }
 
+struct MainServiceResponseModel {
+    
+    var adwerdList = [MainServiceResponseList]()
+    
+}
+
+struct MainServiceResponseList {
+   
+    var ImagePath : String = ""
+    var AppName : String = ""
+    var AppUrl : String = ""
+    var Coins : String = ""
+    var addwerd_id : String = ""
+}
+

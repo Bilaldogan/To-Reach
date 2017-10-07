@@ -24,10 +24,10 @@ class AdvertCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(with item: AdvertModel) {
-        self.lblAdvertName.text = item.name
-        self.lblAdvertValue.text = item.value
-        self.lblAdvertURL.text = item.uRL
+    func configure(with item: MainServiceResponseList) {
+        self.lblAdvertName.text = item.AppName
+        self.lblAdvertValue.text = item.Coins
+        self.lblAdvertURL.text = item.AppUrl
     }
 
 }

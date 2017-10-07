@@ -15,3 +15,10 @@ protocol RegisterServiceDelegate {
     func getError()
     
 }
+
+protocol MainServiceDelegate {
+    
+    func getMainService(response : MainServiceResponseModel)
+    func getError()
+    
+}

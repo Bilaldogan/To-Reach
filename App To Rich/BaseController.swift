@@ -11,6 +11,7 @@ import UIKit
 
 class BaseController: UIViewController {
     
+    var progressView : Progress!
     
     
     override func viewDidLoad() {
@@ -34,6 +35,46 @@ class BaseController: UIViewController {
             return false
         }
     }
- 
+    
+    
+    func calculateTableCellHeight(rate : Double) -> Double {
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        return Double(screenWidth) * rate
+    }
+    
+    
+    //Progress View Setup
+    
+    func showProgressView(){
+        let backgroundView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        backgroundView.tag = 102
+        backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        self.view.addSubview(backgroundView)
+        progressView = Progress()
+        progressView.tag = 101
+        self.view.addSubview(progressView)
+    }
+    
+    func removeProgress(customView : UIView){
+        DispatchQueue.main.async {
+            //print("Start remove sibview")
+            if let viewWithTag = customView.viewWithTag(101) {
+                viewWithTag.removeFromSuperview()
+            }else{
+                print("No!")
+            }
+            
+            if let viewWithTag = customView.viewWithTag(102) {
+                viewWithTag.removeFromSuperview()
+            }else{
+                print("No!")
+            }
+            
+        }
+    }
+    
+    
+    
     
 }
