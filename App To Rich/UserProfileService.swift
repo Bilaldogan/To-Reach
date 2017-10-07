@@ -13,45 +13,79 @@ class UserProfileService : ConnectionDelegate
 {
    	
     let connection = PostConnection()
-    var serviceDelegate : LoginServiceDelegate?
+    var serviceDelegate : UserProfileServiceDelegate?
     
-    var userMail = ""
-    var userPassword = ""
+ 
     
     func dispatchGetService()
     {
         var soapMessage : String = "<?xml version='1.0' encoding='utf-8'?>"
         soapMessage += "<soap:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>"
-        soapMessage += "<soap:Body><UserAddService xmlns='http://tempuri.org/'>"
+        soapMessage += "<soap:Body><UserProfilService xmlns='http://tempuri.org/'>"
         soapMessage += "<AdminEmail>\(GlobalData.adminUserName.rawValue)</AdminEmail>"
         soapMessage += "<AdminPass>\(GlobalData.adminPass.rawValue)</AdminPass>"
-        soapMessage += "<FaceBookId>\(UserPrefence.getUserId())</FaceBookId>"
+        soapMessage += "<UserId>\(UserPrefence.getUserId())</UserId>"
         soapMessage += "</UserAddService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
-        let serviceUrl : String = HttpAdress.staticLink + HttpAdress.loginServiceLink
+        let serviceUrl : String = HttpAdress.staticLink + HttpAdress.userProfileServicelink
         connection.cineDBMakePostConnection(soapMessage: soapMessage, serviceUrl: serviceUrl)
     }
    
     
     func getJson(xmlData: XMLIndexer) {
-        var registerResponseData : RegisterServiceResponseModel = RegisterServiceResponseModel()
+        var userProfileResponse : UserProfileServiceResponseModel = UserProfileServiceResponseModel()
         
         let path = xmlData["soap:Envelope"]
         let path2 = path["soap:Body"]
         let path3 = path2["UserProfilServiceResponse"]
         let result = path3["UserProfilServiceResult"]
+        let subProfileVM = result["SubProfilVM"]
         print(result)
         
         
         
+        for subProfile in subProfileVM["SubProfilVM"].all {
         
-        if result["_id"].element?.text != nil{
-            guard let _id = result["_id"].element?.text else {
+            var subProfileModel : SubProfileModel = SubProfileModel()
+            
+            if subProfile["Id"].element?.text != nil{
+                guard let user_id = subProfile["Id"].element?.text else {
+                    print("adwerd adwerd_id Error...")
+                    return
+                }
+                subProfileModel._id = user_id
+            }
+            
+            if subProfile["UserName"].element?.text != nil{
+                guard let user_name = subProfile["UserName"].element?.text else {
+                    print("adwerd adwerd_id Error...")
+                    return
+                }
+                subProfileModel.userName = user_name
+            }
+            
+            if subProfile["Count"].element?.text != nil{
+                guard let count = subProfile["Count"].element?.text else {
+                    print("adwerd adwerd_id Error...")
+                    return
+                }
+                subProfileModel.count = count
+            }
+            userProfileResponse.subProfiles.append(subProfileModel)
+           
+
+        
+        }
+        
+        
+        
+        if result["Coins"].element?.text != nil{
+            guard let coins = result["Coins"].element?.text else {
                 print("registerResponseData _id Error...")
                 return
             }
-            registerResponseData._id = _id
+           userProfileResponse.coins = coins
         }
         
         if result["Email"].element?.text != nil{
@@ -59,15 +93,15 @@ class UserProfileService : ConnectionDelegate
                 print("registerResponseData Email Error...")
                 return
             }
-            registerResponseData.Email = Email
+            userProfileResponse.email = Email
         }
         
-        if result["Name"].element?.text != nil{
-            guard let Name = result["Name"].element?.text else {
+        if result["UserName"].element?.text != nil{
+            guard let Name = result["UserName"].element?.text else {
                 print("registerResponseData Name Error...")
                 return
             }
-            registerResponseData.Name = Name
+            userProfileResponse.userName = Name
         }
         
         if result["RefNo"].element?.text != nil{
@@ -75,23 +109,17 @@ class UserProfileService : ConnectionDelegate
                 print("registerResponseData RefNo Error...")
                 return
             }
-            registerResponseData.RefNo = RefNo
+            userProfileResponse.refNo = RefNo
         }
         
-        if result["ImagePath"].element?.text != nil{
-            guard let ImagePath = result["ImagePath"].element?.text else {
-                print("registerResponseData ImagePath Error...")
-                return
-            }
-            registerResponseData.ImagePath = ImagePath
-        }
         
-        if result["TotalCoins"].element?.text != nil{
-            guard let TotalCoins = result["TotalCoins"].element?.text else {
+        
+        if result["_id"].element?.text != nil{
+            guard let id = result["_id"].element?.text else {
                 print("registerResponseData TotalCoins Error...")
                 return
             }
-            registerResponseData.TotalCoins = TotalCoins
+            userProfileResponse._id = id
         }
         
         if result["Message"].element?.text != nil{
@@ -99,15 +127,13 @@ class UserProfileService : ConnectionDelegate
                 print("registerResponseData Message Error...")
                 return
             }
-            registerResponseData.Message = Message
+            userProfileResponse.message = Message
         }
         
-        UserPrefence.saveUserMail(mail: self.userMail )
-        UserPrefence.saveUserPassword(password: self.userPassword)
-        UserPrefence.saveUserLoginStatus(isLogin: true)
+       
         
         if  self.serviceDelegate != nil {
-            self.serviceDelegate?.getLoginService(response: registerResponseData)
+            self.serviceDelegate?.getUserProfileService(response: userProfileResponse)
         }
     }
     

@@ -14,4 +14,6 @@ struct HttpAdress {
     
     static let registerServiceLink : String = "UserAddService"
     static let loginServiceLink : String = "LoginService"
+    static let mainServiceLink : String = "AppListService"
+    static let userProfileServicelink : String = "UserProfilService"
 }

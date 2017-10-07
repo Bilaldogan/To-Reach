@@ -26,3 +26,8 @@ protocol MainServiceDelegate {
     func getError()
     
 }
+
+protocol UserProfileServiceDelegate {
+    func getUserProfileService(response : UserProfileServiceResponseModel)
+    func getError()
+}

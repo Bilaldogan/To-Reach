@@ -22,17 +22,31 @@ struct RegisterServiceResponseModel {
 
 struct UserProfileServiceResponseModel {
     var subProfiles : [SubProfileModel] = []
-    var coins : Double = 0
+    var coins : String = ""
     var refNo : String = ""
     var userName : String = ""
     var email : String = ""
-    var _id : Int = 0
+    var _id : String = ""
     var message : String = ""
+
+    
+}
+struct SubProfileModel {
+    var _id : String = ""
+    var userName : String = ""
+    var count : String = ""
+}
+struct MainServiceResponseModel {
+    
+    var adwerdList = [MainServiceResponseList]()
 }
 
-struct SubProfileModel {
-    var _id : Int = 0
-    var userName : String = ""
-    var count : Int = 0
+struct MainServiceResponseList {
+   
+    var ImagePath : String = ""
+    var AppName : String = ""
+    var AppUrl : String = ""
+    var Coins : String = ""
+    var addwerd_id : String = ""
 }
 

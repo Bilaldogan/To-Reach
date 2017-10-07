@@ -401,6 +401,7 @@
 				95DEBA721F88FF9B0093FBC8 /* RegisterService.swift */,
 				225B7E601F8911E3004070B8 /* LoginService.swift */,
 				225B7E681F8931C5004070B8 /* UserProfileService.swift */,
+				95DEBA7B1F8911EB0093FBC8 /* MainService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -568,6 +569,7 @@
 				950095051F7B020E00D7EBEC /* UIViewExtensions.swift in Sources */,
 				95DEBA6F1F88FF130093FBC8 /* ResponseModel.swift in Sources */,
 				225B7E5D1F890992004070B8 /* RegisterContoller.swift in Sources */,
+				95DEBAA31F8933370093FBC8 /* Progress.swift in Sources */,
 				95DEBA711F88FF620093FBC8 /* ServicesDelegate.swift in Sources */,
 				225B7E611F8911E3004070B8 /* LoginService.swift in Sources */,
 				950094F31F7B019500D7EBEC /* LoginController.swift in Sources */,
