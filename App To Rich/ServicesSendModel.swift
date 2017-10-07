@@ -20,3 +20,9 @@ struct RegisterServiceSendData {
     
 }
 
+struct MainServiceSendData {
+    
+    var PageNumber : String = ""
+    var UserId : String = ""
+    
+}

@@ -19,3 +19,10 @@ protocol LoginServiceDelegate {
     func getLoginService(response : RegisterServiceResponseModel)
     func getError()
 }
+
+protocol MainServiceDelegate {
+    
+    func getMainService(response : MainServiceResponseModel)
+    func getError()
+    
+}
