@@ -10,8 +10,6 @@ import UIKit
 
 class LoginController: BaseController{
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.keyboardEvents()

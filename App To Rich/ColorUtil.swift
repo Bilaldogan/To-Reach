@@ -12,5 +12,4 @@ import UIKit
 struct ColorUtil {
     
     static let pinkColor : UIColor = UIColor(red: 226.0/255.0, green: 89.0/255.0, blue: 82.0/255.0, alpha: 1.0)
-    
-}
+    }
