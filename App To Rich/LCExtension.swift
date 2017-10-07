@@ -36,7 +36,6 @@ extension LoginController {
                 self.dismissKeyboard()
                 //Doğru yoldasın
             }
-            
         }
         else{
             self.dismissKeyboard()
@@ -166,6 +165,5 @@ extension LoginController {
         view.endEditing(true)
         self.fullBlackImage()
     }
-    
     
 }
