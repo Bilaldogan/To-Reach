@@ -15,8 +15,8 @@ class BaseController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentLeftMenuViewController(_:)))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentRightMenuViewController(_:)))
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentLeftMenuViewController(_:)))
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentRightMenuViewController(_:)))
 
     }
     func leftTapped() {
