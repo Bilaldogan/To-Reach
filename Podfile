@@ -6,7 +6,7 @@ target 'App To Rich' do
   use_frameworks!
 
   # Pods for App To Rich
-    pod 'Alamofire', '~> 4.5'
     pod 'AKSideMenu'
+    pod 'SWXMLHash'
 
 end

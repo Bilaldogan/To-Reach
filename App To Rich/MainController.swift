@@ -20,8 +20,10 @@ class MainController: BaseController {
         self.tableView.dataSource = self
     }
     override func viewWillAppear(_ animated: Bool) {
-       
+    
     }
+    
+    
 }
 extension MainController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

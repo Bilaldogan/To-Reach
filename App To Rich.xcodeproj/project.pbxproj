@@ -38,6 +38,14 @@
 		95DEBA5A1F88E6390093FBC8 /* RightSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA591F88E6390093FBC8 /* RightSideMenuController.swift */; };
 		95DEBA5E1F88E78A0093FBC8 /* RightMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA5C1F88E78A0093FBC8 /* RightMenuCustomCell.swift */; };
 		95DEBA5F1F88E78A0093FBC8 /* RightMenuCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DEBA5D1F88E78A0093FBC8 /* RightMenuCustomCell.xib */; };
+		95DEBA6A1F88FD600093FBC8 /* PostConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA681F88FD600093FBC8 /* PostConnection.swift */; };
+		95DEBA6B1F88FD600093FBC8 /* ConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA691F88FD600093FBC8 /* ConnectionDelegate.swift */; };
+		95DEBA6D1F88FDFD0093FBC8 /* ServicesSendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA6C1F88FDFD0093FBC8 /* ServicesSendModel.swift */; };
+		95DEBA6F1F88FF130093FBC8 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA6E1F88FF130093FBC8 /* ResponseModel.swift */; };
+		95DEBA711F88FF620093FBC8 /* ServicesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA701F88FF620093FBC8 /* ServicesDelegate.swift */; };
+		95DEBA731F88FF9B0093FBC8 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA721F88FF9B0093FBC8 /* RegisterService.swift */; };
+		95DEBA751F8900160093FBC8 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA741F8900160093FBC8 /* GlobalData.swift */; };
+		95DEBA771F89010B0093FBC8 /* HttpAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA761F89010B0093FBC8 /* HttpAdress.swift */; };
 		A984557EB48F3A4A79676B63 /* Pods_App_To_Rich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +86,14 @@
 		95DEBA591F88E6390093FBC8 /* RightSideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideMenuController.swift; sourceTree = "<group>"; };
 		95DEBA5C1F88E78A0093FBC8 /* RightMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuCustomCell.swift; sourceTree = "<group>"; };
 		95DEBA5D1F88E78A0093FBC8 /* RightMenuCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightMenuCustomCell.xib; sourceTree = "<group>"; };
+		95DEBA681F88FD600093FBC8 /* PostConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostConnection.swift; sourceTree = "<group>"; };
+		95DEBA691F88FD600093FBC8 /* ConnectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionDelegate.swift; sourceTree = "<group>"; };
+		95DEBA6C1F88FDFD0093FBC8 /* ServicesSendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesSendModel.swift; sourceTree = "<group>"; };
+		95DEBA6E1F88FF130093FBC8 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		95DEBA701F88FF620093FBC8 /* ServicesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesDelegate.swift; sourceTree = "<group>"; };
+		95DEBA721F88FF9B0093FBC8 /* RegisterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		95DEBA741F8900160093FBC8 /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		95DEBA761F89010B0093FBC8 /* HttpAdress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpAdress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +155,7 @@
 		223F85F81F7AA7250073A455 /* App To Rich */ = {
 			isa = PBXGroup;
 			children = (
+				95DEBA621F88FCFB0093FBC8 /* Service Structure */,
 				22221CD51F7B0CD500788007 /* Model */,
 				22221CD61F7B0CDE00788007 /* View */,
 				950095151F7B08C000D7EBEC /* Util */,
@@ -157,9 +174,9 @@
 		228F11EB1F7C6B83002E8C97 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				95DEBA611F88FBA20093FBC8 /* User Cell */,
+				95DEBA601F88FB8D0093FBC8 /* Reklam Cell */,
 				95DEBA5B1F88E7740093FBC8 /* SideBar Cell */,
-				22221CD71F7B0D0900788007 /* ChildUserCell.swift */,
-				228F11E71F7C663A002E8C97 /* AdvertCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -256,6 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				950095161F7B08CA00D7EBEC /* ColorUtil.swift */,
+				95DEBA741F8900160093FBC8 /* GlobalData.swift */,
+				95DEBA761F89010B0093FBC8 /* HttpAdress.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -284,6 +303,75 @@
 				95DEBA5D1F88E78A0093FBC8 /* RightMenuCustomCell.xib */,
 			);
 			name = "SideBar Cell";
+			sourceTree = "<group>";
+		};
+		95DEBA601F88FB8D0093FBC8 /* Reklam Cell */ = {
+			isa = PBXGroup;
+			children = (
+				228F11E71F7C663A002E8C97 /* AdvertCell.swift */,
+			);
+			name = "Reklam Cell";
+			sourceTree = "<group>";
+		};
+		95DEBA611F88FBA20093FBC8 /* User Cell */ = {
+			isa = PBXGroup;
+			children = (
+				22221CD71F7B0D0900788007 /* ChildUserCell.swift */,
+			);
+			name = "User Cell";
+			sourceTree = "<group>";
+		};
+		95DEBA621F88FCFB0093FBC8 /* Service Structure */ = {
+			isa = PBXGroup;
+			children = (
+				95DEBA671F88FD520093FBC8 /* Services */,
+				95DEBA661F88FD4D0093FBC8 /* Send Model */,
+				95DEBA651F88FD440093FBC8 /* Response Model */,
+				95DEBA641F88FD400093FBC8 /* Delegate */,
+				95DEBA631F88FD340093FBC8 /* Connection */,
+			);
+			name = "Service Structure";
+			sourceTree = "<group>";
+		};
+		95DEBA631F88FD340093FBC8 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				95DEBA681F88FD600093FBC8 /* PostConnection.swift */,
+				95DEBA691F88FD600093FBC8 /* ConnectionDelegate.swift */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		95DEBA641F88FD400093FBC8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				95DEBA701F88FF620093FBC8 /* ServicesDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		95DEBA651F88FD440093FBC8 /* Response Model */ = {
+			isa = PBXGroup;
+			children = (
+				95DEBA6E1F88FF130093FBC8 /* ResponseModel.swift */,
+			);
+			name = "Response Model";
+			sourceTree = "<group>";
+		};
+		95DEBA661F88FD4D0093FBC8 /* Send Model */ = {
+			isa = PBXGroup;
+			children = (
+				95DEBA6C1F88FDFD0093FBC8 /* ServicesSendModel.swift */,
+			);
+			name = "Send Model";
+			sourceTree = "<group>";
+		};
+		95DEBA671F88FD520093FBC8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				95DEBA721F88FF9B0093FBC8 /* RegisterService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,17 +509,25 @@
 				228F11E61F7C6564002E8C97 /* MainController.swift in Sources */,
 				950094FF1F7B020E00D7EBEC /* AnimatedLine.swift in Sources */,
 				950095171F7B08CA00D7EBEC /* ColorUtil.swift in Sources */,
+				95DEBA771F89010B0093FBC8 /* HttpAdress.swift in Sources */,
 				9500951A1F7B0A8900D7EBEC /* LCExtension.swift in Sources */,
 				95DEBA5E1F88E78A0093FBC8 /* RightMenuCustomCell.swift in Sources */,
 				223F85FC1F7AA7250073A455 /* UserTreeController.swift in Sources */,
+				95DEBA6B1F88FD600093FBC8 /* ConnectionDelegate.swift in Sources */,
 				950095051F7B020E00D7EBEC /* UIViewExtensions.swift in Sources */,
+				95DEBA6F1F88FF130093FBC8 /* ResponseModel.swift in Sources */,
+				95DEBA711F88FF620093FBC8 /* ServicesDelegate.swift in Sources */,
 				950094F31F7B019500D7EBEC /* LoginController.swift in Sources */,
+				95DEBA731F88FF9B0093FBC8 /* RegisterService.swift in Sources */,
 				228F11E81F7C663A002E8C97 /* AdvertCell.swift in Sources */,
 				95DEBA581F88E4610093FBC8 /* RootViewController.swift in Sources */,
 				22E0B65B1F7FFB9100CD2566 /* AccounDetailController.swift in Sources */,
 				22E0B6601F801DED00CD2566 /* AdvertController.swift in Sources */,
 				9500950A1F7B033900D7EBEC /* RegexClass.swift in Sources */,
+				95DEBA751F8900160093FBC8 /* GlobalData.swift in Sources */,
+				95DEBA6A1F88FD600093FBC8 /* PostConnection.swift in Sources */,
 				223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */,
+				95DEBA6D1F88FDFD0093FBC8 /* ServicesSendModel.swift in Sources */,
 				228F11EA1F7C6A32002E8C97 /* AdvertModel.swift in Sources */,
 				22221CD81F7B0D0900788007 /* ChildUserCell.swift in Sources */,
 				95DEBA5A1F88E6390093FBC8 /* RightSideMenuController.swift in Sources */,
