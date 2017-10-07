@@ -75,11 +75,19 @@ class LoginController: BaseController{
     
     @IBAction func haydiBaslayalimButtonAction(_ sender: Any) {
        self.textFieldRegexHelp()
+        registerService.serviceDelegate = self
+        var sendModel : RegisterServiceSendData = RegisterServiceSendData()
+        sendModel.UserEmail = "baran1@hotmail.com"
+        sendModel.UserName = "Baran araoğuz"
+        sendModel.UserPass = "baran1994"
+        sendModel.MacId = "sfkljsdkfjlsdöçfsdfsdkfjsdfjsdfjkds"
+        sendModel.OneSignalId = "dsçkfjslkfjlskdfjsdlkfj"
         
+        registerService.dispatchGetService(model: sendModel)
     }
     
     @IBAction func loginWithFacebookAction(_ sender: Any) {
-
+        
     }
   
     @IBAction func kullaniciSozlesmesiAction(_ sender: Any) {
@@ -101,8 +109,21 @@ class LoginController: BaseController{
     @IBOutlet weak var faceBookİleBaglanButton: UIButton!
     @IBOutlet weak var kullaniciSozButton: UIButton!
     
+    //Service Veriable 
+    var registerService : RegisterService = RegisterService()
+
 }
 
+extension LoginController : RegisterServiceDelegate {
+    
+    func getError() {
+        print("Error")
+    }
+    func getRegisterService(response: RegisterServiceResponseModel) {
+        print(response)
+    }
+    
+}
 
 
 
