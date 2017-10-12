@@ -90,7 +90,7 @@ class RegisterController: BaseController{
     @IBOutlet weak var passTextField: AnimatedTextInput!
     @IBOutlet weak var againPasswordTextField: AnimatedTextInput!
     @IBOutlet weak var kullaniciSozButton: UIButton!
-    
+    var referenceCode = ""
     //Service Veriable
     var registerService : RegisterService = RegisterService()
     

@@ -19,6 +19,7 @@
 		225B7E651F891B12004070B8 /* UserPrefence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E641F891B12004070B8 /* UserPrefence.swift */; };
 		225B7E671F892465004070B8 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E661F892465004070B8 /* WelcomeController.swift */; };
 		225B7E691F8931C5004070B8 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E681F8931C5004070B8 /* UserProfileService.swift */; };
+		22694C2A1F8EE03A00140B4E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22694C291F8EE03A00140B4E /* CustomTextField.swift */; };
 		228F11E61F7C6564002E8C97 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E51F7C6564002E8C97 /* MainController.swift */; };
 		228F11E81F7C663A002E8C97 /* AdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E71F7C663A002E8C97 /* AdvertCell.swift */; };
 		22E0B65B1F7FFB9100CD2566 /* AccounDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */; };
@@ -76,6 +77,7 @@
 		225B7E641F891B12004070B8 /* UserPrefence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPrefence.swift; sourceTree = "<group>"; };
 		225B7E661F892465004070B8 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		225B7E681F8931C5004070B8 /* UserProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		22694C291F8EE03A00140B4E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		228F11E51F7C6564002E8C97 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		228F11E71F7C663A002E8C97 /* AdvertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertCell.swift; sourceTree = "<group>"; };
 		22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccounDetailController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				22E0B65D1F8015C200CD2566 /* CustomButton.swift */,
 				95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */,
+				22694C291F8EE03A00140B4E /* CustomTextField.swift */,
 			);
 			name = "Custom Designable UI";
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				95DEBA5E1F88E78A0093FBC8 /* RightMenuCustomCell.swift in Sources */,
 				223F85FC1F7AA7250073A455 /* UserTreeController.swift in Sources */,
 				95DEBA7C1F8911EB0093FBC8 /* MainService.swift in Sources */,
+				22694C2A1F8EE03A00140B4E /* CustomTextField.swift in Sources */,
 				95DEBA6B1F88FD600093FBC8 /* ConnectionDelegate.swift in Sources */,
 				950095051F7B020E00D7EBEC /* UIViewExtensions.swift in Sources */,
 				95DEBA6F1F88FF130093FBC8 /* ResponseModel.swift in Sources */,
