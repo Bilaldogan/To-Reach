@@ -90,6 +90,66 @@ class BaseController: UIViewController {
             
         }
     }
+    
+    func bottomLeftAndRightradiusSettings(viewToRound: UIButton){
+        let path = UIBezierPath(roundedRect:viewToRound.bounds,
+                                byRoundingCorners:[.bottomLeft, .bottomRight],
+                                cornerRadii : CGSize(width: 10, height:  10))
         
+        let maskLayer = CAShapeLayer()
+        
+        maskLayer.path = path.cgPath
+        viewToRound.layer.mask = maskLayer
+        
+    }
+    
+    func blurEffect(customView: UIView){
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        //blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        customView.addSubview(blurEffectView)
+    }
+    
+    
+    //Show popup
+    func showMessagePopup()
+    {
+        DispatchQueue.main.async {
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessagePopupControllerID") as! MessagePopupController
+            popOverVC.view.tag = 101
+            self.addChildViewController(popOverVC)
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMove(toParentViewController: self)
+            
+            popOverVC.popUpView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            popOverVC.popUpView.alpha = 0.0;
+            UIView.animate(withDuration: 0.35, animations: {
+                popOverVC.popUpView.alpha = 1.0
+                popOverVC.popUpView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            });
+        }
+    }
+    
+    func removePopup(customView : UIView){
+        DispatchQueue.main.async {
+            //print("Start remove sibview")
+            if let viewWithTag = customView.viewWithTag(101) {
+                UIView.animate(withDuration: 0.35, animations: {
+                    viewWithTag.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                    viewWithTag.alpha = 0.0;
+                }, completion:{(finished : Bool)  in
+                    if (finished)
+                    {
+                        viewWithTag.removeFromSuperview()
+                    }
+                });
+                
+            }else{
+                print("No!")
+            }
+        }
+    }
     
 }
