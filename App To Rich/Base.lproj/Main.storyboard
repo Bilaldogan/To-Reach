@@ -727,24 +727,6 @@
             </objects>
             <point key="canvasLocation" x="4265" y="-1255"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ZF2-uS-qrO">
-            <objects>
-                <viewController id="sf1-Z2-mir" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="i2e-Yz-aGj"/>
-                        <viewControllerLayoutGuide type="bottom" id="KUt-hI-PwE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ANp-mD-Ut1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ajL-Id-bKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1962" y="-1339"/>
-        </scene>
         <!--Register Controller-->
         <scene sceneID="qYG-rf-TMe">
             <objects>
@@ -1048,7 +1030,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWp-OJ-xxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2787" y="-661"/>
+            <point key="canvasLocation" x="-416" y="-1255"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Zqq-6d-1mX">
@@ -1097,39 +1079,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jdn-bz-whF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="920" y="495"/>
-        </scene>
-        <!--Advert Controller-->
-        <scene sceneID="aRU-xX-C62">
-            <objects>
-                <viewController id="uh7-RX-rPf" customClass="AdvertController" customModule="App_To_Rich" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SlY-bJ-ADF"/>
-                        <viewControllerLayoutGuide type="bottom" id="0fn-hh-Qei"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ebJ-6d-OCI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NC-jJ-7G6">
-                                <rect key="frame" x="0.0" y="90" width="414" height="646"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5NC-jJ-7G6" secondAttribute="trailing" id="EkY-Xa-jto"/>
-                            <constraint firstItem="5NC-jJ-7G6" firstAttribute="top" secondItem="SlY-bJ-ADF" secondAttribute="bottom" constant="70" id="ctk-NH-D6V"/>
-                            <constraint firstItem="5NC-jJ-7G6" firstAttribute="leading" secondItem="ebJ-6d-OCI" secondAttribute="leading" id="oU2-Om-3tb"/>
-                            <constraint firstItem="0fn-hh-Qei" firstAttribute="top" secondItem="5NC-jJ-7G6" secondAttribute="bottom" id="rtO-B7-QLd"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="5NC-jJ-7G6" id="x7L-ab-vhb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SVE-h6-LyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-359" y="-1255"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dl1-IH-Lk4">
@@ -1270,7 +1219,7 @@
                                             <color key="titleColor" red="0.85490196078431369" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="uh7-RX-rPf" kind="show" id="lSk-gA-xcj"/>
+                                            <segue destination="zTS-T4-wue" kind="show" id="nV1-y6-HUy"/>
                                         </connections>
                                     </button>
                                 </subviews>
