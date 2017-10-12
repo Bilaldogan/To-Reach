@@ -63,19 +63,19 @@ class LoginController: BaseController{
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     //Service Veriable 
-    var registerService : RegisterService = RegisterService()
+    var loginService : LoginService = LoginService()
 
 }
 
-extension LoginController : RegisterServiceDelegate {
+extension LoginController: LoginServiceDelegate {
     
     func getError() {
         print("Error")
     }
-    func getRegisterService(response: RegisterServiceResponseModel) {
+    func getLoginService(response: RegisterServiceResponseModel) {
         print(response)
         performSegue(withIdentifier: "loginTorRootVC", sender: nil)
-        
+
     }
     
 }

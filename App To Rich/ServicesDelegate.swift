@@ -36,3 +36,8 @@ protocol ClickAdwerdServiceDelegate {
     func getUserProfileService(response : ClickAdwerdResponseModel)
     func getError()
 }
+
+protocol ForgotPasswordServiceDelegate {
+    func getForgorService(status : String)
+    func getError()
+}
