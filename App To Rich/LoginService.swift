@@ -18,7 +18,7 @@ class LoginService : ConnectionDelegate
     var userMail = ""
     var userPassword = ""
     
-    func dispatchGetService(with facebookId: String)
+    func dispatchGetService(facebookId: String)
     {
         var soapMessage : String = "<?xml version='1.0' encoding='utf-8'?>"
         soapMessage += "<soap:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>"
@@ -26,14 +26,14 @@ class LoginService : ConnectionDelegate
         soapMessage += "<AdminEmail>\(GlobalData.adminUserName.rawValue)</AdminEmail>"
         soapMessage += "<AdminPass>\(GlobalData.adminPass.rawValue)</AdminPass>"
         soapMessage += "<FaceBookId>\(facebookId)</FaceBookId>"
-        soapMessage += "</UserAddService>"
+        soapMessage += "</LoginService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
         let serviceUrl : String = HttpAdress.staticLink + HttpAdress.loginServiceLink
         connection.cineDBMakePostConnection(soapMessage: soapMessage, serviceUrl: serviceUrl)
     }
     
-    func dispatchGetService(with mail: String, password: String)
+    func dispatchGetService(mail: String, password: String)
     {
         self.userPassword = password
         self.userMail =  mail
@@ -45,7 +45,7 @@ class LoginService : ConnectionDelegate
         soapMessage += "<AdminPass>\(GlobalData.adminPass.rawValue)</AdminPass>"
         soapMessage += "<UserEmail>\(mail)</UserEmail>"
         soapMessage += "<UserPass>\(password)</UserPass>"
-        soapMessage += "</UserAddService>"
+        soapMessage += "</LoginService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
         let serviceUrl : String = HttpAdress.staticLink + HttpAdress.loginServiceLink

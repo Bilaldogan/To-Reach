@@ -25,7 +25,7 @@ class UserProfileService : ConnectionDelegate
         soapMessage += "<AdminEmail>\(GlobalData.adminUserName.rawValue)</AdminEmail>"
         soapMessage += "<AdminPass>\(GlobalData.adminPass.rawValue)</AdminPass>"
         soapMessage += "<UserId>\(UserPrefence.getUserId())</UserId>"
-        soapMessage += "</UserAddService>"
+        soapMessage += "</UserProfilService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
         let serviceUrl : String = HttpAdress.staticLink + HttpAdress.userProfileServicelink
