@@ -727,24 +727,6 @@
             </objects>
             <point key="canvasLocation" x="4265" y="-1255"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ZF2-uS-qrO">
-            <objects>
-                <viewController id="sf1-Z2-mir" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="i2e-Yz-aGj"/>
-                        <viewControllerLayoutGuide type="bottom" id="KUt-hI-PwE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ANp-mD-Ut1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ajL-Id-bKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1962" y="-1339"/>
-        </scene>
         <!--Register Controller-->
         <scene sceneID="qYG-rf-TMe">
             <objects>
@@ -1048,7 +1030,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWp-OJ-xxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2787" y="-661"/>
+            <point key="canvasLocation" x="-416" y="-1255"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Zqq-6d-1mX">
@@ -1270,7 +1252,7 @@
                                             <color key="titleColor" red="0.85490196078431369" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="uh7-RX-rPf" kind="show" id="lSk-gA-xcj"/>
+                                            <segue destination="zTS-T4-wue" kind="show" id="nV1-y6-HUy"/>
                                         </connections>
                                     </button>
                                 </subviews>
