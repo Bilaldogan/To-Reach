@@ -26,3 +26,10 @@ struct MainServiceSendData {
     var UserId : String = ""
     
 }
+
+
+struct ClickAdwerdSendData {
+    
+    var UserId : String = ""
+    var AppId : String = ""
+}

@@ -26,7 +26,7 @@ class LoginController: BaseController{
         navigationController?.navigationBar.isHidden = true // for navigation bar hide
     }
     override func viewWillLayoutSubviews() {
-        self.radiusSettings()
+        
         self.textFieldsFrontEnd()
     }
     
@@ -46,13 +46,6 @@ class LoginController: BaseController{
         
     }
     
-    
-    
-    
-    private func radiusSettings(){
-        self.loginButton.layer.cornerRadius = self.loginButton.frame.height / 2
-    }
-    
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         self.textFieldRegexHelp()
         
@@ -68,6 +61,7 @@ class LoginController: BaseController{
     @IBOutlet weak var passTextField: AnimatedTextInput!
     
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     //Service Veriable 
     var registerService : RegisterService = RegisterService()
 

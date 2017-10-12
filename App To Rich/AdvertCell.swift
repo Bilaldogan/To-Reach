@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class AdvertCell: UITableViewCell {
 
@@ -25,9 +27,15 @@ class AdvertCell: UITableViewCell {
     }
     
     func configure(with item: MainServiceResponseList) {
+        print("with item :", item.AppName)
         self.lblAdvertName.text = item.AppName
         self.lblAdvertValue.text = item.Coins
         self.lblAdvertURL.text = item.AppUrl
+        self.imgViewAdvert.sd_setShowActivityIndicatorView(true)
+        self.imgViewAdvert.sd_setIndicatorStyle(.gray)
+        
+        self.imgViewAdvert.sd_setImage(with: NSURL(string: item.ImagePath)! as URL)
+       
     }
 
 }

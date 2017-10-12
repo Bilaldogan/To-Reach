@@ -50,3 +50,9 @@ struct MainServiceResponseList {
     var addwerd_id : String = ""
 }
 
+
+struct ClickAdwerdResponseModel {
+    
+    var Message : String = ""
+   
+}

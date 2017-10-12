@@ -21,6 +21,7 @@ class AccounDetailController: BaseController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
     }
 
   
