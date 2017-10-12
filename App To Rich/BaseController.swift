@@ -18,6 +18,8 @@ class BaseController: UIViewController {
         super.viewDidLoad()
         //navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentLeftMenuViewController(_:)))
         //navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentRightMenuViewController(_:)))
+        
+        self.configureNavigationBar()
 
     }
     func leftTapped() {
@@ -43,6 +45,21 @@ class BaseController: UIViewController {
         return Double(screenWidth) * rate
     }
     
+    func configureNavigationBar() {
+        let button: UIButton = UIButton(type: .custom)
+        
+        //set image for button
+        button.buttonImageRendering(imageNamed: "menu", imageColor: UIColor.white)
+        //set frame
+        button.frame = CGRect(x: 0, y: 0, width: 40, height: 31)
+        let barButton = UIBarButtonItem(customView: button)
+        button.addTarget(self, action: #selector(self.presentRightMenuViewController(_:)), for: .touchUpInside)
+        //assign button to navigationbar
+        self.navigationItem.rightBarButtonItem = barButton
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
     
     //Progress View Setup
     
@@ -73,8 +90,6 @@ class BaseController: UIViewController {
             
         }
     }
-    
-    
-    
+        
     
 }

@@ -39,6 +39,9 @@
 		950095141F7B086500D7EBEC /* imageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950095131F7B086500D7EBEC /* imageViewExtension.swift */; };
 		950095171F7B08CA00D7EBEC /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950095161F7B08CA00D7EBEC /* ColorUtil.swift */; };
 		9500951A1F7B0A8900D7EBEC /* LCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950095191F7B0A8900D7EBEC /* LCExtension.swift */; };
+		95C28BF31F8EE18600C9F4AC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF21F8EE18600C9F4AC /* WebViewController.swift */; };
+		95C28BF51F8EE8CA00C9F4AC /* ClickAdwerdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */; };
+		95C28BF71F8EF5A700C9F4AC /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF61F8EF5A700C9F4AC /* UIButtonExtension.swift */; };
 		95DEBA581F88E4610093FBC8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA571F88E4610093FBC8 /* RootViewController.swift */; };
 		95DEBA5A1F88E6390093FBC8 /* RightSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA591F88E6390093FBC8 /* RightSideMenuController.swift */; };
 		95DEBA5E1F88E78A0093FBC8 /* RightMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA5C1F88E78A0093FBC8 /* RightMenuCustomCell.swift */; };
@@ -54,6 +57,7 @@
 		95DEBA7C1F8911EB0093FBC8 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA7B1F8911EB0093FBC8 /* MainService.swift */; };
 		95DEBAA21F8933370093FBC8 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DEBAA01F8933370093FBC8 /* Progress.xib */; };
 		95DEBAA31F8933370093FBC8 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBAA11F8933370093FBC8 /* Progress.swift */; };
+		95DEBAA61F8A21F70093FBC8 /* ColorChangeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */; };
 		A984557EB48F3A4A79676B63 /* Pods_App_To_Rich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +99,9 @@
 		950095131F7B086500D7EBEC /* imageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewExtension.swift; sourceTree = "<group>"; };
 		950095161F7B08CA00D7EBEC /* ColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		950095191F7B0A8900D7EBEC /* LCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCExtension.swift; sourceTree = "<group>"; };
+		95C28BF21F8EE18600C9F4AC /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickAdwerdService.swift; sourceTree = "<group>"; };
+		95C28BF61F8EF5A700C9F4AC /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		95DEBA571F88E4610093FBC8 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		95DEBA591F88E6390093FBC8 /* RightSideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideMenuController.swift; sourceTree = "<group>"; };
 		95DEBA5C1F88E78A0093FBC8 /* RightMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuCustomCell.swift; sourceTree = "<group>"; };
@@ -110,6 +117,7 @@
 		95DEBA7B1F8911EB0093FBC8 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		95DEBAA01F8933370093FBC8 /* Progress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
 		95DEBAA11F8933370093FBC8 /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChangeImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				22E0B65D1F8015C200CD2566 /* CustomButton.swift */,
+				95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */,
 			);
 			name = "Custom Designable UI";
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 			children = (
 				950095131F7B086500D7EBEC /* imageViewExtension.swift */,
 				950095091F7B033900D7EBEC /* RegexClass.swift */,
+				95C28BF61F8EF5A700C9F4AC /* UIButtonExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -293,6 +303,7 @@
 				9500951B1F7B0AF200D7EBEC /* Base Controller Class */,
 				950095181F7B0A7000D7EBEC /* Login Controller Classes */,
 				225B7E5B1F890958004070B8 /* Register Controller Clases */,
+				95C28BF21F8EE18600C9F4AC /* WebViewController.swift */,
 			);
 			name = "Conroller Class";
 			sourceTree = "<group>";
@@ -402,6 +413,7 @@
 				225B7E601F8911E3004070B8 /* LoginService.swift */,
 				225B7E681F8931C5004070B8 /* UserProfileService.swift */,
 				95DEBA7B1F8911EB0093FBC8 /* MainService.swift */,
+				95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -409,7 +421,6 @@
 		95DEBA781F890AE90093FBC8 /* Main Controller */ = {
 			isa = PBXGroup;
 			children = (
-				228F11E51F7C6564002E8C97 /* MainController.swift */,
 			);
 			name = "Main Controller";
 			sourceTree = "<group>";
@@ -556,6 +567,7 @@
 				22E0B65E1F8015C200CD2566 /* CustomButton.swift in Sources */,
 				950095011F7B020E00D7EBEC /* AnimatedTextInput.swift in Sources */,
 				950095021F7B020E00D7EBEC /* AnimatedTextInputFieldConfigurator.swift in Sources */,
+				95C28BF71F8EF5A700C9F4AC /* UIButtonExtension.swift in Sources */,
 				225B7E691F8931C5004070B8 /* UserProfileService.swift in Sources */,
 				228F11E61F7C6564002E8C97 /* MainController.swift in Sources */,
 				950094FF1F7B020E00D7EBEC /* AnimatedLine.swift in Sources */,
@@ -572,6 +584,9 @@
 				95DEBAA31F8933370093FBC8 /* Progress.swift in Sources */,
 				95DEBA711F88FF620093FBC8 /* ServicesDelegate.swift in Sources */,
 				225B7E611F8911E3004070B8 /* LoginService.swift in Sources */,
+				95C28BF31F8EE18600C9F4AC /* WebViewController.swift in Sources */,
+				95C28BF51F8EE8CA00C9F4AC /* ClickAdwerdService.swift in Sources */,
+				95DEBAA61F8A21F70093FBC8 /* ColorChangeImageView.swift in Sources */,
 				950094F31F7B019500D7EBEC /* LoginController.swift in Sources */,
 				225B7E5F1F8909C7004070B8 /* RCExtension.swift in Sources */,
 				95DEBA731F88FF9B0093FBC8 /* RegisterService.swift in Sources */,

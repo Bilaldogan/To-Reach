@@ -27,7 +27,6 @@ class RegisterController: BaseController{
         navigationController?.navigationBar.isHidden = true // for navigation bar hide
     }
     override func viewWillLayoutSubviews() {
-        self.radiusSettings()
         self.textFieldsFrontEnd()
     }
     
@@ -66,16 +65,9 @@ class RegisterController: BaseController{
     }
     
     
-    private func radiusSettings(){
-        
-        kayıtOlButton.layer.cornerRadius = self.kayıtOlButton.frame.height / 2
-        girisYapButton.layer.cornerRadius = self.girisYapButton.frame.height / 2
-        
-    }
-    
     @IBAction func haydiBaslayalimButtonAction(_ sender: Any) {
         self.textFieldRegexHelp()
-           }
+    }
     
     @IBAction func loginWithFacebookAction(_ sender: Any) {
         
@@ -110,6 +102,14 @@ extension RegisterController : RegisterServiceDelegate {
         print("Error")
     }
     func getRegisterService(response: RegisterServiceResponseModel) {
+       print(response)
+        if response.Message == "Kayıt başarılı olarak alınmıştır." {
+            UserPrefence.saveUserId(id: response._id)
+            performSegue(withIdentifier: "goToMainController", sender: nil)
+        }
+        else{
+        
+        }
        
     }
     

@@ -89,14 +89,35 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
+        switch indexPath.row {
+        case 0:
+            self.goToUserTreeController()
+        case 1:
+            self.goToAccountDetailController()
+        default:
+            break
+        }
         
         
     }
     
-//    func goToAboutUsController(){
-//        self.sideMenuViewController!.setContentViewController(UINavigationController.init(rootViewController: self.storyboard!.instantiateViewController(withIdentifier: "aboutUsControllerID")), animated: true)
-//        self.sideMenuViewController!.hideMenuViewController()
-//    }
+    func goToAccountDetailController(){
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myProfileVC = storyboard.instantiateViewController(withIdentifier: "AccounDetailControllerID") as! AccounDetailController
+        let obj : UINavigationController = self.sideMenuViewController?.contentViewController as! UINavigationController
+        obj .pushViewController(myProfileVC, animated: true)
+        self.sideMenuViewController!.hideMenuViewController()
+    }
+    
+    func goToUserTreeController(){
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myProfileVC = storyboard.instantiateViewController(withIdentifier: "UserTreeControllerID") as! UserTreeController
+        let obj : UINavigationController = self.sideMenuViewController?.contentViewController as! UINavigationController
+        obj .pushViewController(myProfileVC, animated: true)
+        self.sideMenuViewController!.hideMenuViewController()
+    }
     
     
     let imageArray : Array = ["ev","liste","kilit","question","uyari","odul","cikis"]

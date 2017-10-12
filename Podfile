@@ -8,5 +8,7 @@ target 'App To Rich' do
   # Pods for App To Rich
     pod 'AKSideMenu'
     pod 'SWXMLHash'
+    pod 'SDWebImage'
+
 
 end

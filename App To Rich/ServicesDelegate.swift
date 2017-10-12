@@ -31,3 +31,8 @@ protocol UserProfileServiceDelegate {
     func getUserProfileService(response : UserProfileServiceResponseModel)
     func getError()
 }
+
+protocol ClickAdwerdServiceDelegate {
+    func getUserProfileService(response : ClickAdwerdResponseModel)
+    func getError()
+}

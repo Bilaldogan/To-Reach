@@ -16,4 +16,5 @@ struct HttpAdress {
     static let loginServiceLink : String = "LoginService"
     static let mainServiceLink : String = "AppListService"
     static let userProfileServicelink : String = "UserProfilService"
+    static let clickAdwerdLink : String = "AddAppService"
 }
