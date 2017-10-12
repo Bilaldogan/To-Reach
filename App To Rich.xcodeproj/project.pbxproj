@@ -43,6 +43,7 @@
 		95C28BF31F8EE18600C9F4AC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF21F8EE18600C9F4AC /* WebViewController.swift */; };
 		95C28BF51F8EE8CA00C9F4AC /* ClickAdwerdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */; };
 		95C28BF71F8EF5A700C9F4AC /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF61F8EF5A700C9F4AC /* UIButtonExtension.swift */; };
+		95C28BFA1F8FC6F600C9F4AC /* MessagePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF91F8FC6F600C9F4AC /* MessagePopupController.swift */; };
 		95DEBA581F88E4610093FBC8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA571F88E4610093FBC8 /* RootViewController.swift */; };
 		95DEBA5A1F88E6390093FBC8 /* RightSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA591F88E6390093FBC8 /* RightSideMenuController.swift */; };
 		95DEBA5E1F88E78A0093FBC8 /* RightMenuCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBA5C1F88E78A0093FBC8 /* RightMenuCustomCell.swift */; };
@@ -104,6 +105,7 @@
 		95C28BF21F8EE18600C9F4AC /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickAdwerdService.swift; sourceTree = "<group>"; };
 		95C28BF61F8EF5A700C9F4AC /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		95C28BF91F8FC6F600C9F4AC /* MessagePopupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePopupController.swift; sourceTree = "<group>"; };
 		95DEBA571F88E4610093FBC8 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		95DEBA591F88E6390093FBC8 /* RightSideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideMenuController.swift; sourceTree = "<group>"; };
 		95DEBA5C1F88E78A0093FBC8 /* RightMenuCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMenuCustomCell.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 		9500950F1F7B049E00D7EBEC /* Conroller Class */ = {
 			isa = PBXGroup;
 			children = (
+				95C28BF81F8FC6D100C9F4AC /* Popup Controller */,
 				95DEBA781F890AE90093FBC8 /* Main Controller */,
 				22156DC41F7EDF910073D36C /* MenuControllers */,
 				228F11E51F7C6564002E8C97 /* MainController.swift */,
@@ -337,6 +340,14 @@
 				950095111F7B04C400D7EBEC /* BaseController.swift */,
 			);
 			name = "Base Controller Class";
+			sourceTree = "<group>";
+		};
+		95C28BF81F8FC6D100C9F4AC /* Popup Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95C28BF91F8FC6F600C9F4AC /* MessagePopupController.swift */,
+			);
+			name = "Popup Controller";
 			sourceTree = "<group>";
 		};
 		95DEBA5B1F88E7740093FBC8 /* SideBar Cell */ = {
@@ -583,6 +594,7 @@
 				22694C2A1F8EE03A00140B4E /* CustomTextField.swift in Sources */,
 				95DEBA6B1F88FD600093FBC8 /* ConnectionDelegate.swift in Sources */,
 				950095051F7B020E00D7EBEC /* UIViewExtensions.swift in Sources */,
+				95C28BFA1F8FC6F600C9F4AC /* MessagePopupController.swift in Sources */,
 				95DEBA6F1F88FF130093FBC8 /* ResponseModel.swift in Sources */,
 				225B7E5D1F890992004070B8 /* RegisterContoller.swift in Sources */,
 				95DEBAA31F8933370093FBC8 /* Progress.swift in Sources */,

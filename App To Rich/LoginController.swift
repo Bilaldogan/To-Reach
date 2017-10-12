@@ -53,6 +53,9 @@ class LoginController: BaseController{
     @IBAction func haydiBaslayalimButtonAction(_ sender: Any) {
        
     }
+    @IBAction func forgotPassAction(_ sender: Any) {
+        self.showMessagePopup()
+    }
     
     @IBOutlet weak var gsmImageView: UIImageView!
     @IBOutlet weak var emailImageView: UIImageView!
