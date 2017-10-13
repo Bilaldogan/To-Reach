@@ -14,6 +14,10 @@ class WebViewController: BaseController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(web_link)
+        if !hasConnectivity() {
+            //messege Göster
+            return
+        }
         webView.delegate = self
         if let url = URL(string: "https://" + web_link) {
             let request = URLRequest(url: url)
@@ -35,7 +39,12 @@ class WebViewController: BaseController, UIWebViewDelegate {
         sendData.AppId = self.web_id
         sendData.UserId = UserPrefence.getUserId()
         print(sendData)
+        self.showProgressView()
+        if hasConnectivity() {
         self.clickAdwerdService.dispatchGetService(model: sendData)
+        } else {
+            // Message Göster
+        }
     }
     
     
@@ -52,10 +61,12 @@ class WebViewController: BaseController, UIWebViewDelegate {
 extension WebViewController : ClickAdwerdServiceDelegate {
     
     func getError() {
-        
+        self.removeProgress(customView: self.view)
+
     }
     func getUserProfileService(response: ClickAdwerdResponseModel) {
         print("Response Model :", response)
+        self.removeProgress(customView: self.view)
         self.clickAdwerdService.serviceDelegate = nil
     }
     

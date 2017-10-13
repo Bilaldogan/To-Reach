@@ -64,7 +64,11 @@ class MessagePopupController: BaseController {
     
     @IBAction func OkeyButtonAction(_ sender: Any) {
         self.forgotService.serviceDelegate = self
+        if hasConnectivity() {
         self.forgotService.dispatchGetService(with: self.mailTextField.text!)
+        } else {
+            // Message Göster
+        }
     
     }
     

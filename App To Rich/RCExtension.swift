@@ -44,7 +44,11 @@ extension RegisterController {
                 sendModel.RefNo = self.referenceCode
                 registerService.password = self.passTextField.text!
                 self.showProgressView()
+                if hasConnectivity() {
                 registerService.dispatchGetService(model: sendModel)
+                } else {
+                    // Message Göster
+                }
             }
         }
         else{

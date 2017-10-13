@@ -39,8 +39,12 @@ class MainController: BaseController {
         var sendModel : MainServiceSendData = MainServiceSendData()
         sendModel.PageNumber = pageNumber
         sendModel.UserId = "0"
+        if hasConnectivity() {
         self.mainService.dispatchGetService(model: sendModel)
         self.showProgressView()
+        } else {
+            // Message Göster
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

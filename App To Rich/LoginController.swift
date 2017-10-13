@@ -73,6 +73,7 @@ class LoginController: BaseController{
 extension LoginController: LoginServiceDelegate {
     
     func getError() {
+        self.removeProgress(customView: self.view)
         print("Error")
     }
     func getLoginService(response: RegisterServiceResponseModel) {
