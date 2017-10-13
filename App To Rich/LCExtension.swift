@@ -33,6 +33,7 @@ extension LoginController {
                 loginService.serviceDelegate = self
                 let mail = mailTextField.text!
                 let password = passTextField.text!
+                self.showProgressView()
                 loginService.dispatchGetService(mail: mail, password: password)
             }
         }

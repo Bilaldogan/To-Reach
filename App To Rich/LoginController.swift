@@ -77,6 +77,7 @@ extension LoginController: LoginServiceDelegate {
     }
     func getLoginService(response: RegisterServiceResponseModel) {
         print(response)
+        self.removeProgress(customView: self.view)
         performSegue(withIdentifier: "loginTorRootVC", sender: nil)
 
     }

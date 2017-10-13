@@ -43,6 +43,7 @@ extension RegisterController {
                 sendModel.OneSignalId = "dsçkfjslkfjlskdfjsdlkfj"
                 sendModel.RefNo = self.referenceCode
                 registerService.password = self.passTextField.text!
+                self.showProgressView()
                 registerService.dispatchGetService(model: sendModel)
             }
         }

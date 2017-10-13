@@ -63,7 +63,9 @@ class MessagePopupController: BaseController {
    
     
     @IBAction func OkeyButtonAction(_ sender: Any) {
-       self.closePopUp()
+        self.forgotService.serviceDelegate = self
+        self.forgotService.dispatchGetService(with: self.mailTextField.text!)
+    
     }
     
     internal func renderigEmail() {
@@ -98,9 +100,15 @@ class MessagePopupController: BaseController {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var okeyButton: UIButton!
     @IBOutlet weak var blurView: UIView!
-    
-    
-    
-    
-    
+    var forgotService = ForgotPasswordService()
+}
+extension MessagePopupController : ForgotPasswordServiceDelegate {
+    func getError() {
+        
+    }
+    func getForgorService(status: String) {
+        if status == "false" {
+            self.closePopUp()
+        }
+    }
 }
