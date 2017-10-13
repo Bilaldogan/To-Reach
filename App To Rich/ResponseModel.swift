@@ -17,7 +17,7 @@ struct RegisterServiceResponseModel {
     var RefNo : String = ""
     var ImagePath : String = ""
     var Message : String = ""
-    
+    var Error : String = "true"
 }
 
 struct UserProfileServiceResponseModel {

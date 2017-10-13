@@ -118,13 +118,26 @@ class LoginService : ConnectionDelegate
             }
             registerResponseData.Message = Message
         }
-        
-        UserPrefence.saveUserMail(mail: self.userMail )
-        UserPrefence.saveUserPassword(password: self.userPassword)
-        UserPrefence.saveUserLoginStatus(isLogin: true)
-        UserPrefence.saveUserId(id: registerResponseData._id)
-        if  self.serviceDelegate != nil {
-            self.serviceDelegate?.getLoginService(response: registerResponseData)
+        if result["Error"].element?.text != nil{
+            guard let err = result["Error"].element?.text else {
+                print("registerResponseData Message Error...")
+                return
+            }
+            registerResponseData.Error = err
+        }
+        if registerResponseData.Error == "false" {
+            UserPrefence.saveUserMail(mail: self.userMail )
+            UserPrefence.saveUserPassword(password: self.userPassword)
+            UserPrefence.saveUserLoginStatus(isLogin: true)
+            UserPrefence.saveUserId(id: registerResponseData._id)
+            if  self.serviceDelegate != nil {
+                self.serviceDelegate?.getLoginService(response: registerResponseData)
+            }
+        }
+        else {
+            if  self.serviceDelegate != nil {
+                self.serviceDelegate?.getError()
+            }
         }
     }
     
