@@ -54,5 +54,5 @@ struct MainServiceResponseList {
 struct ClickAdwerdResponseModel {
     
     var Message : String = ""
-   
+    var Error : String = ""
 }

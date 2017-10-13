@@ -428,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hO5-l5-aXS" customClass="ColorChangeImageView" customModule="App_To_Rich" customModuleProvider="target">
-                                <rect key="frame" x="20" y="70" width="374" height="241"/>
+                                <rect key="frame" x="20" y="40" width="374" height="241"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hO5-l5-aXS" secondAttribute="height" multiplier="374:241" id="Xpw-5I-GY7"/>
                                 </constraints>
@@ -439,13 +439,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to App To Reach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-MO-7pC">
-                                <rect key="frame" x="50" y="341" width="314" height="30"/>
+                                <rect key="frame" x="50" y="311" width="314" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tastecard gives 50% Off Food at Yazu Sushi in Mayfair, London. Join over 3450000 members by taking our FREE 30 day trial NOW!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-Re-jjr">
-                                <rect key="frame" x="40" y="388" width="334" height="81.333333333333314"/>
+                                <rect key="frame" x="40" y="358" width="334" height="81.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -553,7 +553,7 @@
                             <constraint firstItem="tZl-z6-b5V" firstAttribute="top" secondItem="NPx-Bl-gok" secondAttribute="bottom" constant="15" id="Zic-XG-qLD"/>
                             <constraint firstItem="XiR-LG-Lot" firstAttribute="top" secondItem="WMA-0i-llr" secondAttribute="bottom" constant="8" id="aoj-bH-yyv"/>
                             <constraint firstItem="hTx-zb-ZbW" firstAttribute="height" secondItem="tZl-z6-b5V" secondAttribute="height" id="cbJ-8R-0sa"/>
-                            <constraint firstItem="hO5-l5-aXS" firstAttribute="top" secondItem="EFb-gA-SNq" secondAttribute="bottom" constant="50" id="hPo-WM-6QK"/>
+                            <constraint firstItem="hO5-l5-aXS" firstAttribute="top" secondItem="EFb-gA-SNq" secondAttribute="bottom" constant="20" id="hPo-WM-6QK"/>
                             <constraint firstItem="XiR-LG-Lot" firstAttribute="height" secondItem="tZl-z6-b5V" secondAttribute="height" id="hyi-i0-npy"/>
                             <constraint firstItem="NPx-Bl-gok" firstAttribute="height" secondItem="tZl-z6-b5V" secondAttribute="height" id="lgJ-wj-LkT"/>
                             <constraint firstItem="hO5-l5-aXS" firstAttribute="trailing" secondItem="mwF-RA-r3V" secondAttribute="trailingMargin" id="mlv-50-7cv"/>
@@ -1500,7 +1500,7 @@
         <image name="right-arrow" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nh6-62-u0l"/>
+        <segue reference="zIg-qj-AC4"/>
         <segue reference="NLq-ll-ZL7"/>
         <segue reference="cAW-4w-yUF"/>
     </inferredMetricsTieBreakers>

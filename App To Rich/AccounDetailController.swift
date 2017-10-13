@@ -30,6 +30,7 @@ class AccounDetailController: BaseController {
 
     func startProfileService(){
         self.userprofileService.serviceDelegate = self
+        self.showProgressView()
         self.userprofileService.dispatchGetService()
     }
     
@@ -82,6 +83,7 @@ extension AccounDetailController : UserProfileServiceDelegate {
         
     }
     func getUserProfileService(response: UserProfileServiceResponseModel) {
+        self.removeProgress(customView: self.view)
         print(response)
     }
 }
