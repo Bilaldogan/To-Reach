@@ -17,7 +17,7 @@ struct RegisterServiceSendData {
     var MacId : String = ""
     var OneSignalId : String = ""
     var FaceBookId : String = ""
-    
+    var RefNo : String = ""
 }
 
 struct MainServiceSendData {

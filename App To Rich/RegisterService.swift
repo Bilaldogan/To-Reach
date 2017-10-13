@@ -14,7 +14,7 @@ class RegisterService : ConnectionDelegate
    	
     let connection = PostConnection()
     var serviceDelegate : RegisterServiceDelegate?
-    
+    var password = ""
     
     func dispatchGetService(model : RegisterServiceSendData)
     {
@@ -29,6 +29,7 @@ class RegisterService : ConnectionDelegate
         soapMessage += "<MacId>\(model.MacId)</MacId>"
         soapMessage += "<OneSignalId>\(model.OneSignalId)</OneSignalId>"
         soapMessage += "<FaceBookId>\(model.FaceBookId)</FaceBookId>"
+        soapMessage += "<ReferenceNo>\(model.RefNo)</ReferenceNo>"
         soapMessage += "</UserAddService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
@@ -102,10 +103,26 @@ class RegisterService : ConnectionDelegate
             }
             registerResponseData.Message = Message
         }
-        
-
-        if  self.serviceDelegate != nil {
-            self.serviceDelegate?.getRegisterService(response: registerResponseData)
+        if result["Error"].element?.text != nil{
+            guard let Error = result["Error"].element?.text else {
+                print("registerResponseData Message Error...")
+                return
+            }
+            registerResponseData.Error = Error
+        }
+        if registerResponseData.Error == "false" {
+            UserPrefence.saveUserMail(mail: registerResponseData.Email )
+            UserPrefence.saveUserPassword(password: self.password)
+            UserPrefence.saveUserLoginStatus(isLogin: true)
+            UserPrefence.saveUserId(id: registerResponseData._id)
+            if  self.serviceDelegate != nil {
+                self.serviceDelegate?.getRegisterService(response: registerResponseData)
+            }
+        }
+        else {
+            if  self.serviceDelegate != nil {
+                self.serviceDelegate?.getError()
+            }
         }
     }
     
