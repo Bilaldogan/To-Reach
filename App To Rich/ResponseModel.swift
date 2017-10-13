@@ -28,7 +28,7 @@ struct UserProfileServiceResponseModel {
     var email : String = ""
     var _id : String = ""
     var message : String = ""
-
+    var error : String = ""
     
 }
 struct SubProfileModel {
