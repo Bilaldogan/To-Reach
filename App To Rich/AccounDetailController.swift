@@ -30,7 +30,12 @@ class AccounDetailController: BaseController {
 
     func startProfileService(){
         self.userprofileService.serviceDelegate = self
+        self.showProgressView()
+        if hasConnectivity() {
         self.userprofileService.dispatchGetService()
+        } else {
+            
+        }
     }
     
   
@@ -79,9 +84,11 @@ extension AccounDetailController :UITableViewDataSource,UITableViewDelegate {
 
 extension AccounDetailController : UserProfileServiceDelegate {
     func getError() {
-        
+        self.removeProgress(customView: self.view)
+
     }
     func getUserProfileService(response: UserProfileServiceResponseModel) {
+        self.removeProgress(customView: self.view)
         print(response)
     }
 }

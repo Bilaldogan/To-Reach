@@ -73,10 +73,12 @@ class LoginController: BaseController{
 extension LoginController: LoginServiceDelegate {
     
     func getError() {
+        self.removeProgress(customView: self.view)
         print("Error")
     }
     func getLoginService(response: RegisterServiceResponseModel) {
         print(response)
+        self.removeProgress(customView: self.view)
         performSegue(withIdentifier: "loginTorRootVC", sender: nil)
 
     }

@@ -44,8 +44,8 @@ class ForgotPasswordService : ConnectionDelegate
         
         var status = ""
         
-        if result["error"].element?.text != nil{
-            guard let sttus = result["error"].element?.text else {
+        if result["Error"].element?.text != nil{
+            guard let sttus = result["Error"].element?.text else {
                 print("registerResponseData _id Error...")
                 return
             }

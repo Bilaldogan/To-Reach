@@ -129,12 +129,25 @@ class UserProfileService : ConnectionDelegate
             }
             userProfileResponse.message = Message
         }
-        
+        if result["Error"].element?.text != nil{
+            guard let Error = result["Error"].element?.text else {
+                print("registerResponseData Message Error...")
+                return
+            }
+            userProfileResponse.error = Error
+        }
+        if userProfileResponse.error == "false" {
+            if  self.serviceDelegate != nil {
+                self.serviceDelegate?.getUserProfileService(response: userProfileResponse)
+            }
+        } else {
+            if  self.serviceDelegate != nil {
+                self.serviceDelegate?.getError()
+            }
+        }
        
         
-        if  self.serviceDelegate != nil {
-            self.serviceDelegate?.getUserProfileService(response: userProfileResponse)
-        }
+       
     }
     
     func getError(errMessage: String) {

@@ -52,9 +52,22 @@ class ClickAdwerdService : ConnectionDelegate
             }
             clickAdwerdResponseData.Message = Message
         }
-        
+        if result["Error"].element?.text != nil{
+            guard let error = result["Error"].element?.text else {
+                print("adwerd Message Error...")
+                return
+            }
+            clickAdwerdResponseData.Error = error
+        }
+        if clickAdwerdResponseData.Error == "false"
+        {
         if  self.serviceDelegate != nil {
             self.serviceDelegate?.getUserProfileService(response: clickAdwerdResponseData)
+        }
+        } else {
+            if  self.serviceDelegate != nil {
+                self.serviceDelegate?.getError()
+            }
         }
     }
     

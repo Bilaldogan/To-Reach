@@ -99,10 +99,12 @@ class RegisterController: BaseController{
 extension RegisterController : RegisterServiceDelegate {
     
     func getError() {
+        self.removeProgress(customView: self.view)
         print("Error")
     }
     func getRegisterService(response: RegisterServiceResponseModel) {
        print(response)
+        self.removeProgress(customView: self.view)
         if response.Message == "Kayıt başarılı olarak alınmıştır." {
             UserPrefence.saveUserId(id: response._id)
             performSegue(withIdentifier: "goToMainController", sender: nil)

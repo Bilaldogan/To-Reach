@@ -17,7 +17,7 @@ struct RegisterServiceResponseModel {
     var RefNo : String = ""
     var ImagePath : String = ""
     var Message : String = ""
-    
+    var Error : String = "true"
 }
 
 struct UserProfileServiceResponseModel {
@@ -28,7 +28,7 @@ struct UserProfileServiceResponseModel {
     var email : String = ""
     var _id : String = ""
     var message : String = ""
-
+    var error : String = ""
     
 }
 struct SubProfileModel {
@@ -54,5 +54,5 @@ struct MainServiceResponseList {
 struct ClickAdwerdResponseModel {
     
     var Message : String = ""
-   
+    var Error : String = ""
 }
