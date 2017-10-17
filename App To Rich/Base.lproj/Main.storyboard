@@ -714,6 +714,9 @@
                                 <state key="normal" title="FACEBOOK İLE GİRİŞ YAP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookLoginAction:" destination="UjE-fY-ckj" eventType="touchUpInside" id="QPb-26-UOI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPx-Bl-gok">
                                 <rect key="frame" x="199" y="611" width="16" height="45"/>
@@ -780,6 +783,7 @@
                         <outlet property="registerButtonLeading" destination="3VA-cJ-8ZU" id="Gcv-ap-QT0"/>
                         <outlet property="texFieldReferenceCode" destination="WMA-0i-llr" id="W1f-4g-1rp"/>
                         <segue destination="Fzz-Ad-6cD" kind="show" identifier="WelcomeToRegister" id="pK4-iT-HRV"/>
+                        <segue destination="5Qr-ng-M5i" kind="show" identifier="goToMainController" id="hNJ-NB-7eH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lG-Tu-nVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
