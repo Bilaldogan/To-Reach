@@ -43,6 +43,15 @@ class UserPrefence {
         }
         return ""
     }
+    static func saveOneSignalId(id: String) {
+        self.userDefaults.set(id, forKey: oneSignalUserId)
+    }
+    static func getOneSignalId() -> String {
+        if let id = userDefaults.value(forKeyPath: oneSignalUserId) as? String {
+            return id
+        }
+        return ""
+    }
     static func removeUserId(){
         UserDefaults.standard.removeObject(forKey: userID)
     }
@@ -51,4 +60,5 @@ class UserPrefence {
     private static let password = "userPassword"
     private static let isLoginned = "isLoginned"
     private static let userID = "userID"
+    private static let oneSignalUserId = "oneSignalUserId"
 }

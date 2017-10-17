@@ -21,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        
         //setInitialVC()
         configureOneSignal(options: launchOptions)
         return true
@@ -62,6 +60,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //   how your app will use them.
         OneSignal.promptForPushNotifications(userResponse: { accepted in
             print("User accepted notifications: \(accepted)")
+            let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+            if let userID = status.subscriptionStatus.userId {
+                
+                print("userID = \(userID)")
+
+            }
         })
         
     
@@ -71,6 +75,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
     }
+    
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -97,9 +97,9 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
             self.goToAccountDetailController()
         case 2:
             self.shareSupporter.globalShare(viewController: self)
-        case 4:
+        case 3:
             self.goToTransferController()
-        case 5:
+        case 4:
             self.goTo ()
         default:
             break
@@ -133,6 +133,9 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginControllerID")
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+        UserPrefence.saveUserLoginStatus(isLogin: false)
+        UserPrefence.removeUserMail()
+        UserPrefence.removeUserId()
 
         
     }

@@ -13,6 +13,9 @@
 		223F86011F7AA7250073A455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223F86001F7AA7250073A455 /* Assets.xcassets */; };
 		223F86041F7AA7250073A455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F86021F7AA7250073A455 /* LaunchScreen.storyboard */; };
 		224A41041F9575FB00D79BDB /* PopUpTrasnferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A41031F9575FB00D79BDB /* PopUpTrasnferController.swift */; };
+		224A96391F9658AE00837AB1 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A96381F9658AE00837AB1 /* WelcomeController.swift */; };
+		224A963B1F96594800837AB1 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A963A1F96594800837AB1 /* MainController.swift */; };
+		224A963D1F96596E00837AB1 /* AccounDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A963C1F96596E00837AB1 /* AccounDetailController.swift */; };
 		225B7E5D1F890992004070B8 /* RegisterContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E5C1F890992004070B8 /* RegisterContoller.swift */; };
 		225B7E5F1F8909C7004070B8 /* RCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E5E1F8909C7004070B8 /* RCExtension.swift */; };
 		225B7E611F8911E3004070B8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E601F8911E3004070B8 /* LoginService.swift */; };
@@ -74,6 +77,9 @@
 		223F86051F7AA7250073A455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224A41021F9541E600D79BDB /* App To Rich.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "App To Rich.entitlements"; sourceTree = "<group>"; };
 		224A41031F9575FB00D79BDB /* PopUpTrasnferController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "\U0010PopUpTrasnferController.swift"; sourceTree = "<group>"; };
+		224A96381F9658AE00837AB1 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		224A963A1F96594800837AB1 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		224A963C1F96596E00837AB1 /* AccounDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccounDetailController.swift; sourceTree = "<group>"; };
 		225B7E5C1F890992004070B8 /* RegisterContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterContoller.swift; sourceTree = "<group>"; };
 		225B7E5E1F8909C7004070B8 /* RCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCExtension.swift; sourceTree = "<group>"; };
 		225B7E601F8911E3004070B8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -459,6 +465,7 @@
 		95F9901E1F9516CF00FF2C9B /* Main Page Controller */ = {
 			isa = PBXGroup;
 			children = (
+				224A963A1F96594800837AB1 /* MainController.swift */,
 			);
 			name = "Main Page Controller";
 			sourceTree = "<group>";
@@ -466,6 +473,7 @@
 		95F9901F1F9516D900FF2C9B /* Welcome Controller */ = {
 			isa = PBXGroup;
 			children = (
+				224A96381F9658AE00837AB1 /* WelcomeController.swift */,
 			);
 			name = "Welcome Controller";
 			sourceTree = "<group>";
@@ -473,6 +481,7 @@
 		95F990201F9516E200FF2C9B /* My Profile Controller */ = {
 			isa = PBXGroup;
 			children = (
+				224A963C1F96596E00837AB1 /* AccounDetailController.swift */,
 			);
 			name = "My Profile Controller";
 			sourceTree = "<group>";
@@ -627,6 +636,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224A963D1F96596E00837AB1 /* AccounDetailController.swift in Sources */,
+				224A963B1F96594800837AB1 /* MainController.swift in Sources */,
 				22C1DFEE1F8FB01600F26909 /* ForgotPasswordContller.swift in Sources */,
 				950095141F7B086500D7EBEC /* imageViewExtension.swift in Sources */,
 				950095041F7B020E00D7EBEC /* AnimatedTextView.swift in Sources */,
@@ -663,6 +674,7 @@
 				225B7E5F1F8909C7004070B8 /* RCExtension.swift in Sources */,
 				95DEBA731F88FF9B0093FBC8 /* RegisterService.swift in Sources */,
 				228F11E81F7C663A002E8C97 /* AdvertCell.swift in Sources */,
+				224A96391F9658AE00837AB1 /* WelcomeController.swift in Sources */,
 				225B7E651F891B12004070B8 /* UserPrefence.swift in Sources */,
 				95DEBA581F88E4610093FBC8 /* RootViewController.swift in Sources */,
 				9500950A1F7B033900D7EBEC /* RegexClass.swift in Sources */,
