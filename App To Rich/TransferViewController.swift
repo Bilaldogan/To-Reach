@@ -41,5 +41,24 @@ extension TransferViewController {
         }
     }
     
+    func removePopup2(customView : UIView){
+        DispatchQueue.main.async {
+            //print("Start remove sibview")
+            if let viewWithTag = customView.viewWithTag(101) {
+                UIView.animate(withDuration: 0.35, animations: {
+                    viewWithTag.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                    viewWithTag.alpha = 0.0;
+                }, completion:{(finished : Bool)  in
+                    if (finished)
+                    {
+                        viewWithTag.removeFromSuperview()
+                    }
+                });
+                
+            }else{
+                print("No!")
+            }
+        }
+    }
 
 }
