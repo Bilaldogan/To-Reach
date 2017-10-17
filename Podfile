@@ -9,6 +9,8 @@ target 'App To Rich' do
     pod 'AKSideMenu'
     pod 'SWXMLHash'
     pod 'SDWebImage'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
 
 
 end
