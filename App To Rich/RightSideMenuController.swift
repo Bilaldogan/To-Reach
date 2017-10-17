@@ -116,7 +116,8 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         obj .pushViewController(myProfileVC, animated: true)
         self.sideMenuViewController!.hideMenuViewController()
     }
-
+    
+   
     func goToTransferController(){
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

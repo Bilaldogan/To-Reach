@@ -40,7 +40,7 @@ extension RegisterController {
                 sendModel.UserName = nameTextField.text!
                 sendModel.UserPass = passTextField.text!
                 sendModel.MacId = UIDevice.current.identifierForVendor!.uuidString
-                sendModel.OneSignalId = "dsçkfjslkfjlskdfjsdlkfj"
+                sendModel.OneSignalId = UserPrefence.getOneSignalId()
                 print(self.referenceCode)
                 sendModel.RefNo = self.referenceCode
 
