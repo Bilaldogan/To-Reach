@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Qr-ng-M5i">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UjE-fY-ckj">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -337,7 +336,7 @@
                                         <rect key="frame" x="0.0" y="475" width="414" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0IX-en-FG6" id="cUb-pN-EVi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Z70-FX-vgT">
@@ -714,6 +713,9 @@
                                 <state key="normal" title="FACEBOOK İLE GİRİŞ YAP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookLoginAction:" destination="UjE-fY-ckj" eventType="touchUpInside" id="QPb-26-UOI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPx-Bl-gok">
                                 <rect key="frame" x="199" y="611" width="16" height="45"/>
@@ -780,6 +782,7 @@
                         <outlet property="registerButtonLeading" destination="3VA-cJ-8ZU" id="Gcv-ap-QT0"/>
                         <outlet property="texFieldReferenceCode" destination="WMA-0i-llr" id="W1f-4g-1rp"/>
                         <segue destination="Fzz-Ad-6cD" kind="show" identifier="WelcomeToRegister" id="pK4-iT-HRV"/>
+                        <segue destination="5Qr-ng-M5i" kind="show" identifier="goToMainController" id="hNJ-NB-7eH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lG-Tu-nVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2163,10 +2166,8 @@ Tlw
         <image name="transfer" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nh6-62-u0l"/>
-
-        <segue reference="NLq-ll-ZL7"/>
         <segue reference="zIg-qj-AC4"/>
-        <segue reference="s1l-gK-iFd"/>
+        <segue reference="hNJ-NB-7eH"/>
+        <segue reference="NLq-ll-ZL7"/>
     </inferredMetricsTieBreakers>
 </document>

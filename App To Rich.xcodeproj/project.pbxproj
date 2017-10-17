@@ -324,11 +324,7 @@
 				95F9901E1F9516CF00FF2C9B /* Main Page Controller */,
 				95C28BF81F8FC6D100C9F4AC /* Popup Controller */,
 				22156DC41F7EDF910073D36C /* MenuControllers */,
-				228F11E51F7C6564002E8C97 /* MainController.swift */,
-				225B7E661F892465004070B8 /* WelcomeController.swift */,
-				22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */,
 				22656DCF1F9515DC00EBD4E9 /* TransferViewController.swift */,
-				223F85FB1F7AA7250073A455 /* UserTreeController.swift */,
 				9500951B1F7B0AF200D7EBEC /* Base Controller Class */,
 				950095181F7B0A7000D7EBEC /* Login Controller Classes */,
 				225B7E5B1F890958004070B8 /* Register Controller Clases */,
@@ -542,7 +538,6 @@
 					223F85F51F7AA7250073A455 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = K5795Q9X7C;
-
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -818,11 +813,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "App To Rich/App To Rich.entitlements";
 				DEVELOPMENT_TEAM = K5795Q9X7C;
-
 				INFOPLIST_FILE = "App To Rich/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CodingMing.AppToRich;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingMind.AppToRich;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -835,11 +829,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "App To Rich/App To Rich.entitlements";
 				DEVELOPMENT_TEAM = K5795Q9X7C;
-
 				INFOPLIST_FILE = "App To Rich/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CodingMing.AppToRich;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingMind.AppToRich;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

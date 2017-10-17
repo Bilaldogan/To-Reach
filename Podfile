@@ -11,6 +11,7 @@ target 'App To Rich' do
     pod 'SDWebImage'
     pod 'FacebookCore'
     pod 'FacebookLogin'
+    pod 'OneSignal', '>= 2.5.2', '< 3.0'
 
 
 end

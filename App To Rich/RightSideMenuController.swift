@@ -116,15 +116,7 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         obj .pushViewController(myProfileVC, animated: true)
         self.sideMenuViewController!.hideMenuViewController()
     }
-    
-    func goToUserTreeController(){
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let myProfileVC = storyboard.instantiateViewController(withIdentifier: "UserTreeControllerID") as! UserTreeController
-        let obj : UINavigationController = self.sideMenuViewController?.contentViewController as! UINavigationController
-        obj .pushViewController(myProfileVC, animated: true)
-        self.sideMenuViewController!.hideMenuViewController()
-    }
+
     func goToTransferController(){
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
