@@ -92,6 +92,22 @@ class MainService : ConnectionDelegate
             mainResponseData.adwerdList.append(mainServiceList)
         }
         
+        if result["Message"].element?.text != nil{
+            guard let Message = result["Message"].element?.text else {
+                print("registerResponseData Message Error...")
+                return
+            }
+            mainResponseData.message = Message
+        }
+        if result["Error"].element?.text != nil{
+            guard let err = result["Error"].element?.text else {
+                print("registerResponseData Message Error...")
+                return
+            }
+            mainResponseData.error = err
+        }
+
+        
         if  self.serviceDelegate != nil {
             self.serviceDelegate?.getMainService(response: mainResponseData)
         }

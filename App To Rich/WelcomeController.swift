@@ -132,12 +132,12 @@ extension WelcomeController : RegisterServiceDelegate {
     }
     func getRegisterService(response: RegisterServiceResponseModel) {
         self.removeProgress(customView: self.view)
-        if response.Message == "Kayıt başarılı olarak alınmıştır." {
+        if response.Error == "false" {
             UserPrefence.saveUserId(id: response._id)
             performSegue(withIdentifier: "goToMainController", sender: nil)
         }
         else{
-            
+            self.view.makeToast(response.Message)
         }
     }
     

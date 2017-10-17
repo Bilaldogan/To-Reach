@@ -105,12 +105,14 @@ extension RegisterController : RegisterServiceDelegate {
     func getRegisterService(response: RegisterServiceResponseModel) {
        print(response)
         self.removeProgress(customView: self.view)
-        if response.Message == "Kayıt başarılı olarak alınmıştır." {
+        if response.Error == "false " {
+            UserPrefence.saveUserMail(mail: response.Email )
+            UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: response._id)
             performSegue(withIdentifier: "goToMainController", sender: nil)
         }
         else{
-        
+            self.view.makeToast(response.Message)
         }
        
     }

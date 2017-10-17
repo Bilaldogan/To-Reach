@@ -12,6 +12,7 @@ target 'App To Rich' do
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'OneSignal', '>= 2.5.2', '< 3.0'
+    pod 'Toast-Swift', '~> 2.0.0'
 
 
 end

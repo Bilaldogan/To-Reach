@@ -40,6 +40,8 @@ struct SubProfileModel {
 struct MainServiceResponseModel {
     
     var adwerdList : [MainServiceResponseList] = []
+    var error : String = ""
+    var message : String = ""
 }
 
 struct MainServiceResponseList {

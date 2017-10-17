@@ -59,16 +59,11 @@ class ClickAdwerdService : ConnectionDelegate
             }
             clickAdwerdResponseData.Error = error
         }
-        if clickAdwerdResponseData.Error == "false"
-        {
+       
         if  self.serviceDelegate != nil {
             self.serviceDelegate?.getUserProfileService(response: clickAdwerdResponseData)
         }
-        } else {
-            if  self.serviceDelegate != nil {
-                self.serviceDelegate?.getError()
-            }
-        }
+        
     }
     
     func getError(errMessage: String) {

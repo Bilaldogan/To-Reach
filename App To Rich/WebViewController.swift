@@ -65,6 +65,9 @@ extension WebViewController : ClickAdwerdServiceDelegate {
 
     }
     func getUserProfileService(response: ClickAdwerdResponseModel) {
+        if response.Error == "true" {
+            self.view.makeToast(response.Message)
+        }
         print("Response Model :", response)
         self.removeProgress(customView: self.view)
         self.clickAdwerdService.serviceDelegate = nil

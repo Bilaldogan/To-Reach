@@ -113,6 +113,6 @@ extension MessagePopupController : ForgotPasswordServiceDelegate {
     func getForgorService(status: String) {
         if status == "false" {
             self.closePopUp()
-        }
+        } 
     }
 }

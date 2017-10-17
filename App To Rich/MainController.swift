@@ -92,9 +92,13 @@ extension MainController : MainServiceDelegate {
     }
     func getMainService(response: MainServiceResponseModel) {
         print(response)
+        if response.error == "false" {
         self.adwerdListResponse = response
         self.tableView.reloadData()
         self.removeProgress(customView: self.view)
+        } else {
+            self.view.makeToast(response.message)
+        }
     }
     
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class BaseController: UIViewController {
     
     var progressView : Progress!
@@ -34,6 +34,7 @@ class BaseController: UIViewController {
             // Handle error however you please
             return false
         }
+    
     }
     
     

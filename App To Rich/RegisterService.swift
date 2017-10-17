@@ -111,19 +111,10 @@ class RegisterService : ConnectionDelegate
             }
             registerResponseData.Error = Error
         }
-        if registerResponseData.Error == "false" {
-            UserPrefence.saveUserMail(mail: registerResponseData.Email )
-            UserPrefence.saveUserLoginStatus(isLogin: true)
-            UserPrefence.saveUserId(id: registerResponseData._id)
-            if  self.serviceDelegate != nil {
+        if  self.serviceDelegate != nil {
                 self.serviceDelegate?.getRegisterService(response: registerResponseData)
             }
-        }
-        else {
-            if  self.serviceDelegate != nil {
-                self.serviceDelegate?.getError()
-            }
-        }
+        
     }
     
     func getError(errMessage: String) {

@@ -86,7 +86,7 @@ extension AccounDetailController : UserProfileServiceDelegate {
             self.coinLabel.text = response.coins
         }
         else{
-            
+            self.view.makeToast(response.message)
         }
         for subUser in response.subProfiles {
             print(subUser.error)

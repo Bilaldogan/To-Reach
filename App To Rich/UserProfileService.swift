@@ -151,15 +151,9 @@ class UserProfileService : ConnectionDelegate
             }
             userProfileResponse.error = Error
         }
-        if userProfileResponse.error == "false" {
             if  self.serviceDelegate != nil {
                 self.serviceDelegate?.getUserProfileService(response: userProfileResponse)
             }
-        } else {
-            if  self.serviceDelegate != nil {
-                self.serviceDelegate?.getError()
-            }
-        }
        
         
        

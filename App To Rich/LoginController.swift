@@ -79,7 +79,15 @@ extension LoginController: LoginServiceDelegate {
     func getLoginService(response: RegisterServiceResponseModel) {
         print(response)
         self.removeProgress(customView: self.view)
-        performSegue(withIdentifier: "loginTorRootVC", sender: nil)
+        if response.Error == "false" {
+            UserPrefence.saveUserMail(mail: response.Email )
+            UserPrefence.saveUserLoginStatus(isLogin: true)
+            UserPrefence.saveUserId(id: response._id)
+
+            performSegue(withIdentifier: "loginTorRootVC", sender: nil)
+        } else {
+            self.view.makeToast(response.Message)
+        }
 
     }
     
