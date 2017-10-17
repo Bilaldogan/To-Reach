@@ -12,7 +12,8 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
     
     
     var tableView: UITableView?
-    
+    var window: UIWindow?
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -94,6 +95,10 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
             self.goToUserTreeController()
         case 1:
             self.goToAccountDetailController()
+        case 4:
+            self.goToTransferController()
+        case 5:
+            self.goTo ()
         default:
             break
         }
@@ -118,7 +123,24 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
         obj .pushViewController(myProfileVC, animated: true)
         self.sideMenuViewController!.hideMenuViewController()
     }
-    
+    func goToTransferController(){
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myProfileVC = storyboard.instantiateViewController(withIdentifier: "TransferController") as! TransferViewController
+        let obj : UINavigationController = self.sideMenuViewController?.contentViewController as! UINavigationController
+        obj .pushViewController(myProfileVC, animated: true)
+        self.sideMenuViewController!.hideMenuViewController()
+    }
+
+    func goTo() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginControllerID")
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+
+        
+    }
     
     let imageArray : Array = ["ev","liste","kilit","question","uyari","odul","cikis"]
     let labelTextArray : Array = ["ANASAYFA","PROFİLİM","PAYLAŞ","KAZAN","TRANSFER","ÇIKIŞ YAP"]

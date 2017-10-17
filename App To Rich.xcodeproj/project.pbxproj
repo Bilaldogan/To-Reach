@@ -13,12 +13,14 @@
 		223F85FF1F7AA7250073A455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F85FD1F7AA7250073A455 /* Main.storyboard */; };
 		223F86011F7AA7250073A455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223F86001F7AA7250073A455 /* Assets.xcassets */; };
 		223F86041F7AA7250073A455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F86021F7AA7250073A455 /* LaunchScreen.storyboard */; };
+		224A41041F9575FB00D79BDB /* PopUpTrasnferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A41031F9575FB00D79BDB /* PopUpTrasnferController.swift */; };
 		225B7E5D1F890992004070B8 /* RegisterContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E5C1F890992004070B8 /* RegisterContoller.swift */; };
 		225B7E5F1F8909C7004070B8 /* RCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E5E1F8909C7004070B8 /* RCExtension.swift */; };
 		225B7E611F8911E3004070B8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E601F8911E3004070B8 /* LoginService.swift */; };
 		225B7E651F891B12004070B8 /* UserPrefence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E641F891B12004070B8 /* UserPrefence.swift */; };
 		225B7E671F892465004070B8 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E661F892465004070B8 /* WelcomeController.swift */; };
 		225B7E691F8931C5004070B8 /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B7E681F8931C5004070B8 /* UserProfileService.swift */; };
+		22656DD01F9515DC00EBD4E9 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22656DCF1F9515DC00EBD4E9 /* TransferViewController.swift */; };
 		22694C2A1F8EE03A00140B4E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22694C291F8EE03A00140B4E /* CustomTextField.swift */; };
 		228F11E61F7C6564002E8C97 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E51F7C6564002E8C97 /* MainController.swift */; };
 		228F11E81F7C663A002E8C97 /* AdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E71F7C663A002E8C97 /* AdvertCell.swift */; };
@@ -74,12 +76,15 @@
 		223F86001F7AA7250073A455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223F86031F7AA7250073A455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		223F86051F7AA7250073A455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224A41021F9541E600D79BDB /* App To Rich.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "App To Rich.entitlements"; sourceTree = "<group>"; };
+		224A41031F9575FB00D79BDB /* PopUpTrasnferController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "\U0010PopUpTrasnferController.swift"; sourceTree = "<group>"; };
 		225B7E5C1F890992004070B8 /* RegisterContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterContoller.swift; sourceTree = "<group>"; };
 		225B7E5E1F8909C7004070B8 /* RCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCExtension.swift; sourceTree = "<group>"; };
 		225B7E601F8911E3004070B8 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		225B7E641F891B12004070B8 /* UserPrefence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPrefence.swift; sourceTree = "<group>"; };
 		225B7E661F892465004070B8 /* WelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		225B7E681F8931C5004070B8 /* UserProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		22656DCF1F9515DC00EBD4E9 /* TransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		22694C291F8EE03A00140B4E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		228F11E51F7C6564002E8C97 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		228F11E71F7C663A002E8C97 /* AdvertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertCell.swift; sourceTree = "<group>"; };
@@ -186,6 +191,7 @@
 		223F85F81F7AA7250073A455 /* App To Rich */ = {
 			isa = PBXGroup;
 			children = (
+				224A41021F9541E600D79BDB /* App To Rich.entitlements */,
 				95DEBA621F88FCFB0093FBC8 /* Service Structure */,
 				22221CD51F7B0CD500788007 /* Model */,
 				22221CD61F7B0CDE00788007 /* View */,
@@ -317,6 +323,7 @@
 				228F11E51F7C6564002E8C97 /* MainController.swift */,
 				225B7E661F892465004070B8 /* WelcomeController.swift */,
 				22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */,
+				22656DCF1F9515DC00EBD4E9 /* TransferViewController.swift */,
 				223F85FB1F7AA7250073A455 /* UserTreeController.swift */,
 				9500951B1F7B0AF200D7EBEC /* Base Controller Class */,
 				950095181F7B0A7000D7EBEC /* Login Controller Classes */,
@@ -359,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				95C28BF91F8FC6F600C9F4AC /* MessagePopupController.swift */,
+				224A41031F9575FB00D79BDB /* PopUpTrasnferController.swift */,
 			);
 			name = "Popup Controller";
 			sourceTree = "<group>";
@@ -497,8 +505,16 @@
 				TargetAttributes = {
 					223F85F51F7AA7250073A455 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BXR3K72MAT;
+						DevelopmentTeam = K5795Q9X7C;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -606,6 +622,7 @@
 				95DEBA5E1F88E78A0093FBC8 /* RightMenuCustomCell.swift in Sources */,
 				223F85FC1F7AA7250073A455 /* UserTreeController.swift in Sources */,
 				95DEBA7C1F8911EB0093FBC8 /* MainService.swift in Sources */,
+				224A41041F9575FB00D79BDB /* PopUpTrasnferController.swift in Sources */,
 				22694C2A1F8EE03A00140B4E /* CustomTextField.swift in Sources */,
 				22C1DFF01F8FB0AB00F26909 /* FPCExtension.swift in Sources */,
 				95DEBA6B1F88FD600093FBC8 /* ConnectionDelegate.swift in Sources */,
@@ -619,6 +636,7 @@
 				95C28BF31F8EE18600C9F4AC /* WebViewController.swift in Sources */,
 				95C28BF51F8EE8CA00C9F4AC /* ClickAdwerdService.swift in Sources */,
 				95DEBAA61F8A21F70093FBC8 /* ColorChangeImageView.swift in Sources */,
+				22656DD01F9515DC00EBD4E9 /* TransferViewController.swift in Sources */,
 				950094F31F7B019500D7EBEC /* LoginController.swift in Sources */,
 				225B7E5F1F8909C7004070B8 /* RCExtension.swift in Sources */,
 				95DEBA731F88FF9B0093FBC8 /* RegisterService.swift in Sources */,
@@ -761,11 +779,12 @@
 			baseConfigurationReference = 814A38D98AC56540CFA308BB /* Pods-App To Rich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BXR3K72MAT;
+				CODE_SIGN_ENTITLEMENTS = "App To Rich/App To Rich.entitlements";
+				DEVELOPMENT_TEAM = K5795Q9X7C;
 				INFOPLIST_FILE = "App To Rich/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bd.App-To-Rich";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingMing.AppToRich;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -776,11 +795,12 @@
 			baseConfigurationReference = 83973B83222039C49BB80BE0 /* Pods-App To Rich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BXR3K72MAT;
+				CODE_SIGN_ENTITLEMENTS = "App To Rich/App To Rich.entitlements";
+				DEVELOPMENT_TEAM = K5795Q9X7C;
 				INFOPLIST_FILE = "App To Rich/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bd.App-To-Rich";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CodingMing.AppToRich;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

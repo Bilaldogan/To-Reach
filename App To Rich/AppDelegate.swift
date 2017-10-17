@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //setInitialVC()
+        configureOneSignal(options: launchOptions)
         return true
     }
 
@@ -37,6 +39,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
         
+    }
+    
+    func configureOneSignal(options : [UIApplicationLaunchOptionsKey: Any]?) {
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+        
+        // Replace 'YOUR_APP_ID' with your OneSignal App ID.
+        OneSignal.initWithLaunchOptions(options,
+                                        appId: "d895d88b-a2ba-48fc-ac34-ffde05181b83",
+                                        handleNotificationAction: nil,
+                                        settings: onesignalInitSettings)
+       
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        
+        // Recommend moving the below line to prompt for push after informing the user about
+        //   how your app will use them.
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+        
+    
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

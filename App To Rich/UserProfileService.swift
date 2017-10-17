@@ -24,7 +24,8 @@ class UserProfileService : ConnectionDelegate
         soapMessage += "<soap:Body><UserProfilService xmlns='http://tempuri.org/'>"
         soapMessage += "<AdminEmail>\(GlobalData.adminUserName.rawValue)</AdminEmail>"
         soapMessage += "<AdminPass>\(GlobalData.adminPass.rawValue)</AdminPass>"
-        soapMessage += "<UserId>\(UserPrefence.getUserId())</UserId>"
+        soapMessage += "<UserId>35</UserId>"
+        //soapMessage += "<UserId>\(UserPrefence.getUserId())</UserId>"
         soapMessage += "</UserProfilService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
