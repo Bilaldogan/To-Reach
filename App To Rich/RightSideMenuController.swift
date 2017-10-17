@@ -12,7 +12,8 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
     
     
     var tableView: UITableView?
-    
+    var window: UIWindow?
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -96,6 +97,10 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
             self.goToAccountDetailController()
         case 2:
             self.shareSupporter.globalShare(viewController: self)
+        case 4:
+            self.goToTransferController()
+        case 5:
+            self.goTo ()
         default:
             break
         }
@@ -111,8 +116,34 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         obj .pushViewController(myProfileVC, animated: true)
         self.sideMenuViewController!.hideMenuViewController()
     }
-   
     
+    func goToUserTreeController(){
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myProfileVC = storyboard.instantiateViewController(withIdentifier: "UserTreeControllerID") as! UserTreeController
+        let obj : UINavigationController = self.sideMenuViewController?.contentViewController as! UINavigationController
+        obj .pushViewController(myProfileVC, animated: true)
+        self.sideMenuViewController!.hideMenuViewController()
+    }
+    func goToTransferController(){
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myProfileVC = storyboard.instantiateViewController(withIdentifier: "TransferController") as! TransferViewController
+        let obj : UINavigationController = self.sideMenuViewController?.contentViewController as! UINavigationController
+        obj .pushViewController(myProfileVC, animated: true)
+        self.sideMenuViewController!.hideMenuViewController()
+    }
+
+    func goTo() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginControllerID")
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+
+        
+    }
+
     
     let imageArray : Array = ["ev","liste","kilit","question","odul","cikis"]
     let labelTextArray : Array = ["ANASAYFA","PROFİLİM","PAYLAŞ","TRANSFER","ÇIKIŞ YAP"]
