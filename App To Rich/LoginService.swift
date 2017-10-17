@@ -127,7 +127,6 @@ class LoginService : ConnectionDelegate
         }
         if registerResponseData.Error == "false" {
             UserPrefence.saveUserMail(mail: self.userMail )
-            UserPrefence.saveUserPassword(password: self.userPassword)
             UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: registerResponseData._id)
             if  self.serviceDelegate != nil {

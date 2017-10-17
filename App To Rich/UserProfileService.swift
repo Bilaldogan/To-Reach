@@ -30,6 +30,9 @@ class UserProfileService : ConnectionDelegate
         soapMessage += "</soap:Body></soap:Envelope>"
         
         let serviceUrl : String = HttpAdress.staticLink + HttpAdress.userProfileServicelink
+        print(soapMessage)
+        print(serviceUrl)
+        
         connection.cineDBMakePostConnection(soapMessage: soapMessage, serviceUrl: serviceUrl)
     }
    
@@ -41,14 +44,15 @@ class UserProfileService : ConnectionDelegate
         let path2 = path["soap:Body"]
         let path3 = path2["UserProfilServiceResponse"]
         let result = path3["UserProfilServiceResult"]
-        let subProfileVM = result["SubProfilVM"]
+        let subProfileVM = result["SubProfilVM"]["SubProfilVM"]
+        
         print(result)
+        print(subProfileVM)
         
-        
-        
-        for subProfile in subProfileVM["SubProfilVM"].all {
+        for subProfile in result["SubProfilVM"]["SubProfilVM"].all {
         
             var subProfileModel : SubProfileModel = SubProfileModel()
+            print(subProfile)
             
             if subProfile["Id"].element?.text != nil{
                 guard let user_id = subProfile["Id"].element?.text else {
@@ -73,6 +77,16 @@ class UserProfileService : ConnectionDelegate
                 }
                 subProfileModel.count = count
             }
+            
+            if subProfile["Error"].element?.text != nil{
+                guard let error = subProfile["Error"].element?.text else {
+                    print("adwerd error Error...")
+                    return
+                }
+                subProfileModel.error = error
+            }
+            
+            
             userProfileResponse.subProfiles.append(subProfileModel)
            
 

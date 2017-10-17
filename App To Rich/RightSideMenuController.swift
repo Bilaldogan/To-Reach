@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RightSideMenuController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class RightSideMenuController: BaseController,UITableViewDataSource, UITableViewDelegate {
     
     
     var tableView: UITableView?
@@ -23,10 +23,10 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
         
         switch UIDevice.current.userInterfaceIdiom{
         case .pad:
-            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 94 * 6) / 2.0, width: self.view.frame.size.width, height: 100 * 6), style: UITableViewStyle.plain)
+            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 94 * 6) / 2.0, width: self.view.frame.size.width, height: 100 * 5), style: UITableViewStyle.plain)
             
         case .phone:
-            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 50 * 6) / 2.0, width: self.view.frame.size.width, height: 54 * 6), style: UITableViewStyle.plain)
+            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 50 * 6) / 2.0, width: self.view.frame.size.width, height: 54 * 5), style: UITableViewStyle.plain)
         default:
             break
         }
@@ -67,7 +67,7 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,9 +92,11 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
      
         switch indexPath.row {
         case 0:
-            self.goToUserTreeController()
+            break
         case 1:
             self.goToAccountDetailController()
+        case 2:
+            self.shareSupporter.globalShare(viewController: self)
         case 4:
             self.goToTransferController()
         case 5:
@@ -141,9 +143,10 @@ class RightSideMenuController: UIViewController,UITableViewDataSource, UITableVi
 
         
     }
+
     
-    let imageArray : Array = ["ev","liste","kilit","question","uyari","odul","cikis"]
-    let labelTextArray : Array = ["ANASAYFA","PROFİLİM","PAYLAŞ","KAZAN","TRANSFER","ÇIKIŞ YAP"]
+    let imageArray : Array = ["ev","liste","kilit","question","odul","cikis"]
+    let labelTextArray : Array = ["ANASAYFA","PROFİLİM","PAYLAŞ","TRANSFER","ÇIKIŞ YAP"]
     
     
     

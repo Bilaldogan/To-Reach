@@ -41,8 +41,9 @@ extension RegisterController {
                 sendModel.UserPass = passTextField.text!
                 sendModel.MacId = UIDevice.current.identifierForVendor!.uuidString
                 sendModel.OneSignalId = "dsçkfjslkfjlskdfjsdlkfj"
+                print(self.referenceCode)
                 sendModel.RefNo = self.referenceCode
-                registerService.password = self.passTextField.text!
+
                 self.showProgressView()
                 if hasConnectivity() {
                 registerService.dispatchGetService(model: sendModel)

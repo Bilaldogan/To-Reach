@@ -8,16 +8,14 @@
 
 import UIKit
 
-
 class BaseController: UIViewController {
     
     var progressView : Progress!
-    
+    var backgroundView : UIView?
+    var shareSupporter = ShareSupporter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentLeftMenuViewController(_:)))
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named:"kullanici"), style: .plain, target: self, action: #selector(self.presentRightMenuViewController(_:)))
         
         self.configureNavigationBar()
 
@@ -64,26 +62,30 @@ class BaseController: UIViewController {
     //Progress View Setup
     
     func showProgressView(){
-        let backgroundView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        backgroundView.tag = 102
-        backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
-        self.view.addSubview(backgroundView)
+        backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        backgroundView?.tag = 202
+        backgroundView?.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        self.view.addSubview(backgroundView!)
         progressView = Progress()
-        progressView.tag = 101
+        progressView.tag = 201
         self.view.addSubview(progressView)
+        
     }
     
     func removeProgress(customView : UIView){
         DispatchQueue.main.async {
             //print("Start remove sibview")
-            if let viewWithTag = customView.viewWithTag(101) {
+            if let viewWithTag = customView.viewWithTag(201) {
+                self.progressView.stopAnimatingKey = true
                 viewWithTag.removeFromSuperview()
+                self.progressView = nil
             }else{
                 print("No!")
             }
             
-            if let viewWithTag = customView.viewWithTag(102) {
+            if let viewWithTag = customView.viewWithTag(202) {
                 viewWithTag.removeFromSuperview()
+                self.backgroundView = nil
             }else{
                 print("No!")
             }

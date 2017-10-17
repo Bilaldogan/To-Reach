@@ -12,6 +12,7 @@ class Progress: UIView {
 
     // MARK: - Initializers
 
+    var stopAnimatingKey : Bool = false
     
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var middleViewConstraint: NSLayoutConstraint!
@@ -36,12 +37,10 @@ class Progress: UIView {
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
-        let customFrame = CGRect(x: (screenWidth - (screenWidth * 0.3)) - 15 , y: (screenHeight - screenWidth * 0.15) - 15 , width: screenWidth * 0.3, height: screenWidth * 0.15)
+        let customFrame = CGRect(x: (screenWidth - (screenWidth * 0.3)) - 15 , y: (screenHeight - screenWidth * 0.15) - 80 , width: screenWidth * 0.3, height: screenWidth * 0.15)
         super.init(frame: customFrame)
-        
+        stopAnimatingKey = false
 
-        
-        
         setupView()
         self.animatingView()
     }
@@ -119,13 +118,11 @@ class Progress: UIView {
                 self.middleViewConstraint = self.middleViewConstraint.setMultiplier(multiplier: CGFloat(0.8))
                 let when = DispatchTime.now() + 0.1
                 DispatchQueue.main.asyncAfter(deadline: when) {
-                    DispatchQueue.main.asyncAfter(deadline: when) {
                         UIView.animate(withDuration: 0.5, animations: {
                             self.fourthViewConstraint = self.fourthViewConstraint.setMultiplier(multiplier: CGFloat(0.8))
                             self.secondViewConstraint = self.secondViewConstraint.setMultiplier(multiplier: CGFloat(0.8))
                             self.layoutIfNeeded()
                         })
-                    }
                 }
                 let whenTwo = DispatchTime.now() + 0.2
                 DispatchQueue.main.asyncAfter(deadline: whenTwo) {
@@ -139,8 +136,12 @@ class Progress: UIView {
                 
                 self.layoutIfNeeded()
             }) { (success) in
+                if !self.stopAnimatingKey{
                 self.animatingView()
+                }
+                else{
                 
+                }
             }
             
         }

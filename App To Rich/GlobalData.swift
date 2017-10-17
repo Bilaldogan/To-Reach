@@ -11,4 +11,9 @@ import Foundation
 enum GlobalData : String {
     case adminUserName = "AppToRichDevs"
     case adminPass = "M1y2ş1G7"
+    
+    
+    case staticURL = "http://yonetim.apptorich.com"
+    
+    
 }
