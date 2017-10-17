@@ -9,6 +9,6 @@ target 'App To Rich' do
     pod 'AKSideMenu'
     pod 'SWXMLHash'
     pod 'SDWebImage'
-
+    pod 'OneSignal', '>= 2.5.2', '< 3.0'
 
 end
