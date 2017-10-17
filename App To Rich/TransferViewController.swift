@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransferViewController: UIViewController {
+class TransferViewController: BaseController {
 
     @IBOutlet weak var downView: UIView!
     override func viewDidLoad() {
@@ -16,13 +16,13 @@ class TransferViewController: UIViewController {
         downView.layer.cornerRadius = 20.0
     }
     @IBAction func confirmButtonTapped(_ sender: Any) {
-        showMessagePopup()
+        showMessagePopup2()
     }
    }
 
 
 extension TransferViewController {
-    func showMessagePopup()
+    func showMessagePopup2()
     {
         DispatchQueue.main.async {
             let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpTrasferController") as! PopUpTransferController
@@ -41,7 +41,7 @@ extension TransferViewController {
         }
     }
     
-    func removePopup(customView : UIView){
+    func removePopup2(customView : UIView){
         DispatchQueue.main.async {
             //print("Start remove sibview")
             if let viewWithTag = customView.viewWithTag(101) {

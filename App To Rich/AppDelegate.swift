@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("User accepted notifications: \(accepted)")
             let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
             if let userID = status.subscriptionStatus.userId {
-                
+                UserPrefence.saveOneSignalId(id: userID)
                 print("userID = \(userID)")
 
             }
@@ -72,6 +72,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     
     }
+    
+    func onOSSubscriptionChanged(_ stateChanges: OSSubscriptionStateChanges!) {
+        if !stateChanges.from.subscribed && stateChanges.to.subscribed {
+            print("Subscribed for OneSignal push notifications!")
+        }
+        print("SubscriptionStateChange: \n\(stateChanges)")
+        
+        //The player id is inside stateChanges. But be careful, this value can be nil if the user has not granted you permission to send notifications.
+        if let userID = stateChanges.to.userId {
+            UserPrefence.saveOneSignalId(id: userID)
+            print("userID = \(userID)")
+        }
+    }
+    
     
     public func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool
     {
