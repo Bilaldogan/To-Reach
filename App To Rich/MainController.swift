@@ -38,7 +38,7 @@ class MainController: BaseController {
         self.mainService.serviceDelegate = self
         var sendModel : MainServiceSendData = MainServiceSendData()
         sendModel.PageNumber = pageNumber
-        sendModel.UserId = "0"
+        sendModel.UserId = UserPrefence.getUserId()
         if hasConnectivity() {
         self.mainService.dispatchGetService(model: sendModel)
         self.showProgressView()
@@ -90,7 +90,6 @@ extension MainController : MainServiceDelegate {
     func getError() {
         
     }
-    
     func getMainService(response: MainServiceResponseModel) {
         print(response)
         self.adwerdListResponse = response

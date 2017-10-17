@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22221CD81F7B0D0900788007 /* ChildUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22221CD71F7B0D0900788007 /* ChildUserCell.swift */; };
 		223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F85F91F7AA7250073A455 /* AppDelegate.swift */; };
-		223F85FC1F7AA7250073A455 /* UserTreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F85FB1F7AA7250073A455 /* UserTreeController.swift */; };
 		223F85FF1F7AA7250073A455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F85FD1F7AA7250073A455 /* Main.storyboard */; };
 		223F86011F7AA7250073A455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223F86001F7AA7250073A455 /* Assets.xcassets */; };
 		223F86041F7AA7250073A455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223F86021F7AA7250073A455 /* LaunchScreen.storyboard */; };
@@ -62,6 +61,7 @@
 		95DEBAA21F8933370093FBC8 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DEBAA01F8933370093FBC8 /* Progress.xib */; };
 		95DEBAA31F8933370093FBC8 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBAA11F8933370093FBC8 /* Progress.swift */; };
 		95DEBAA61F8A21F70093FBC8 /* ColorChangeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */; };
+		95F990241F95180E00FF2C9B /* ShareSupporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F990231F95180E00FF2C9B /* ShareSupporter.swift */; };
 		A984557EB48F3A4A79676B63 /* Pods_App_To_Rich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +69,6 @@
 		22221CD71F7B0D0900788007 /* ChildUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildUserCell.swift; sourceTree = "<group>"; };
 		223F85F61F7AA7250073A455 /* App To Rich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App To Rich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223F85F91F7AA7250073A455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		223F85FB1F7AA7250073A455 /* UserTreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTreeController.swift; sourceTree = "<group>"; };
 		223F85FE1F7AA7250073A455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		223F86001F7AA7250073A455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223F86031F7AA7250073A455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,6 +125,7 @@
 		95DEBAA01F8933370093FBC8 /* Progress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
 		95DEBAA11F8933370093FBC8 /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChangeImageView.swift; sourceTree = "<group>"; };
+		95F990231F95180E00FF2C9B /* ShareSupporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSupporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +186,7 @@
 		223F85F81F7AA7250073A455 /* App To Rich */ = {
 			isa = PBXGroup;
 			children = (
+				95F990221F9517F200FF2C9B /* Supporter Classes */,
 				95DEBA621F88FCFB0093FBC8 /* Service Structure */,
 				22221CD51F7B0CD500788007 /* Model */,
 				22221CD61F7B0CDE00788007 /* View */,
@@ -311,18 +312,16 @@
 		9500950F1F7B049E00D7EBEC /* Conroller Class */ = {
 			isa = PBXGroup;
 			children = (
+				95F990211F9516F700FF2C9B /* Adwerd Detail Controller */,
+				95F990201F9516E200FF2C9B /* My Profile Controller */,
+				95F9901F1F9516D900FF2C9B /* Welcome Controller */,
+				95F9901E1F9516CF00FF2C9B /* Main Page Controller */,
 				95C28BF81F8FC6D100C9F4AC /* Popup Controller */,
-				95DEBA781F890AE90093FBC8 /* Main Controller */,
 				22156DC41F7EDF910073D36C /* MenuControllers */,
-				228F11E51F7C6564002E8C97 /* MainController.swift */,
-				225B7E661F892465004070B8 /* WelcomeController.swift */,
-				22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */,
-				223F85FB1F7AA7250073A455 /* UserTreeController.swift */,
 				9500951B1F7B0AF200D7EBEC /* Base Controller Class */,
 				950095181F7B0A7000D7EBEC /* Login Controller Classes */,
 				225B7E5B1F890958004070B8 /* Register Controller Clases */,
 				22C1DFEC1F8FAFEF00F26909 /* Forgot Controller */,
-				95C28BF21F8EE18600C9F4AC /* WebViewController.swift */,
 			);
 			name = "Conroller Class";
 			sourceTree = "<group>";
@@ -446,13 +445,6 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		95DEBA781F890AE90093FBC8 /* Main Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Main Controller";
-			sourceTree = "<group>";
-		};
 		95DEBA9F1F8933290093FBC8 /* Custom FrameWork's */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +452,46 @@
 				95DEBAA11F8933370093FBC8 /* Progress.swift */,
 			);
 			name = "Custom FrameWork's";
+			sourceTree = "<group>";
+		};
+		95F9901E1F9516CF00FF2C9B /* Main Page Controller */ = {
+			isa = PBXGroup;
+			children = (
+				228F11E51F7C6564002E8C97 /* MainController.swift */,
+			);
+			name = "Main Page Controller";
+			sourceTree = "<group>";
+		};
+		95F9901F1F9516D900FF2C9B /* Welcome Controller */ = {
+			isa = PBXGroup;
+			children = (
+				225B7E661F892465004070B8 /* WelcomeController.swift */,
+			);
+			name = "Welcome Controller";
+			sourceTree = "<group>";
+		};
+		95F990201F9516E200FF2C9B /* My Profile Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22E0B65A1F7FFB9100CD2566 /* AccounDetailController.swift */,
+			);
+			name = "My Profile Controller";
+			sourceTree = "<group>";
+		};
+		95F990211F9516F700FF2C9B /* Adwerd Detail Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95C28BF21F8EE18600C9F4AC /* WebViewController.swift */,
+			);
+			name = "Adwerd Detail Controller";
+			sourceTree = "<group>";
+		};
+		95F990221F9517F200FF2C9B /* Supporter Classes */ = {
+			isa = PBXGroup;
+			children = (
+				95F990231F95180E00FF2C9B /* ShareSupporter.swift */,
+			);
+			name = "Supporter Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,7 +529,7 @@
 				TargetAttributes = {
 					223F85F51F7AA7250073A455 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BXR3K72MAT;
+						DevelopmentTeam = K28P236TA3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -600,11 +632,11 @@
 				225B7E691F8931C5004070B8 /* UserProfileService.swift in Sources */,
 				228F11E61F7C6564002E8C97 /* MainController.swift in Sources */,
 				950094FF1F7B020E00D7EBEC /* AnimatedLine.swift in Sources */,
+				95F990241F95180E00FF2C9B /* ShareSupporter.swift in Sources */,
 				950095171F7B08CA00D7EBEC /* ColorUtil.swift in Sources */,
 				95DEBA771F89010B0093FBC8 /* HttpAdress.swift in Sources */,
 				9500951A1F7B0A8900D7EBEC /* LCExtension.swift in Sources */,
 				95DEBA5E1F88E78A0093FBC8 /* RightMenuCustomCell.swift in Sources */,
-				223F85FC1F7AA7250073A455 /* UserTreeController.swift in Sources */,
 				95DEBA7C1F8911EB0093FBC8 /* MainService.swift in Sources */,
 				22694C2A1F8EE03A00140B4E /* CustomTextField.swift in Sources */,
 				22C1DFF01F8FB0AB00F26909 /* FPCExtension.swift in Sources */,
@@ -761,9 +793,9 @@
 			baseConfigurationReference = 814A38D98AC56540CFA308BB /* Pods-App To Rich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BXR3K72MAT;
+				DEVELOPMENT_TEAM = K28P236TA3;
 				INFOPLIST_FILE = "App To Rich/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bd.App-To-Rich";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -776,9 +808,9 @@
 			baseConfigurationReference = 83973B83222039C49BB80BE0 /* Pods-App To Rich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BXR3K72MAT;
+				DEVELOPMENT_TEAM = K28P236TA3;
 				INFOPLIST_FILE = "App To Rich/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bd.App-To-Rich";
 				PRODUCT_NAME = "$(TARGET_NAME)";

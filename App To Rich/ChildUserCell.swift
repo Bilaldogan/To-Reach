@@ -29,6 +29,14 @@ class ChildUserCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-           }
+    }
+    
+    
+    func configure(with item: SubProfileModel) {
+        self.lblChildUserCount.text = item.count
+        self.lblUserName.text = item.userName
+        
+        
+    }
 
 }

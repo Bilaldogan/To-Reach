@@ -19,7 +19,6 @@ class WelcomeController: BaseController {
     @IBOutlet weak var lblOr: UILabel!
     
     let welcomeToRegister = "WelcomeToRegister"
-    let refenrenceCode = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +32,7 @@ class WelcomeController: BaseController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? RegisterController {
-            destinationVC.referenceCode = refenrenceCode
+            destinationVC.referenceCode = texFieldReferenceCode.text!
         }
     }
     

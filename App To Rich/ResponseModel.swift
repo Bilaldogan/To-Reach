@@ -35,10 +35,11 @@ struct SubProfileModel {
     var _id : String = ""
     var userName : String = ""
     var count : String = ""
+    var error : String = ""
 }
 struct MainServiceResponseModel {
     
-    var adwerdList = [MainServiceResponseList]()
+    var adwerdList : [MainServiceResponseList] = []
 }
 
 struct MainServiceResponseList {

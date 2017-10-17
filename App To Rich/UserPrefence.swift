@@ -20,15 +20,8 @@ class UserPrefence {
         }
         return ""
     }
-    
-    static func saveUserPassword(password: String) {
-        self.userDefaults.setValue(password, forKey: password)
-    }
-    static func getUserPassword() -> String {
-        if let password = userDefaults.value(forKeyPath: password) as? String {
-            return password
-        }
-        return ""
+    static func removeUserMail(){
+        UserDefaults.standard.removeObject(forKey: mail)
     }
     
     static func saveUserLoginStatus(isLogin : Bool) {
@@ -50,7 +43,9 @@ class UserPrefence {
         }
         return ""
     }
-   
+    static func removeUserId(){
+        UserDefaults.standard.removeObject(forKey: userID)
+    }
     
     private static let mail = "userMail"
     private static let password = "userPassword"

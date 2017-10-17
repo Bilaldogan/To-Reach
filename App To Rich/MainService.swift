@@ -44,6 +44,7 @@ class MainService : ConnectionDelegate
         let path4 = path3["AppListServiceResult"]
         let result = path4["AppList"]
         
+        print(result)
         
         for adwerd in result["AppListVM"].all {
             var mainServiceList : MainServiceResponseList = MainServiceResponseList()

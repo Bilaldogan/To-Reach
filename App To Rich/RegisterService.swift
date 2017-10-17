@@ -14,7 +14,6 @@ class RegisterService : ConnectionDelegate
    	
     let connection = PostConnection()
     var serviceDelegate : RegisterServiceDelegate?
-    var password = ""
     
     func dispatchGetService(model : RegisterServiceSendData)
     {
@@ -33,6 +32,8 @@ class RegisterService : ConnectionDelegate
         soapMessage += "</UserAddService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
+        
+        print(soapMessage)
         let serviceUrl : String = HttpAdress.staticLink + HttpAdress.registerServiceLink
         connection.cineDBMakePostConnection(soapMessage: soapMessage, serviceUrl: serviceUrl)
     }
@@ -112,7 +113,6 @@ class RegisterService : ConnectionDelegate
         }
         if registerResponseData.Error == "false" {
             UserPrefence.saveUserMail(mail: registerResponseData.Email )
-            UserPrefence.saveUserPassword(password: self.password)
             UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: registerResponseData._id)
             if  self.serviceDelegate != nil {
