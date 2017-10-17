@@ -25,8 +25,8 @@ class AdvertCell: UITableViewCell {
     
     func configure(with item: MainServiceResponseList) {
         self.lblAdvertName.text = item.AppName
-        self.lblAdvertValue.text = item.Coins
-        self.lblAdvertURL.text = item.AppUrl
+        self.lblAdvertValue.text = item.Coins + "Coins"
+        //self.lblAdvertURL.text = item.AppUrl
         self.imgViewAdvert.sd_setShowActivityIndicatorView(true)
         self.imgViewAdvert.sd_setIndicatorStyle(.gray)
         

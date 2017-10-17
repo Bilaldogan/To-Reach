@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
-        //setInitialVC()
+        setInitialVC()
         configureOneSignal(options: launchOptions)
         return true
     }

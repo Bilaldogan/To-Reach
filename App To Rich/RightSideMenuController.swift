@@ -23,10 +23,10 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         
         switch UIDevice.current.userInterfaceIdiom{
         case .pad:
-            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 94 * 6) / 2.0, width: self.view.frame.size.width, height: 100 * 5), style: UITableViewStyle.plain)
+            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 97 * 6) / 2.0, width: self.view.frame.size.width, height: 100 * 5), style: UITableViewStyle.plain)
             
         case .phone:
-            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 50 * 6) / 2.0, width: self.view.frame.size.width, height: 54 * 5), style: UITableViewStyle.plain)
+            self.tableView = UITableView.init(frame: CGRect(x: 0, y: (self.view.frame.size.height - 47 * 6) / 2.0, width: self.view.frame.size.width, height: 54 * 5), style: UITableViewStyle.plain)
         default:
             break
         }
@@ -97,9 +97,9 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
             self.goToAccountDetailController()
         case 2:
             self.shareSupporter.globalShare(viewController: self)
-        case 4:
+        case 3:
             self.goToTransferController()
-        case 5:
+        case 4:
             self.goTo ()
         default:
             break
@@ -132,7 +132,7 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginControllerID")
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
-
+        
         
     }
 
