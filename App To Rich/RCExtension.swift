@@ -19,17 +19,21 @@ extension RegisterController {
             if nameTextField.text! == "" || mailTextField.text! == "" || passTextField.text! == "" || againPasswordTextField.text! == ""{
                 self.dismissKeyboard()
                 //Popup çağır
+                self.view.makeToast("Lütfen tüm boş alanları doldurunuz.")
             }
             else if RegexClass.validateButunNumaralarSifirOlarmaz(textField: passTextField) == false{
                 self.dismissKeyboard()
+                self.view.makeToast("Tüm numaralar 0 olamaz.")
                 //Popup çağır
             }
             else if RegexClass.isValidEmail(testStr: self.mailTextField.text!) == false {
                 self.dismissKeyboard()
+                self.view.makeToast("Lütfen doğru bir email adresi giriniz.")
                 //Popup çağır
             }
             else if  passTextField.text! !=  againPasswordTextField.text!{
                 self.dismissKeyboard()
+                self.view.makeToast("Lütfen şifrelerinizin aynı olduğundan emin olun")
                 //Popup çağır
             }
             else{
@@ -48,12 +52,14 @@ extension RegisterController {
                 if hasConnectivity() {
                 registerService.dispatchGetService(model: sendModel)
                 } else {
+                    self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
                     // Message Göster
                 }
             }
         }
         else{
             self.dismissKeyboard()
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
         }
     }
     

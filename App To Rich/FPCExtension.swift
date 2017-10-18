@@ -29,6 +29,7 @@ extension ForgotPasswordController {
             }
         }
         else{
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             self.dismissKeyboard()
         }
     }

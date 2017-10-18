@@ -15,7 +15,7 @@ class WebViewController: BaseController, UIWebViewDelegate {
         super.viewDidLoad()
         print(web_link)
         if !hasConnectivity() {
-            //messege Göster
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             return
         }
         webView.delegate = self
@@ -43,6 +43,7 @@ class WebViewController: BaseController, UIWebViewDelegate {
         if hasConnectivity() {
         self.clickAdwerdService.dispatchGetService(model: sendData)
         } else {
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             // Message Göster
         }
     }

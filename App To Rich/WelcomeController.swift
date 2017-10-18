@@ -78,6 +78,7 @@ class WelcomeController: BaseController {
                     if self.hasConnectivity() {
                         self.registerService.dispatchGetService(model: sendModel)
                     } else {
+                        self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
                         // Message Göster
                     }
                     

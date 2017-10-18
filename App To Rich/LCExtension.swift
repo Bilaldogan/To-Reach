@@ -18,14 +18,17 @@ extension LoginController {
         if isNetAvaible{
             if  mailTextField.text! == "" || passTextField.text! == "" {
                 self.dismissKeyboard()
+                self.view.makeToast("Lütfen tüm boş alanları doldurunuz.")
                 //Popup çağır
             }
             else if RegexClass.validateButunNumaralarSifirOlarmaz(textField: passTextField) == false{
                 self.dismissKeyboard()
+                self.view.makeToast("Tüm numaralar 0 olamaz.")
                 //Popup çağır
             }
             else if RegexClass.isValidEmail(testStr: self.mailTextField.text!) == false {
                 self.dismissKeyboard()
+                self.view.makeToast("Lütfen doğru bir email adresi giriniz.")
                 //Popup çağır
             }
             else{
@@ -37,11 +40,13 @@ extension LoginController {
                 if hasConnectivity() {
                 loginService.dispatchGetService(mail: mail, password: password)
                 } else {
+                    self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
                     //message Göster
                 }
             }
         }
         else{
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             self.dismissKeyboard()
         }
     }

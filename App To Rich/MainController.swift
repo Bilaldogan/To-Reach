@@ -43,6 +43,7 @@ class MainController: BaseController {
         self.mainService.dispatchGetService(model: sendModel)
         self.showProgressView()
         } else {
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             // Message Göster
         }
     }

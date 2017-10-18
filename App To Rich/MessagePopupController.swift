@@ -67,6 +67,7 @@ class MessagePopupController: BaseController {
         if hasConnectivity() {
         self.forgotService.dispatchGetService(with: self.mailTextField.text!)
         } else {
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             // Message Göster
         }
     

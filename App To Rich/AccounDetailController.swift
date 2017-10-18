@@ -42,7 +42,7 @@ class AccounDetailController: BaseController {
             self.userprofileService.dispatchGetService()
         }
         else {
-            
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
         }
     }
     

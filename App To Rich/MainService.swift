@@ -92,15 +92,15 @@ class MainService : ConnectionDelegate
             mainResponseData.adwerdList.append(mainServiceList)
         }
         
-        if result["Message"].element?.text != nil{
-            guard let Message = result["Message"].element?.text else {
+        if path4["Message"].element?.text != nil{
+            guard let Message = path4["Message"].element?.text else {
                 print("registerResponseData Message Error...")
                 return
             }
             mainResponseData.message = Message
         }
-        if result["Error"].element?.text != nil{
-            guard let err = result["Error"].element?.text else {
+        if path4["Error"].element?.text != nil{
+            guard let err = path4["Error"].element?.text else {
                 print("registerResponseData Message Error...")
                 return
             }

@@ -360,7 +360,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="childUserCell" rowHeight="109" id="0IX-en-FG6" customClass="ChildUserCell" customModule="App_To_Rich" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="475.33333333333331" width="414" height="109"/>
+                                        <rect key="frame" x="0.0" y="475" width="414" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0IX-en-FG6" id="cUb-pN-EVi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>

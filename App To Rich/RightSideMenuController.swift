@@ -100,7 +100,7 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         case 3:
             self.goToTransferController()
         case 4:
-            self.goTo ()
+            self.goToExitApp()
         default:
             break
         }
@@ -136,13 +136,26 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
         self.sideMenuViewController!.hideMenuViewController()
     }
 
-    func goTo() {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginControllerID")
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+    func goToExitApp() {
         
+        let alert = UIAlertController(title: "App To Rich", message: "Çıkış yapmak istediğinize emin misiniz?", preferredStyle: UIAlertControllerStyle.alert)
+        DispatchQueue.main.async {
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Evet", style: UIAlertActionStyle.default, handler: { action in
+                print("Click Yes")
+                UserPrefence.saveUserLoginStatus(isLogin: false)
+                UserPrefence.removeUserId()
+                UserPrefence.removeUserMail()
+                UserPrefence.removeoneSignalUserId()
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginControllerID")
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+            }))
+            alert.addAction(UIAlertAction(title: "Hayır", style: UIAlertActionStyle.cancel, handler: nil))
+        }
+        self.present(alert, animated: true, completion: nil)
         
     }
 
