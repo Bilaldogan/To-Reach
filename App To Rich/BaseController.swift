@@ -14,11 +14,30 @@ class BaseController: UIViewController {
     var backgroundView : UIView?
     var shareSupporter = ShareSupporter()
     
+    var objectFrame : CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
+    var keyboardIsShown = false
+    var isScreenWillMove : Bool = false {
+        didSet {
+                    let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                    self.view.addGestureRecognizer(tap)
+            NotificationCenter.default.addObserver(self, selector: #selector(BaseController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(BaseController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.configureNavigationBar()
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
 
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     func leftTapped() {
        // self.presentLeftMenuViewController(nil)
@@ -154,6 +173,49 @@ class BaseController: UIViewController {
                 print("No!")
             }
         }
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if isScreenWillMove {
+            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                if !keyboardIsShown {
+                    
+                    let moveSize = keyboardSize.size.height - (self.view.frame.height - objectFrame.maxY ) + 5
+                    
+                    print("obeject Frame: \(self.objectFrame)")
+                    print("moveSize : \(moveSize)")
+                    print("keyboardHeight : \(keyboardSize.height)")
+                    print("screen height : \(self.view.frame.height)")
+                    print("maxy : \(objectFrame.maxY)")
+                     if keyboardSize.height > (self.view.frame.height - objectFrame.maxY) {
+                        //self.view.frame.origin.y -=  moveSize
+                        
+                        if keyboardSize.height > (moveSize) {
+                            
+                            self.view.frame.origin.y -=  moveSize
+                            
+                        }
+                        keyboardIsShown = true
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    //******
+    func keyboardWillHide(notification: NSNotification) {
+        if ((notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            if keyboardIsShown {
+                self.view.frame.origin.y = 0.0
+                keyboardIsShown = false
+            }
+        }
+        
+    }
+    func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
     
 }

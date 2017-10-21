@@ -22,11 +22,14 @@ class WelcomeController: BaseController {
     var registerService : RegisterService = RegisterService()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        texFieldReferenceCode.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+            texFieldReferenceCode.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        texFieldReferenceCode.layoutIfNeeded()
+        objectFrame = self.texFieldReferenceCode.frame
+        isScreenWillMove = true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

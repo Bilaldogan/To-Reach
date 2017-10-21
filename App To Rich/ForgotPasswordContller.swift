@@ -12,7 +12,6 @@ class ForgotPasswordController: BaseController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.keyboardEvents()
         self.addTappedTo()
         self.fullBlackImage()
         self.textFieldsProperties()

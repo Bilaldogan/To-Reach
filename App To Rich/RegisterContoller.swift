@@ -12,19 +12,22 @@ class RegisterController: BaseController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.keyboardEvents()
         self.addTappedTo()
         self.fullBlackImage()
         self.renderigSozlesmesi()
         self.textFieldsProperties()
-        
-    }
+         }
     override func viewDidAppear(_ animated: Bool) {
-        
+        super.viewDidAppear(animated)
+        kayıtOlButton.layoutIfNeeded()
+        objectFrame = self.view.convert(kayıtOlButton.frame, from: kayıtOlButton.superview)
+        isScreenWillMove = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true // for navigation bar hide
+      
     }
     override func viewWillLayoutSubviews() {
         self.textFieldsFrontEnd()
