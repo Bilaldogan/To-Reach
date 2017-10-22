@@ -669,6 +669,7 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="72k-Rn-rb8" id="D4u-1f-yVG"/>
+                        <outlet property="okeyButton" destination="G6h-pv-TKr" id="VKc-vp-lS9"/>
                         <outlet property="popUpView" destination="B5J-s7-WG1" id="5jh-FW-F44"/>
                     </connections>
                 </viewController>

@@ -182,12 +182,7 @@ class BaseController: UIViewController {
                     
                     let moveSize = keyboardSize.size.height - (self.view.frame.height - objectFrame.maxY ) + 5
                     
-                    print("obeject Frame: \(self.objectFrame)")
-                    print("moveSize : \(moveSize)")
-                    print("keyboardHeight : \(keyboardSize.height)")
-                    print("screen height : \(self.view.frame.height)")
-                    print("maxy : \(objectFrame.maxY)")
-                     if keyboardSize.height > (self.view.frame.height - objectFrame.maxY) {
+                        if keyboardSize.height > (self.view.frame.height - objectFrame.maxY) {
                         //self.view.frame.origin.y -=  moveSize
                         
                         if keyboardSize.height > (moveSize) {

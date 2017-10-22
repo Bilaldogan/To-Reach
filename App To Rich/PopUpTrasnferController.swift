@@ -17,13 +17,14 @@ class PopUpTransferController: BaseController {
         self.blurView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         self.blurEffect(customView: self.blurView)
         self.popUpView.layer.cornerRadius = 10.0
-        
-        
-        
         //self.blurView.translatesAutoresizingMaskIntoConstraints = true
         
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        objectFrame = self.view.convert(okeyButton.frame, from: okeyButton.superview)
+        isScreenWillMove = true
+    }
     override func viewWillLayoutSubviews() {
         
     }
