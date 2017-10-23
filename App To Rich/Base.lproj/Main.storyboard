@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Qr-ng-M5i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Qr-ng-M5i">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -51,20 +51,20 @@
                                                         <constraint firstAttribute="width" secondItem="0cX-1K-YNm" secondAttribute="height" multiplier="1:1" id="7Fa-F1-AuL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-Sh-mzq">
-                                                    <rect key="frame" x="237" y="29" width="58" height="58"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold2" translatesAutoresizingMaskIntoConstraints="NO" id="9nc-Sh-mzq">
+                                                    <rect key="frame" x="235.5" y="29" width="58" height="58"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="9nc-Sh-mzq" secondAttribute="height" id="d0I-tK-wem"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100  COIN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="vhR-6R-BqF">
-                                                    <rect key="frame" x="252" y="43" width="29" height="29"/>
+                                                    <rect key="frame" x="250.5" y="43" width="29" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.85098039215686272" green="0.0" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="9df-b8-gP1">
-                                                    <rect key="frame" x="289" y="35" width="21" height="46"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backArrow-2" translatesAutoresizingMaskIntoConstraints="NO" id="9df-b8-gP1">
+                                                    <rect key="frame" x="301.5" y="46.5" width="10.5" height="23"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="9df-b8-gP1" secondAttribute="height" multiplier="21:46" id="ZYO-JV-Npe"/>
@@ -81,18 +81,18 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="9df-b8-gP1" secondAttribute="trailing" constant="2" id="24a-rt-tnt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9df-b8-gP1" secondAttribute="trailing" id="24a-rt-tnt"/>
                                                 <constraint firstItem="vhR-6R-BqF" firstAttribute="centerY" secondItem="9nc-Sh-mzq" secondAttribute="centerY" id="2a8-SB-ZLq"/>
                                                 <constraint firstItem="vhR-6R-BqF" firstAttribute="centerX" secondItem="9nc-Sh-mzq" secondAttribute="centerX" id="97y-Zv-wXc"/>
                                                 <constraint firstItem="9df-b8-gP1" firstAttribute="centerY" secondItem="geM-vN-cvj" secondAttribute="centerY" id="DmB-UL-eQD"/>
                                                 <constraint firstItem="vhR-6R-BqF" firstAttribute="width" secondItem="9nc-Sh-mzq" secondAttribute="width" multiplier="0.5" id="MYx-Dl-KOh"/>
-                                                <constraint firstItem="9df-b8-gP1" firstAttribute="height" secondItem="geM-vN-cvj" secondAttribute="height" multiplier="0.4" id="REh-zn-6on"/>
+                                                <constraint firstItem="9df-b8-gP1" firstAttribute="height" secondItem="geM-vN-cvj" secondAttribute="height" multiplier="0.2" id="REh-zn-6on"/>
                                                 <constraint firstItem="0cX-1K-YNm" firstAttribute="centerY" secondItem="geM-vN-cvj" secondAttribute="centerY" id="TXl-V9-iNf"/>
                                                 <constraint firstItem="9nc-Sh-mzq" firstAttribute="centerY" secondItem="geM-vN-cvj" secondAttribute="centerY" id="U48-DP-cH1"/>
                                                 <constraint firstItem="0cX-1K-YNm" firstAttribute="leading" secondItem="geM-vN-cvj" secondAttribute="leadingMargin" id="aeg-NV-fwH"/>
-                                                <constraint firstItem="9nc-Sh-mzq" firstAttribute="leading" secondItem="Tey-m5-t42" secondAttribute="trailing" constant="12" id="egd-42-5gr"/>
                                                 <constraint firstItem="Tey-m5-t42" firstAttribute="leading" secondItem="0cX-1K-YNm" secondAttribute="trailing" constant="8" id="g83-e2-jIE"/>
                                                 <constraint firstItem="9nc-Sh-mzq" firstAttribute="height" secondItem="geM-vN-cvj" secondAttribute="height" multiplier="0.5" id="ksb-77-PgL"/>
+                                                <constraint firstItem="9df-b8-gP1" firstAttribute="leading" secondItem="9nc-Sh-mzq" secondAttribute="trailing" constant="8" id="lYi-c7-wJK"/>
                                                 <constraint firstItem="0cX-1K-YNm" firstAttribute="height" secondItem="geM-vN-cvj" secondAttribute="height" multiplier="0.7" id="mON-Dk-SOe"/>
                                                 <constraint firstItem="Tey-m5-t42" firstAttribute="centerY" secondItem="geM-vN-cvj" secondAttribute="centerY" id="oT4-Cs-Fef"/>
                                                 <constraint firstItem="Tey-m5-t42" firstAttribute="width" secondItem="geM-vN-cvj" secondAttribute="width" multiplier="0.4" id="tHl-Rl-P5k"/>
@@ -212,7 +212,7 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                             </variation>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="adV-Ht-pFe">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold2" translatesAutoresizingMaskIntoConstraints="NO" id="adV-Ht-pFe">
                                             <rect key="frame" x="120" y="253" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="adV-Ht-pFe" secondAttribute="height" multiplier="1:1" id="AIw-hW-bcY"/>
@@ -704,7 +704,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to App To Rich" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-MO-7pC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppToRich' e Hoşgeldin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-MO-7pC">
                                 <rect key="frame" x="46" y="204.5" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -850,7 +850,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4lG-Tu-nVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2013" y="210"/>
+            <point key="canvasLocation" x="-2473" y="189"/>
         </scene>
         <!--User Tree Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1249,7 +1249,7 @@
                                             <constraint firstItem="mhC-Nm-K5p" firstAttribute="width" secondItem="zqh-et-gju" secondAttribute="width" multiplier="0.91" id="tgE-mT-kOs"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLEASE FILL YOUR INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-pC-zcu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BİLGİLERİNİZİ DOLDURUNUZ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-pC-zcu">
                                         <rect key="frame" x="32.5" y="20" width="256" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                         <color key="textColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1358,11 +1358,12 @@
                         <outlet property="nameTextField" destination="Gm2-Hj-eCm" id="B3f-xv-SYk"/>
                         <outlet property="passTextField" destination="9t6-3N-4Hd" id="z14-80-aNy"/>
                         <segue destination="5Qr-ng-M5i" kind="show" identifier="goToMainController" id="s1l-gK-iFd"/>
+                        <segue destination="gzY-Kk-wec" kind="show" identifier="goToUserAgreement" id="ubi-Ad-fLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxx-WS-F46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2013" y="-661"/>
+            <point key="canvasLocation" x="-1995" y="-661"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Zqq-6d-1mX">
@@ -1671,7 +1672,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cs8-YX-74O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234.375" y="-505.98591549295776"/>
+            <point key="canvasLocation" x="-621" y="-500"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="DYR-v0-pke">
@@ -1803,12 +1804,338 @@
             </objects>
             <point key="canvasLocation" x="-359" y="-1346"/>
         </scene>
+        <!--Kullanici Sozlesmesi Controller-->
+        <scene sceneID="ing-9X-e9a">
+            <objects>
+                <viewController id="gzY-Kk-wec" customClass="KullaniciSozlesmesiController" customModule="App_To_Rich" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FQy-DS-U3Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="hNW-XK-SCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hv2-Ww-0y7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KULLANICI SÖZLEŞMESİ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c95-SE-mJr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="42.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuR-C9-1yd">
+                                <rect key="frame" x="0.0" y="62.5" width="320" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Terms of Service (ToS)
+1. INTRODUCTION.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">AppToRich provides you access to its online service (the “Service”) on www.AppToRich.com (the “AppToRich Website”) and the related AppToRich software on your mobile device or other computing device. The Service is a social networking based suite of integrated mobile and web applications that allow partner Advertisers to provide Users with offers (“Opportunities”) to earn credits that are redeemable for cash if they perform specified tasks or comply with certain requirements set forth in such Offers. Your use of the Service is subject to your acceptance of and compliance with these terms of service (the “Terms of Service” or the “Agreement”). If you do not agree to these Terms of Service, please do not use the Service. These Terms of Service shall apply to all transactions conducted through the Service. The term of the Agreement will commence on the date you enroll as a User and will end when terminated by either party in accordance with the terms of the Agreement (the “Term”).
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="1a. CONTESTS">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+All Contests prizes and “rewards” given by AppToRich are not affiliated with Apple Inc. Contests are solely sponsored by the AppToRich. All Prizes &amp; or rewards are NOT Apple products; and or do they have any association with Apple.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="A. OFFERS.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+Participating Advertisers create and list Offers on the Service, which allow Users the chance to receive Rewards from the Advertiser in exchange for performing specified tasks or complying with the requirements (such tasks and/or requirements constituting the “Requirements”) set forth in the Offer. Each Opportunity listing contains a description of the Requirements and the corresponding Reward to be provided by the Advertiser. AppToRich provides the Service to facilitate the relationship between Advertisers and Users. Advertisers are solely responsible for the content of their Offers listings and for the payment of any identified Rewards to Users.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="B. REWARDS.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+Advertisers in their sole discretion shall determine whether a particular User has fulfilled the Requirements and is entitled to receive the associated Rewards. If you do not comply with the Requirements you will not be entitled to the Reward associated with such Opportunity. You agree that all Rewards will be forfeited if your account is terminated for any reason, or if AppToRich discontinues providing the Service. Rewards are not gift certificates and in no way will be paid with any apple products AppToRich does not recognize transfers of Rewards or related points or the purported sale, gift or trade in the “real world” of anything related to the Rewards or the Service. Accordingly you may not buy or sell Rewards or otherwise exchange items for value. Any attempt to do so is in violation of these Terms of Use and will result in the termination of your account.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="C. PROHIBITED ACTIVITIES.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+You may not use the Service for any other purpose than that for which AppToRich makes it available. AppToRich reserves the right in its sole discretion to investigate, terminate your membership and take appropriate legal action if you violate this provision or otherwise misuse the Service, or behave in a way which AppToRich regards as inappropriate or which is unlawful or illegal. The following is a list of the type of actions that you may not engage in with respect to the Service:
+You will not use the Service for any illegal purpose, including engaging in any criminal or tortious activity, including without limitation child pornography, fraud, trafficking in obscene material, drug dealing, gambling, harassment, stalking, spamming or theft of trade secrets.
+You will not express or imply that any statements you make are endorsed by AppToRich without our specific prior written consent.
+You will not use any robot, spider, site search/retrieval application, or other manual or automatic device or process to retrieve, index, “data mine”, or in any way reproduce or circumvent the navigational structure or presentation of the Service or its contents.
+You will not post, distribute or reproduce in any way any copyrighted material, trademarks, or other proprietary information unless under fair use or without obtaining the prior consent of the owner of such proprietary rights.
+You will not remove any copyright, trademark or other proprietary rights notices contained in the Service.
+You will not interfere with or disrupt the Service or the servers or networks connected to the Service.
+You will not post, email or otherwise transmit any material that contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications equipment.
+You will not forge headers or otherwise manipulate identifiers in order to disguise the origin of any information transmitted through the Service.
+You will not “frame” or “mirror” any part of the Service, or otherwise take elements of the Service and reformat or display them.
+You will not modify, adapt, sublicense, translate, sell, reverse engineer, decipher, decompile or otherwise disassemble any portion of the Service or any software used on or for the Service or cause others to do so.
+You will not collect or gather other people’s personal information (including account information) from the Service.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">2. USER SPECIFIC TERMS.
+A. USER REGISTRATION.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+As a condition to using the Service, and in order to receive monetary payments in connection with Rewards, you will be required to register and you will be required to provide valid PayPal account information. You shall provide AppToRich with accurate, complete, and updated registration information. Failure to do so will constitute a breach of these Terms of Use, which may result in termination of account. You shall not (i) select or use a screen name of another person with the intent to impersonate that person, (ii) use a screen name subject to any rights of a person other than you without the proper authorization, or (iii) use as a screen name a name that is otherwise offensive, vulgar or obscene. AppToRich reserves the right to refuse registration of, or cancel a Users account in its sole discretion. You are solely responsible for the activity that occurs on your account and shall be responsible for maintaining the confidentiality of your password. You shall immediately notify AppToRich of any unauthorized use of your account, or other account related security breach of which you are aware.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="B. FULFILLMENT OF COMPENSATION.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+User acknowledges and agrees that the obligation to provide Rewards earned by Users in connection with Offers resides with the Advertiser, not AppToRich. AppToRich merely facilitates such Rewards on behalf of the Advertisers. User waives any and all claims or rights of action against AppToRich relating to the failure of an Advertiser to pay User a Reward. In addition, User acknowledges that User is: (i) not an employee of AppToRich, (ii) responsible for the payment of all taxes on compensation received from an Advertiser, (iii) responsible for any reporting requirements imposed by the federal, state or local government, and (iv) responsible for compliance with all other applicable laws and regulations.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="C. GRANT OF USAGE LICENSE.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+By participating in the Service and accepting Rewards, User grants AppToRich and the specific Advertiser providing the Reward a worldwide, royalty-free, non-exclusive, sub-licensable, unconditional, perpetual and transferable license to use, display, perform, reproduce, republish, and distribute any content or any portion thereof (“Content”) provided by a User in connection with the Service or an Opportunity in all forms of media and through any media channels (now known or hereafter developed), including but not limited to television, radio, print, Internet site and other electronic communications. You acknowledge and agree that the Content you submit, post or display may be viewed by other Users of the Service and through third party services. You should only provide Content that you are comfortable sharing under these terms.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="3. ELIGIBILITY.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+You must be eighteen (18) years or older to use the Service. By using the Service, you are representing and warranting that all information you submit is truthful and accurate, and that you agree to maintain the accuracy of such information. You understand and agree that in accordance with the terms of the AppToRich Privacy Policy (“Privacy Policy”), which is integrated into and included as part of these Terms of Service. AppToRich accounts are not transferable, assignable or resalable under any circumstances.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="4. PROTECTION OF MINORS.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Children under the age of thirteen (13) are not be the target audience of AppToRich Offers and AppToRich strives to protect their privacy. For this reason, Advertisers are prohibited from posting any Offer that targets children and underage people are prohibited to use the service.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="5. CONFIDENTIALITY.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+“Confidential Information” means any information disclosed to an Advertiser or User by AppToRich, either directly or indirectly, in writing, orally or by inspection of tangible objects, other than information that you can establish: (i) was publicly known and made generally available in the public domain prior to the time of disclosure to you by AppToRich; (ii) becomes publicly known and made generally available after disclosure to you by AppToRich other than through your action or inaction; or (iii) is in your possession, without confidentiality restrictions, prior to the time of disclosure by AppToRich as shown by your files and records. Advertiser and/or User shall not at any time (a) disclose, sell, license, transfer or otherwise make available to any person or entity any Confidential Information (except to your employees and agents who have a legitimate need to know such information and are bound in writing by confidentiality and non-use restrictions not less protective than those contained herein), or (b) use, reproduce or copy any Confidential Information, except as necessary in connection with the purpose for which such Confidential Information is disclosed to you and in accordance with the Agreement. Advertiser and/or User agrees to take all measures to protect the secrecy, and avoid disclosure and unauthorized use, of the Confidential Information. Advertiser and/or User may disclose Confidential Information if required by law to disclose the Confidential Information, provided that such Advertiser of User gives AppToRich prompt written notice of such requirement prior to such disclosure and assistance in obtaining an order protecting the information from public disclosure, and provided further that any such disclosure is limited to the minimum extent necessary to comply with the legal requirement. All Confidential Information shall remain AppToRich personal property and all documents, electronic media and other tangible items containing or relating to any Confidential Information shall be delivered to AppToRich immediately upon AppToRich request, and also, upon termination of the Agreement. Nothing contained in the Agreement will prevent AppToRich, its parent and/or affiliates from complying with privacy laws and regulations, and if there is any conflict between the Agreement and the terms of the applicable AppToRich Privacy Policy (as posted on or linked from the AppToRich Website), the Agreement shall control. Advertiser and User may not issue any press release or other public statement regarding the Agreement, AppToRich, its parent and/or its affiliates without AppToRich prior written consent.
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="6. UNAUTHORIZED USE.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.51121394230769235" blue="0.37587740384615387" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+There are just a few rules you need to follow in order to avoid any problems and suspensions:
+Don’t create multiple and/or fake accounts.
+Don’t use VPNs or proxys to fake your IP address or location.
+Don’t try to change your device ID.
+Do not spam with your referral code.
+AppToRich team will suspend accounts that don't comply with this simple rules.
+Outside of an app provided by AppToRich, any attempt to utilize automated programs, bots, screen scraping, database calls, human initiated data collection or any other means of gathering data, content or other information for the purpose of reverse engineering our platform for commercial or personal gain is strictly prohibited.
+7. PROVISION OF THE SERVICE.
+AppToRich is constantly innovating and changing its Service offering in order to provide the best possible experience for its Users. You acknowledge and agree that the form and nature of the Service which AppToRich provides may change from time to time without prior notice to you. You acknowledge and agree that AppToRich may stop (permanently or temporarily) providing the Service (or any features or functionality within the Service) to you or to Users generally at AppToRich sole discretion, without prior notice to you. You and/or AppToRich may terminate the Agreement and/or your participation in the Service at any time, for any reason or for no reason, and AppToRich shall not have any liability regarding such decisions. Sections 2 through 17 of these Terms of Service shall survive any termination of the Agreement.
+8. REPRESENTATIONS AND WARRANTIES.
+Each User and Advertiser participating in the Service represents, warrants and covenants that (i) it has sufficient authority to enter into the Agreement; (ii) its use of AppToRich services is solely for lawful commercial and business purposes; (iii) it has the necessary rights to provide all information provided under the Agreement (including all content, data, Offers, titles, URLs and descriptions) for use as described in the Agreement, and that all such information and all claims, statements, products and services contained or referenced herein and in the Website or submitted by an Advertiser or User: (a) do not violate any law, statute, ordinance, treaty or regulation or AppToRich policy or guideline; (b) do not infringe any copyright, patent, trademark, trade secret or other intellectual property right of any third party; (c) do not breach any duty toward or rights of any person or entity including rights of publicity or privacy, and have not otherwise resulted in or are not likely to result in any consumer fraud, product liability, tort, breach of contract, injury, damage or harm of any kind to any person or entity; (d) are not false, deceptive or misleading; (e) are not defamatory, libelous, slanderous or threatening; (f) will be free of viruses, Trojan horses, trap doors, back doors, Easter eggs, worms, time bombs, cancelbots or other computer programming routines that may potentially damage, interfere with, intercept, or expropriate any system data or personal information; and (g) comply with the applicable Master Agreement (if applicable); (iv) it will not engage or cause others to engage in any form of spamming or improper or malicious, as determined by AppToRich, clicking, impression or marketing activities through the Service, and it will comply with all applicable laws including complying with all applicable laws such as the CAN-SPAM Act of 2003; and (v) it will not use the Service to “stalk” or otherwise harass another person or harm any persons or entities in any way.
+9. TRADEMARKS.
+AppToRich and other AppToRich graphics, logos, designs, page headers, button icons, scripts, and service names are registered trademarks, trademarks or trade dress of AppToRich in the Turkey and/or other countries. AppToRich trademarks and trade dress may not be used, including as part of trademarks and/or as part of domain names, in connection with any product or service in any manner that is likely to cause confusion. The images and icons available on our media page may be used by partner and third party sites in connection with journalistic promotion of our services, commercial applications are forbidden except where pre-approved in writing.
+10. INDEMNIFICATION.
+Each User and Advertiser participating in the Service agrees to indemnify and hold harmless AppToRich, its parent and affiliates and their officers, directors, licensors, partners, licensees, consultants, contractors, agents, attorneys, employees, third party service providers and third parties authorized by AppToRich to make your listings, results, and/or Service available in connection with third party Websites, blogs, postings, content, applications and/or e-mails (“Third Party Products”), and their respective officers, directors, agents, affiliates, and employees (each, a “AppToRich Entity” and collectively, the “AppToRich Entities”) from any and all claims, liabilities, costs and expenses, including reasonable attorneys’ fees (collectively, “Claim(s)”), that actually or allegedly result from such User or Advertiser’s information, use of the Service, submissions to the Service, or its breach of the Agreement. Each User and Advertiser agrees to be solely responsible for defending any Claim against or suffered by AppToRich and/or any AppToRich Entity, subject to AppToRichRewards and/or the AppToRich Entity’s right to participate with counsel of its own choosing, and for payment of damages or losses resulting from all claims against AppToRich, and/or any AppToRich Entity provided that you will not agree to any settlement that imposes any obligation or liability on AppToRich and/or an AppToRich Entity without AppToRich prior express written consent.
+11. WARRANTY DISCLAIMER.
+EACH ADVERTISER AND USER EXPRESSLY AGREES THAT THE SERVICE IS AVAILABLE ON AN “AS IS” BASIS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, AND THAT ITS USE THEREOF IS AT ITS OWN RISK. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, AppToRich DISCLAIMS TO THE MAXIMUM EXTENT PERMITTED BY LAW ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY (i) WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, (ii) WARRANTIES AGAINST INFRINGEMENT OF ANY THIRD PARTY INTELLECTUAL PROPERTY OR PROPRIETARY RIGHTS, (iii) WARRANTIES RELATING TO DELAYS, INTERRUPTIONS, ERRORS, OR OMISSIONS IN THE SERVICE OR AppToRich WEBSITE, OR ANY PART THEREOF, (iv) WARRANTIES RELATING TO THE TRANSMISSION OR DELIVERY OF THE SERVICE OR THE AppToRich WEBSITE, (v) WARRANTIES RELATING TO THE ACCURACY OR CORRECTNESS OF DATA, AND ANY OTHER WARRANTIES OTHERWISE RELATING TO PERFORMANCE, NONPERFORMANCE, OR OTHER ACTS OR OMISSIONS BY AppToRich. FURTHER, AND WITHOUT LIMITING THE GENERALITY OF ANY OF THE FOREGOING, THERE IS NO WARRANTY THAT THE SERVICE OR THE AppToRich WEBSITE WILL MEET A USER’S OR AN ADVERTISER’S NEEDS OR REQUIREMENTS OR THE NEEDS OR REQUIREMENTS OF ANY OTHER PERSON. IN ADDITION, EACH USER AND ADVERTISER ACKNOWLEDGES AND AGREES THAT AppToRich’S WARRANTY DOES NOT COVER TELECOMMUNICATIONS OR INTERNET OUTAGES CAUSED BY THIRD PARTIES OR OTHERWISE OUTSIDE OF AppToRich’S CONTROL. THE SERVICE MAY BE LIMITED BY MANY FACTORS, INCLUDING INHERENT RISKS OF THE INTERNET. BECAUSE SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN CATEGORIES OF DAMAGES OR IMPLIED WARRANTIES, THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. IN SUCH JURISDICTIONS, AppToRich’S LIABILITY IS LIMITED TO THE GREATEST EXTENT PERMITTED BY LAW.
+12. LIMITATION OF LIABILITY.
+AppToRich LIABILITY IN CONNECTION WITH THE AGREEMENT, UNDER ANY CAUSE OF ACTION OR THEORY, SHALL BE STRICTLY LIMITED TO $100. AppToRich SHALL NOT BE LIABLE TO USERS FOR DAMAGES OF ANY KIND ARISING OUT OF A USER’S USE OF THE SERVICE. WITHOUT LIMITING THE FOREGOING, IN NO EVENT SHALL AppToRich OR ANY AppToRich ENTITY BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, ARISING OUT OF, OR IN CONNECTION WITH, THE AGREEMENT. ADVERTISER AGREES THAT ADVERTISER WILL NOT HOLD AppToRich RESPONSIBLE FOR THE SELECTION OR RETENTION OF, OR ANY ACTS, ERRORS, OR OMISSIONS BY, ANY THIRD PARTY IN CONNECTION WITH THE AGREEMENT, INCLUDING WITH RESPECT TO PARTICIPATION OR ACCESS BY ANY THIRD PARTY ON ADVERTISER’S LISTING(S) OF OFFERS, REGARDLESS OF THE INTENT OF SUCH THIRD PARTY.
+THE FOREGOING LIMITATIONS APPLY WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR ANY OTHER BASIS, EVEN IF AppToRich OR ITS AFFILIATES OR ANY OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, AppToRich’S LIABILITY IN SUCH JURISDICTIONS SHALL BE LIMITED TO THE EXTENT PERMITTED BY LAW.
+13. NOTICES.
+AppToRich may give general notices to Users and Advertisers by posting on the AppToRich Website, or by electronic mail to the e-mail address provided by you to AppToRich. It is your responsibility to ensure that your e-mail address and any other contact information you provide to AppToRich is updated, current and correct. All notices to AppToRich shall be sent via electronic e-mail, to: AppToRich help@AppToRich.com
+14. CHOICE OF LAW.
+Any dispute referring or relating to the Agreement or between the parties shall be governed by the laws of the Turkey, without regard to its conflict of laws principles. You agree to submit to the exclusive jurisdiction of the courts located in Istanbul. Any claim against AppToRich arising from the Agreement shall be adjudicated on an individual basis, and shall not be consolidated in any proceeding with any claim or controversy of any other party.
+15. MISCELLANEOUS.
+The Agreement constitutes the entire agreement and understanding between the parties regarding the subject matter contained herein and supersedes all previous and contemporaneous agreements, proposals and communications in all forms of media (including all instructions, advertisements, messages and policies), written and oral, between you and AppToRich regarding the subject matter contained herein. Only a written instrument executed by the party waiving compliance may waive the terms or covenants of the Agreement. No waiver by either party of a breach of any provision hereof shall be taken or held to be a waiver of any succeeding breach of such provision or as a waiver of the provision itself. If any provision of the Agreement is held or made invalid or unenforceable for any reason, such invalidity shall not affect the remainder of the Agreement, and the invalid or unenforceable provisions shall be replaced by a mutually acceptable provision, which being valid, legal and enforceable comes closest to the original intentions of the parties to the Agreement and has like economic effect. AppToRich shall have no liability under the Agreement by reason of any failure or delay in the performance of its obligations on account of strikes, shortages, riots, acts of terrorism, insurrection, fires, flood, storm, explosions, earthquakes, Internet outages, computer virus, Acts of God, war, governmental action, or any other cause that is beyond its reasonable control. The parties are independent contractors and nothing in the Agreement shall be construed to create, evidence, or imply any agency, employment, partnership, or joint venture between the parties. Neither Advertisers nor Users are employees of AppToRich. None of AppToRich, Advertisers or Users shall have any right, power, or authority to create any obligation or responsibility on behalf of the other. The Agreement is not intended to benefit, nor shall it be deemed to give rise to any rights in, any third party. You may not assign or transfer the Agreement, or sublicense, assign or delegate any right or duty under the Agreement without AppToRich prior written consent. Any assignment, transfer or attempted assignment or transfer in violation of this Section shall be void and of no force and effect. AppToRich and its subsequent assignees may assign the Agreement, in whole or in part, or any of its rights or delegate any of its duties, under the Agreement to any party. Any rights not expressly granted in the Agreement are reserved by AppToRich, and all implied licenses are disclaimed. Headings used in the Agreement are for reference purposes only and in no way affect the Agreement. The term “including” is a term of enlargement meaning “including without limitation,” and does not denote exclusivity. AppToRich may change the Agreement and/or the Privacy Policy at any time upon notice published on its Website. Any use by you, your Affiliates, agents, representatives, employees, or any person or entity acting on your behalf, of the Service after such notice shall be deemed to be continued acceptance by you of the Agreement and Privacy Policy, including any amendments and modifications thereto. All information or material in connection with a Service must be submitted in the form requested by AppToRich. AppToRich reserves the right to discontinue offering, and/or modify the Service at any time. Except as otherwise specified by AppToRich, you agree that you will direct all communications relating to the Service or your participation therein directly to AppToRich and not to any other entity. The organization, specifications, structure or appearance of any AppToRich property or any page where your information (including listings) may be displayed may be redesigned or modified at any time.
+
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wck-D1-RYf">
+                                <rect key="frame" x="0.0" y="508.5" width="320" height="59.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjj-st-pFq">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="59.5"/>
+                                        <state key="normal" title="Kabul Etmiyorum"/>
+                                        <connections>
+                                            <action selector="kabulEtmiyorumAction:" destination="gzY-Kk-wec" eventType="touchUpInside" id="HuH-S2-2bZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDS-8x-1Mz">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="59.5"/>
+                                        <state key="normal" title="Kabul Ediyorum"/>
+                                        <connections>
+                                            <action selector="kabulEdiyorumAction:" destination="gzY-Kk-wec" eventType="touchUpInside" id="d1s-PO-6e9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hDS-8x-1Mz" secondAttribute="bottom" id="1jg-4a-bos"/>
+                                    <constraint firstItem="zjj-st-pFq" firstAttribute="leading" secondItem="wck-D1-RYf" secondAttribute="leading" id="ELV-dz-SIx"/>
+                                    <constraint firstItem="zjj-st-pFq" firstAttribute="top" secondItem="wck-D1-RYf" secondAttribute="top" id="QpD-2x-bXc"/>
+                                    <constraint firstAttribute="trailing" secondItem="hDS-8x-1Mz" secondAttribute="trailing" id="ROe-gf-N9V"/>
+                                    <constraint firstItem="hDS-8x-1Mz" firstAttribute="width" secondItem="wck-D1-RYf" secondAttribute="width" multiplier="0.5" id="bEW-hT-zNA"/>
+                                    <constraint firstAttribute="bottom" secondItem="zjj-st-pFq" secondAttribute="bottom" id="pAj-74-jSr"/>
+                                    <constraint firstItem="hDS-8x-1Mz" firstAttribute="top" secondItem="wck-D1-RYf" secondAttribute="top" id="qAm-96-sfn"/>
+                                    <constraint firstItem="zjj-st-pFq" firstAttribute="width" secondItem="wck-D1-RYf" secondAttribute="width" multiplier="0.5" id="udO-SB-Wec"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hNW-XK-SCb" firstAttribute="top" secondItem="wck-D1-RYf" secondAttribute="bottom" id="4Zh-N2-0sR"/>
+                            <constraint firstItem="QuR-C9-1yd" firstAttribute="top" secondItem="c95-SE-mJr" secondAttribute="bottom" id="6nq-tB-vW4"/>
+                            <constraint firstItem="QuR-C9-1yd" firstAttribute="height" secondItem="Hv2-Ww-0y7" secondAttribute="height" multiplier="0.82" id="KtG-xG-YVi"/>
+                            <constraint firstAttribute="trailing" secondItem="wck-D1-RYf" secondAttribute="trailing" id="LiV-tD-76C"/>
+                            <constraint firstAttribute="trailing" secondItem="QuR-C9-1yd" secondAttribute="trailing" id="MjT-vg-tOq"/>
+                            <constraint firstItem="wck-D1-RYf" firstAttribute="top" secondItem="QuR-C9-1yd" secondAttribute="bottom" constant="-20" id="Rh6-GC-v8Y"/>
+                            <constraint firstItem="wck-D1-RYf" firstAttribute="leading" secondItem="Hv2-Ww-0y7" secondAttribute="leading" id="U2Q-BU-ZHO"/>
+                            <constraint firstItem="QuR-C9-1yd" firstAttribute="leading" secondItem="Hv2-Ww-0y7" secondAttribute="leading" id="XJk-c5-WKp"/>
+                            <constraint firstItem="c95-SE-mJr" firstAttribute="height" secondItem="Hv2-Ww-0y7" secondAttribute="height" multiplier="0.075" id="hi5-d8-H5m"/>
+                            <constraint firstAttribute="trailing" secondItem="c95-SE-mJr" secondAttribute="trailing" id="mrW-0t-5Q2"/>
+                            <constraint firstItem="c95-SE-mJr" firstAttribute="leading" secondItem="Hv2-Ww-0y7" secondAttribute="leading" id="ugu-dZ-fWd"/>
+                            <constraint firstItem="c95-SE-mJr" firstAttribute="top" secondItem="Hv2-Ww-0y7" secondAttribute="top" constant="20" id="zX7-ha-pjX"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="kullaniciSozlesmesiTextField" destination="QuR-C9-1yd" id="gGB-xI-05R"/>
+                        <segue destination="Fzz-Ad-6cD" kind="show" identifier="sozlesmeToRegisterController" id="fT5-LI-eVb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKf-DG-w2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3034" y="-661"/>
+        </scene>
     </scenes>
     <resources>
         <image name="at" width="100" height="100"/>
+        <image name="backArrow-2" width="15" height="25"/>
         <image name="check" width="100" height="100"/>
-        <image name="coin" width="66" height="66"/>
         <image name="dollar bag" width="128" height="128"/>
+        <image name="gold2" width="80" height="80"/>
         <image name="kilit" width="100" height="100"/>
         <image name="kullanici" width="100" height="100"/>
         <image name="logo" width="205" height="112"/>
@@ -1817,8 +2144,8 @@
         <image name="transfer" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nh6-62-u0l"/>
+        <segue reference="pK4-iT-HRV"/>
+        <segue reference="hNJ-NB-7eH"/>
         <segue reference="NLq-ll-ZL7"/>
-        <segue reference="cAW-4w-yUF"/>
     </inferredMetricsTieBreakers>
 </document>

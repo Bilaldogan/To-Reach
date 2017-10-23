@@ -14,15 +14,32 @@ class WebViewController: BaseController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(web_link)
+        self.showProgressView()
         if !hasConnectivity() {
             self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             return
         }
+        
         webView.delegate = self
-        if let url = URL(string: "https://" + web_link) {
-            let request = URLRequest(url: url)
-            webView.loadRequest(request)
+        if web_link.range(of:"http://") != nil {
+            if let url = URL(string: web_link) {
+                let request = URLRequest(url: url)
+                webView.loadRequest(request)
+            }
         }
+        else if web_link.range(of:"https://") != nil {
+            if let url = URL(string: web_link) {
+                let request = URLRequest(url: url)
+                webView.loadRequest(request)
+            }
+        }
+        else{
+            if let url = URL(string: "https://" + web_link) {
+                let request = URLRequest(url: url)
+                webView.loadRequest(request)
+            }
+        }
+        
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
@@ -39,7 +56,7 @@ class WebViewController: BaseController, UIWebViewDelegate {
         sendData.AppId = self.web_id
         sendData.UserId = UserPrefence.getUserId()
         print(sendData)
-        self.showProgressView()
+        
         if hasConnectivity() {
         self.clickAdwerdService.dispatchGetService(model: sendData)
         } else {

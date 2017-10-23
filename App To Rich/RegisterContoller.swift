@@ -16,7 +16,8 @@ class RegisterController: BaseController{
         self.fullBlackImage()
         self.renderigSozlesmesi()
         self.textFieldsProperties()
-         }
+        self.bufferFunc()
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         kayıtOlButton.layoutIfNeeded()
@@ -56,7 +57,18 @@ class RegisterController: BaseController{
             guard let strongself = self else { return }
             strongself.renderigAgainPassword()
         }
+        let kullaniciSozlesmesiGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tappedKullanıcıSoz(img:)))
+        self.kullaniciSozlesmesiImageView.isUserInteractionEnabled = true
+        self.kullaniciSozlesmesiImageView.addGestureRecognizer(kullaniciSozlesmesiGesture)
         
+    }
+   
+    func tappedKullanıcıSoz(img : AnyObject){
+        self.performSegue(withIdentifier: "goToUserAgreement", sender: nil)
+        GlobalData.bufferEmail = self.mailTextField.text!
+        GlobalData.bufferName = self.nameTextField.text!
+        GlobalData.bufferPass = self.passTextField.text!
+        GlobalData.bufferAgainPass = self.againPasswordTextField.text!
     }
     
     func renderigSozlesmesi() {
@@ -65,6 +77,22 @@ class RegisterController: BaseController{
         self.kullaniciSozButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.kullaniciSozButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
         self.kullaniciSozButton.contentHorizontalAlignment = .left
+        
+        
+        if GlobalData.kullaniciSozlesmesiKey == "0" {
+            let kullaniciSozImage = UIImage(named: "check")
+            let kullanicitintedImage = kullaniciSozImage?.withRenderingMode(.alwaysTemplate)
+            kullaniciSozlesmesiImageView.image = kullanicitintedImage
+            kullaniciSozlesmesiImageView.tintColor = UIColor.gray.withAlphaComponent(0.7)
+            print("Kullanici Tapped")
+        }
+        else if GlobalData.kullaniciSozlesmesiKey == "1" {
+            let kullaniciSozImage = UIImage(named: "checked")
+            let kullanicitintedImage = kullaniciSozImage?.withRenderingMode(.alwaysTemplate)
+            kullaniciSozlesmesiImageView.image = kullanicitintedImage
+            kullaniciSozlesmesiImageView.tintColor = UIColor.gray.withAlphaComponent(0.7)
+            print("Kullanici Tapped")
+        }
     }
     
     
@@ -77,7 +105,11 @@ class RegisterController: BaseController{
     }
     
     @IBAction func kullaniciSozlesmesiAction(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "goToUserAgreement", sender: nil)
+        GlobalData.bufferEmail = self.mailTextField.text!
+        GlobalData.bufferName = self.nameTextField.text!
+        GlobalData.bufferPass = self.passTextField.text!
+        GlobalData.bufferAgainPass = self.againPasswordTextField.text!
     }
     
     
@@ -113,6 +145,10 @@ extension RegisterController : RegisterServiceDelegate {
             UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: response._id)
             performSegue(withIdentifier: "goToMainController", sender: nil)
+            GlobalData.bufferEmail = ""
+            GlobalData.bufferName = ""
+            GlobalData.bufferPass = ""
+            GlobalData.bufferAgainPass = ""
         }
         else{
             self.view.makeToast(response.Message)

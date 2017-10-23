@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         setInitialVC()
         configureOneSignal(options: launchOptions)
+        UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
 
@@ -64,7 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let userID = status.subscriptionStatus.userId {
                 UserPrefence.saveOneSignalId(id: userID)
                 print("userID = \(userID)")
-
             }
         })
         
@@ -77,7 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         print("SubscriptionStateChange: \n\(stateChanges)")
         
-        //The player id is inside stateChanges. But be careful, this value can be nil if the user has not granted you permission to send notifications.
         if let userID = stateChanges.to.userId {
             UserPrefence.saveOneSignalId(id: userID)
             print("userID = \(userID)")

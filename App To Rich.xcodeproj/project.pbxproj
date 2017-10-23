@@ -64,6 +64,7 @@
 		95DEBAA21F8933370093FBC8 /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DEBAA01F8933370093FBC8 /* Progress.xib */; };
 		95DEBAA31F8933370093FBC8 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBAA11F8933370093FBC8 /* Progress.swift */; };
 		95DEBAA61F8A21F70093FBC8 /* ColorChangeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */; };
+		95EB21D01F9DFD3800A7AF6B /* KullaniciSozlesmesiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB21CF1F9DFD3800A7AF6B /* KullaniciSozlesmesiController.swift */; };
 		95F990241F95180E00FF2C9B /* ShareSupporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F990231F95180E00FF2C9B /* ShareSupporter.swift */; };
 		A984557EB48F3A4A79676B63 /* Pods_App_To_Rich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		95DEBAA01F8933370093FBC8 /* Progress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
 		95DEBAA11F8933370093FBC8 /* Progress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		95DEBAA51F8A21F70093FBC8 /* ColorChangeImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChangeImageView.swift; sourceTree = "<group>"; };
+		95EB21CF1F9DFD3800A7AF6B /* KullaniciSozlesmesiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KullaniciSozlesmesiController.swift; sourceTree = "<group>"; };
 		95F990231F95180E00FF2C9B /* ShareSupporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSupporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -320,6 +322,7 @@
 		9500950F1F7B049E00D7EBEC /* Conroller Class */ = {
 			isa = PBXGroup;
 			children = (
+				95EB21CE1F9DFB6D00A7AF6B /* Kullanıcı Sözleşmesi Controller */,
 				95F990211F9516F700FF2C9B /* Adwerd Detail Controller */,
 				95F990201F9516E200FF2C9B /* My Profile Controller */,
 				95F9901F1F9516D900FF2C9B /* Welcome Controller */,
@@ -463,6 +466,14 @@
 				95DEBAA11F8933370093FBC8 /* Progress.swift */,
 			);
 			name = "Custom FrameWork's";
+			sourceTree = "<group>";
+		};
+		95EB21CE1F9DFB6D00A7AF6B /* Kullanıcı Sözleşmesi Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95EB21CF1F9DFD3800A7AF6B /* KullaniciSozlesmesiController.swift */,
+			);
+			name = "Kullanıcı Sözleşmesi Controller";
 			sourceTree = "<group>";
 		};
 		95F9901E1F9516CF00FF2C9B /* Main Page Controller */ = {
@@ -687,6 +698,7 @@
 				22C1DFF21F8FB4A100F26909 /* ForgotPasswordService.swift in Sources */,
 				223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */,
 				95DEBA6D1F88FDFD0093FBC8 /* ServicesSendModel.swift in Sources */,
+				95EB21D01F9DFD3800A7AF6B /* KullaniciSozlesmesiController.swift in Sources */,
 				22221CD81F7B0D0900788007 /* ChildUserCell.swift in Sources */,
 				95DEBA5A1F88E6390093FBC8 /* RightSideMenuController.swift in Sources */,
 				950095001F7B020E00D7EBEC /* AnimatedTextField.swift in Sources */,

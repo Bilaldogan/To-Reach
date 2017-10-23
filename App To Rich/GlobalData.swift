@@ -16,4 +16,10 @@ enum GlobalData : String {
     case staticURL = "http://yonetim.apptorich.com"
     
     
+    //Keys
+    static var kullaniciSozlesmesiKey : String = "0"
+    static var bufferName : String = ""
+    static var bufferEmail : String = ""
+    static var bufferPass : String = ""
+    static var bufferAgainPass : String = ""
 }

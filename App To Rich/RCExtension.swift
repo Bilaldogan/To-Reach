@@ -36,6 +36,10 @@ extension RegisterController {
                 self.view.makeToast("Lütfen şifrelerinizin aynı olduğundan emin olun")
                 //Popup çağır
             }
+            else if GlobalData.kullaniciSozlesmesiKey == "0"{
+                self.dismissKeyboard()
+                self.view.makeToast("Kullanıcı sözleşmesini kabul etmeniz gerekmektedir")
+            }
             else{
                 self.dismissKeyboard()
                 registerService.serviceDelegate = self
@@ -44,7 +48,13 @@ extension RegisterController {
                 sendModel.UserName = nameTextField.text!
                 sendModel.UserPass = passTextField.text!
                 sendModel.MacId = UIDevice.current.identifierForVendor!.uuidString
-                sendModel.OneSignalId = "111223123123"
+                if UserPrefence.getOneSignalId() != "" {
+                    sendModel.OneSignalId = UserPrefence.getOneSignalId()
+                }
+                else{
+                    sendModel.OneSignalId = "040404"
+                }
+                
                 print(self.referenceCode)
                 sendModel.RefNo = self.referenceCode
 
@@ -154,6 +164,20 @@ extension RegisterController {
         
     }
     
+    internal func bufferFunc() {
+        if GlobalData.bufferEmail != "" {
+            self.mailTextField.text = GlobalData.bufferEmail
+        }
+        if GlobalData.bufferName != "" {
+            self.nameTextField.text = GlobalData.bufferName
+        }
+        if GlobalData.bufferPass != ""{
+            self.passTextField.text = GlobalData.bufferPass
+        }
+        if GlobalData.bufferPass != ""{
+            self.againPasswordTextField.text = GlobalData.bufferAgainPass
+        }
+    }
     
     
 }

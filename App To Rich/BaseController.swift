@@ -39,6 +39,9 @@ class BaseController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     func leftTapped() {
        // self.presentLeftMenuViewController(nil)
     }
