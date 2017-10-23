@@ -23,7 +23,7 @@ class WelcomeController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.addTapped()
         texFieldReferenceCode.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
@@ -31,6 +31,20 @@ class WelcomeController: BaseController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private func addTapped(){
+        
+        let closePopUpGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.closeKeyboard))
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(closePopUpGesture)
+        
+        
+    }
+    func closeKeyboard(){
+        self.view.endEditing(true)
+    }
+    
+    
     @IBAction func facebookLoginAction(_ sender: Any) {
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile,.email ], viewController: self) { loginResult in

@@ -105,7 +105,7 @@ extension RegisterController : RegisterServiceDelegate {
     func getRegisterService(response: RegisterServiceResponseModel) {
        print(response)
         self.removeProgress(customView: self.view)
-        if response.Error == "false " {
+        if response.Error == "false" {
             UserPrefence.saveUserMail(mail: response.Email )
             UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: response._id)
