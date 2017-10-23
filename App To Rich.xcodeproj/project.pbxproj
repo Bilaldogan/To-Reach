@@ -24,6 +24,7 @@
 		22656DD01F9515DC00EBD4E9 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22656DCF1F9515DC00EBD4E9 /* TransferViewController.swift */; };
 		22694C2A1F8EE03A00140B4E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22694C291F8EE03A00140B4E /* CustomTextField.swift */; };
 		228F11E81F7C663A002E8C97 /* AdvertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F11E71F7C663A002E8C97 /* AdvertCell.swift */; };
+		22BD3AEC1F9C519800349F27 /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD3AEB1F9C519800349F27 /* TransferService.swift */; };
 		22C1DFEE1F8FB01600F26909 /* ForgotPasswordContller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C1DFED1F8FB01600F26909 /* ForgotPasswordContller.swift */; };
 		22C1DFF01F8FB0AB00F26909 /* FPCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C1DFEF1F8FB0AB00F26909 /* FPCExtension.swift */; };
 		22C1DFF21F8FB4A100F26909 /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C1DFF11F8FB4A100F26909 /* ForgotPasswordService.swift */; };
@@ -88,6 +89,7 @@
 		22656DCF1F9515DC00EBD4E9 /* TransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		22694C291F8EE03A00140B4E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		228F11E71F7C663A002E8C97 /* AdvertCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertCell.swift; sourceTree = "<group>"; };
+		22BD3AEB1F9C519800349F27 /* TransferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 		22C1DFED1F8FB01600F26909 /* ForgotPasswordContller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordContller.swift; sourceTree = "<group>"; };
 		22C1DFEF1F8FB0AB00F26909 /* FPCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPCExtension.swift; sourceTree = "<group>"; };
 		22C1DFF11F8FB4A100F26909 /* ForgotPasswordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 				225B7E681F8931C5004070B8 /* UserProfileService.swift */,
 				95DEBA7B1F8911EB0093FBC8 /* MainService.swift */,
 				95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */,
+				22BD3AEB1F9C519800349F27 /* TransferService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				9500950A1F7B033900D7EBEC /* RegexClass.swift in Sources */,
 				95DEBA751F8900160093FBC8 /* GlobalData.swift in Sources */,
 				95DEBA6A1F88FD600093FBC8 /* PostConnection.swift in Sources */,
+				22BD3AEC1F9C519800349F27 /* TransferService.swift in Sources */,
 				22C1DFF21F8FB4A100F26909 /* ForgotPasswordService.swift in Sources */,
 				223F85FA1F7AA7250073A455 /* AppDelegate.swift in Sources */,
 				95DEBA6D1F88FDFD0093FBC8 /* ServicesSendModel.swift in Sources */,

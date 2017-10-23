@@ -17,19 +17,33 @@ class PopUpTransferController: BaseController {
         self.blurView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         self.blurEffect(customView: self.blurView)
         self.popUpView.layer.cornerRadius = 10.0
-        
-        
-        
+        transferService.serviceDelegate = self
         //self.blurView.translatesAutoresizingMaskIntoConstraints = true
         
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        objectFrame = self.view.convert(okeyButton.frame, from: okeyButton.superview)
+        isScreenWillMove = true
+    }
     override func viewWillLayoutSubviews() {
         
     }
     
     override func viewDidLayoutSubviews() {
        // self.bottomLeftAndRightradiusSettings(viewToRound: okeyButton)
+    }
+    @IBAction func okeyTapped(_ sender: UIButton) {
+        self.showProgressView()
+        if hasConnectivity() {
+            var model = TransferServiceSendData()
+            model.ibanNo = lblIBAN.text!
+            model.gSM = lblGSM.text!
+            transferService.dispatchGetService(model: model)
+        } else {
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
+            //message Göster
+        }
     }
     
     private func addTapped(){
@@ -53,23 +67,30 @@ class PopUpTransferController: BaseController {
         });
     }
     
+    var transferService : TransferService = TransferService()
+
     
+    @IBOutlet weak var lblGSM: UITextField!
+    @IBOutlet weak var lblIBAN: UITextField!
     
-    
-    
-    internal func renderigEmail() {
-        emailImageView.imageViewRendering(imageNamed: "at", imageColor: ColorUtil.pinkColor)
-    }
-    
-    
-    
-    
-    @IBOutlet weak var emailImageView: UIImageView!
-    @IBOutlet weak var mailTextField: AnimatedTextInput!
     @IBOutlet weak var popUpView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var okeyButton: UIButton!
     @IBOutlet weak var blurView: UIView!
-    var forgotService = ForgotPasswordService()
+}
+extension PopUpTransferController : TransferServiceDelegate {
+    func getError() {
+        self.removeProgress(customView: self.view)
+    }
+    func getTrasnferService(status: String) {
+        self.removeProgress(customView: self.view)
+        if status == "true" {
+            self.view.makeToast("işleminiz başarı ile gerçekleştrildi.")
+        } else {
+            self.view.makeToast("işleminiz şuanda gerçekleştirilemiyor")
+        }
+
+
+    }
+
+    
 }

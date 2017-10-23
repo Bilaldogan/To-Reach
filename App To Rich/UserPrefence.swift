@@ -59,6 +59,16 @@ class UserPrefence {
     static func removeoneSignalUserId(){
         UserDefaults.standard.removeObject(forKey: oneSignalUserId)
     }
+    static func saveUserCoins(coins: String) {
+        self.userDefaults.set(coins, forKey: userCoins)
+    }
+    static func getUserCoins() -> Int {
+        if let coins = userDefaults.value(forKeyPath: userCoins) as? Int {
+            return coins
+        }
+        return 0
+    }
+    
    
     
     private static let mail = "userMail"
@@ -66,4 +76,5 @@ class UserPrefence {
     private static let isLoginned = "isLoginned"
     private static let userID = "userID"
     private static let oneSignalUserId = "oneSignalUserId"
+    private static let userCoins = "userCoins"
 }

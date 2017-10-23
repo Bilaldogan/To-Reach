@@ -33,3 +33,8 @@ struct ClickAdwerdSendData {
     var UserId : String = ""
     var AppId : String = ""
 }
+
+struct TransferServiceSendData {
+    var ibanNo = ""
+    var gSM = ""
+}

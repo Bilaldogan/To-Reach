@@ -41,3 +41,7 @@ protocol ForgotPasswordServiceDelegate {
     func getForgorService(status : String)
     func getError()
 }
+protocol TransferServiceDelegate {
+    func getTrasnferService(status: String)
+    func getError()
+}

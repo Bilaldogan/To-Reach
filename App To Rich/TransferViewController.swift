@@ -11,16 +11,51 @@ import UIKit
 class TransferViewController: BaseController {
 
     @IBOutlet weak var downView: UIView!
+    
+    var userprofileService : UserProfileService = UserProfileService()
+    
+    @IBOutlet weak var lblCoins: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        startProfileService()
         downView.layer.cornerRadius = 20.0
     }
     @IBAction func confirmButtonTapped(_ sender: Any) {
-        showTransferPopup()
+            showTransferPopup()
     }
+    
+    func startProfileService(){
+        self.userprofileService.serviceDelegate = self
+        self.showProgressView()
+        if hasConnectivity() {
+            self.userprofileService.dispatchGetService()
+        }
+        else {
+            self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
+        }
+    }
+    
    }
 
+extension TransferViewController: UserProfileServiceDelegate {
+    func getError() {
+        self.removeProgress(customView: self.view)
+        
+    }
+    func getUserProfileService(response: UserProfileServiceResponseModel) {
+        if response.error == "false" {
+            self.lblCoins.text = response.coins
+        }
+        else{
+            self.view.makeToast(response.message)
+        }
+        self.removeProgress(customView: self.view)
+        print(response)
+    }
 
+    
+}
 extension TransferViewController {
     
     func showTransferPopup(){

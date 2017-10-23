@@ -85,37 +85,5 @@ extension ForgotPasswordController {
       
     }
     
-    ///Keyboard Action Function'ss
-    internal func keyboardEvents(){
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(LoginController.dismissKeyboard))
-        self.view.addGestureRecognizer(tap)
-        
-    }
-    internal func keyboardWillShow(notification: NSNotification) {
-        if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= ( self.view.frame.height * 0.25 )
-            }
-        }
-    }
-    
-    //******
-    internal func keyboardWillHide(notification: NSNotification) {
-        if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == -self.view.frame.height * 0.25  {
-                self.view.frame.origin.y += ( self.view.frame.height * 0.25 )
-            }
-            
-        }
-    }
-    
-    internal func dismissKeyboard() {
-        view.endEditing(true)
-        self.fullBlackImage()
-    }
-    
+   
 }

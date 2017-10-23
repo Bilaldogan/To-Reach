@@ -26,7 +26,6 @@ class WelcomeController: BaseController {
         self.addTapped()
         texFieldReferenceCode.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

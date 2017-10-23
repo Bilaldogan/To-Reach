@@ -109,7 +109,8 @@ class MessagePopupController: BaseController {
 }
 extension MessagePopupController : ForgotPasswordServiceDelegate {
     func getError() {
-        
+        self.removeProgress(customView: self.view)
+
     }
     func getForgorService(status: String) {
         if status == "false" {
