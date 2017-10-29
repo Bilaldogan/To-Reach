@@ -28,6 +28,12 @@ class KullaniciSozlesmesiController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? RegisterController {
+            destinationVC.referenceCode = self.referenceCode
+        }
+    }
+    
     
     @IBAction func kabulEdiyorumAction(_ sender: Any) {
         GlobalData.kullaniciSozlesmesiKey = "1"
@@ -40,6 +46,6 @@ class KullaniciSozlesmesiController: UIViewController {
     }
     
     @IBOutlet weak var kullaniciSozlesmesiTextField: UITextView!
-    
+    var referenceCode = ""
 
 }

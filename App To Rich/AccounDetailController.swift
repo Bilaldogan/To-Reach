@@ -17,6 +17,7 @@ class AccounDetailController: BaseController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var refNoLabel: UILabel!
     @IBOutlet weak var coinLabel: UILabel!
+    @IBOutlet weak var yourConnectLabel: UILabel!
     
     
     var lastContentOffset: CGFloat = 0
@@ -88,14 +89,21 @@ extension AccounDetailController : UserProfileServiceDelegate {
         else{
             self.view.makeToast(response.message)
         }
-        for subUser in response.subProfiles {
-            print(subUser.error)
-            if subUser.error == "false"{
-                self.subUserArray.append(subUser)
-            }
+        
+        if response.subProfiles.count == 1 && response.subProfiles[0].error == "true" {
+            
+            self.yourConnectLabel.text = "Henüz bir bağlantın bulunmamaktadır"
         }
-        print(response.subProfiles)
-        self.tableView.reloadData()
+        else{
+            for subUser in response.subProfiles {
+                print(subUser.error)
+                if subUser.error == "false"{
+                    self.subUserArray.append(subUser)
+                }
+            }
+            print(response.subProfiles)
+            self.tableView.reloadData()
+        }
         
         self.removeProgress(customView: self.view)
         print(response)

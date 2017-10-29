@@ -86,6 +86,9 @@ extension WebViewController : ClickAdwerdServiceDelegate {
         if response.Error == "true" {
             self.view.makeToast(response.Message)
         }
+        else {
+            self.showNoticePopup(Title: "TEBRİKLER", Description: "PUANLARINIZ HESABINIZA BAŞARIYLA AKTARILDI")
+        }
         print("Response Model :", response)
         self.removeProgress(customView: self.view)
         self.clickAdwerdService.serviceDelegate = nil

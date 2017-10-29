@@ -44,6 +44,7 @@
 		950095141F7B086500D7EBEC /* imageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950095131F7B086500D7EBEC /* imageViewExtension.swift */; };
 		950095171F7B08CA00D7EBEC /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950095161F7B08CA00D7EBEC /* ColorUtil.swift */; };
 		9500951A1F7B0A8900D7EBEC /* LCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950095191F7B0A8900D7EBEC /* LCExtension.swift */; };
+		95AF69EC1FA3CAFA00D9B84D /* NoticePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF69EB1FA3CAFA00D9B84D /* NoticePopupController.swift */; };
 		95C28BF31F8EE18600C9F4AC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF21F8EE18600C9F4AC /* WebViewController.swift */; };
 		95C28BF51F8EE8CA00C9F4AC /* ClickAdwerdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */; };
 		95C28BF71F8EF5A700C9F4AC /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28BF61F8EF5A700C9F4AC /* UIButtonExtension.swift */; };
@@ -113,6 +114,7 @@
 		950095131F7B086500D7EBEC /* imageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewExtension.swift; sourceTree = "<group>"; };
 		950095161F7B08CA00D7EBEC /* ColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		950095191F7B0A8900D7EBEC /* LCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCExtension.swift; sourceTree = "<group>"; };
+		95AF69EB1FA3CAFA00D9B84D /* NoticePopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticePopupController.swift; sourceTree = "<group>"; };
 		95C28BF21F8EE18600C9F4AC /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickAdwerdService.swift; sourceTree = "<group>"; };
 		95C28BF61F8EF5A700C9F4AC /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 			children = (
 				95C28BF91F8FC6F600C9F4AC /* MessagePopupController.swift */,
 				224A41031F9575FB00D79BDB /* PopUpTrasnferController.swift */,
+				95AF69EB1FA3CAFA00D9B84D /* NoticePopupController.swift */,
 			);
 			name = "Popup Controller";
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 			files = (
 				224A963D1F96596E00837AB1 /* AccounDetailController.swift in Sources */,
 				224A963B1F96594800837AB1 /* MainController.swift in Sources */,
+				95AF69EC1FA3CAFA00D9B84D /* NoticePopupController.swift in Sources */,
 				22C1DFEE1F8FB01600F26909 /* ForgotPasswordContller.swift in Sources */,
 				950095141F7B086500D7EBEC /* imageViewExtension.swift in Sources */,
 				950095041F7B020E00D7EBEC /* AnimatedTextView.swift in Sources */,

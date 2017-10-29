@@ -15,7 +15,7 @@ class LoginController: BaseController{
         self.addTappedTo()
         self.fullBlackImage()
         self.textFieldsProperties()
-      
+        self.configure()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -60,6 +60,7 @@ class LoginController: BaseController{
         self.showMessagePopup()
     }
     
+    @IBOutlet weak var backArrowButton: UIButton!
     @IBOutlet weak var gsmImageView: UIImageView!
     @IBOutlet weak var emailImageView: UIImageView!
     
@@ -86,6 +87,7 @@ extension LoginController: LoginServiceDelegate {
             UserPrefence.saveUserMail(mail: response.Email )
             UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: response._id)
+            UserPrefence.saveRefNo(id: response.RefNo)
 
             performSegue(withIdentifier: "loginTorRootVC", sender: nil)
         } else {

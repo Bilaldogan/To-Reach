@@ -42,6 +42,7 @@ struct MainServiceResponseModel {
     var adwerdList : [MainServiceResponseList] = []
     var error : String = ""
     var message : String = ""
+    var Price : String = ""
 }
 
 struct MainServiceResponseList {

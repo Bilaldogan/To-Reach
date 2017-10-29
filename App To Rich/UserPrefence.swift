@@ -69,8 +69,21 @@ class UserPrefence {
         return 0
     }
     
-   
+    static func saveRefNo(id: String) {
+        self.userDefaults.set(id, forKey: refNo)
+    }
+    static func getRefNo() -> String {
+        if let id = userDefaults.value(forKeyPath: refNo) as? String {
+            return id
+        }
+        return ""
+    }
+    static func removeRefNo(){
+        UserDefaults.standard.removeObject(forKey: refNo)
+    }
     
+   
+    private static let refNo = "refNo"
     private static let mail = "userMail"
     private static let password = "userPassword"
     private static let isLoginned = "isLoginned"

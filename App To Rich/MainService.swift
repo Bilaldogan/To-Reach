@@ -106,6 +106,13 @@ class MainService : ConnectionDelegate
             }
             mainResponseData.error = err
         }
+        if path4["Price"].element?.text != nil{
+            guard let Price = path4["Price"].element?.text else {
+                print("registerResponseData Price Error...")
+                return
+            }
+            mainResponseData.Price = Price
+        }
 
         
         if  self.serviceDelegate != nil {

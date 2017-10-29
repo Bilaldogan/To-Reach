@@ -147,6 +147,7 @@ class RightSideMenuController: BaseController,UITableViewDataSource, UITableView
                 UserPrefence.removeUserId()
                 UserPrefence.removeUserMail()
                 UserPrefence.removeoneSignalUserId()
+                UserPrefence.removeRefNo()
                 self.window = UIWindow(frame: UIScreen.main.bounds)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeControllerID")

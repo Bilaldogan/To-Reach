@@ -42,6 +42,9 @@ class BaseController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        self.removeProgress(customView: self.view)
+    }
     func leftTapped() {
        // self.presentLeftMenuViewController(nil)
     }
@@ -59,11 +62,48 @@ class BaseController: UIViewController {
     
     }
     
+    func calculatePopupFrame() -> CGRect{
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height - (self.navigationController?.navigationBar.intrinsicContentSize.height)! - UIApplication.shared.statusBarFrame.height
+        let rect = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        return rect
+    }
     
     func calculateTableCellHeight(rate : Double) -> Double {
         let screenSize = UIScreen.main.bounds
         let screenWidth = screenSize.width
         return Double(screenWidth) * rate
+    }
+    
+    func configureMainPageNovBar(amount: String) {
+        let button = UIButton.init(type: .custom)
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        let imageView = UIImageView(frame: CGRect(x: 5, y: 5, width: 25, height: 25))
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = UIColor.clear
+        imageView.image = UIImage(named: "money")
+        let label = UILabel(frame: CGRect(x: 35, y: 0, width: 50, height: 35))
+        label.text = amount
+        label.baselineAdjustment = .alignCenters
+        label.textColor = UIColor.white
+        let buttonView = UIView(frame: CGRect(x: 0, y: 0, width: 85, height: 35))
+        button.frame = buttonView.frame
+        button.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        button.layer.cornerRadius = 5.0
+        button.layer.masksToBounds = true
+        buttonView.addSubview(button)
+        buttonView.addSubview(imageView)
+        buttonView.addSubview(label)
+        let barButton = UIBarButtonItem.init(customView: buttonView)
+        self.navigationItem.leftBarButtonItem = barButton
+    }
+    
+    func buttonPressed(){
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let myProfileVC = storyboard.instantiateViewController(withIdentifier: "AccounDetailControllerID") as! AccounDetailController
+        let obj : UINavigationController = self.sideMenuViewController?.contentViewController as! UINavigationController
+        obj .pushViewController(myProfileVC, animated: true)
+        self.sideMenuViewController!.hideMenuViewController()
     }
     
     func configureNavigationBar() {
@@ -137,6 +177,26 @@ class BaseController: UIViewController {
         customView.addSubview(blurEffectView)
     }
     
+    //Show popup
+    func showNoticePopup(Title item: String , Description text: String)
+    {
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoticePopupControllerID") as! NoticePopupController
+            popOverVC.descText = text
+            popOverVC.titleText = item
+            popOverVC.view.tag = 101
+            self.addChildViewController(popOverVC)
+            popOverVC.view.frame = self.calculatePopupFrame()
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMove(toParentViewController: self)
+            
+            popOverVC.popUpView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            popOverVC.popUpView.alpha = 0.0;
+            UIView.animate(withDuration: 0.35, animations: {
+                popOverVC.popUpView.alpha = 1.0
+                popOverVC.popUpView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            });
+    }
+    
     
     //Show popup
     func showMessagePopup()
@@ -200,6 +260,31 @@ class BaseController: UIViewController {
             
         }
     }
+    
+    //Layer Settings 
+    func bottomRightradiusSettings(viewToRound: UIButton){
+        let path = UIBezierPath(roundedRect:viewToRound.bounds,
+                                byRoundingCorners:[.bottomRight],
+                                cornerRadii: CGSize(width: 10, height:  10))
+        
+        let maskLayer = CAShapeLayer()
+        
+        maskLayer.path = path.cgPath
+        viewToRound.layer.mask = maskLayer
+        
+    }
+    func bottomLeftradiusSettings(viewToRound: UIButton){
+        let path = UIBezierPath(roundedRect:viewToRound.bounds,
+                                byRoundingCorners:[.bottomLeft],
+                                cornerRadii : CGSize(width: 10, height:  10))
+        
+        let maskLayer = CAShapeLayer()
+        
+        maskLayer.path = path.cgPath
+        viewToRound.layer.mask = maskLayer
+        
+    }
+   
     
     //******
     func keyboardWillHide(notification: NSNotification) {

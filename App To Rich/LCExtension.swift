@@ -51,6 +51,9 @@ extension LoginController {
         }
     }
     
+    func configure(){
+        self.backArrowButton.buttonImageRendering(imageNamed: "ok-sol", imageColor: UIColor.white)
+    }
     
     //TextField Animated Function'ss
     internal func renderigKullanici() {
@@ -107,8 +110,8 @@ extension LoginController {
         passTextField.style.marginPosition = self.gsmImageView.frame.width
         passTextField.contentInset = UIEdgeInsetsMake(22.5, 0, 0, 0)
         
-        passTextField.addResponsiveFont(fontSize: 13)
-        mailTextField.addResponsiveFont(fontSize: 13)
+        passTextField.addResponsiveFont(fontSize: 15)
+        mailTextField.addResponsiveFont(fontSize: 15)
         
         mailTextField.style.placeholderSelfPosition = 22.5 + (self.emailImageView.frame.height / 4)
         

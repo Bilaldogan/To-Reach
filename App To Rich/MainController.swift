@@ -28,6 +28,7 @@ class MainController: BaseController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,10 +95,12 @@ extension MainController : MainServiceDelegate {
     func getMainService(response: MainServiceResponseModel) {
         print(response)
         if response.error == "false" {
+        self.configureMainPageNovBar(amount: response.Price)
         self.adwerdListResponse = response
         self.tableView.reloadData()
         self.removeProgress(customView: self.view)
         } else {
+            self.removeProgress(customView: self.view)
             self.view.makeToast(response.message)
         }
     }

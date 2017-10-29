@@ -18,7 +18,6 @@ class PopUpTransferController: BaseController {
         self.blurEffect(customView: self.blurView)
         self.popUpView.layer.cornerRadius = 10.0
         transferService.serviceDelegate = self
-        //self.blurView.translatesAutoresizingMaskIntoConstraints = true
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -29,18 +28,34 @@ class PopUpTransferController: BaseController {
     override func viewWillLayoutSubviews() {
         
     }
-    
+   
     override func viewDidLayoutSubviews() {
-       // self.bottomLeftAndRightradiusSettings(viewToRound: okeyButton)
+        //self.bottomLeftAndRightradiusSettings(viewToRound: okeyButton)
     }
+    
     @IBAction func okeyTapped(_ sender: UIButton) {
-        self.showProgressView()
-        if hasConnectivity() {
-            var model = TransferServiceSendData()
-            model.ibanNo = lblIBAN.text!
-            model.gSM = lblGSM.text!
-            transferService.dispatchGetService(model: model)
+         if hasConnectivity() {
+            if amountTextField.text?.isEmpty == false || lblGSM.text?.isEmpty == false || lblIBAN.text?.isEmpty == false {
+                if self.userPrice >= Int(amountTextField.text!)! {
+                    self.showProgressView()
+                    var model = TransferServiceSendData()
+                    model.amount = amountTextField.text!
+                    model.ibanNo = lblIBAN.text!
+                    model.gSM = lblGSM.text!
+                    transferService.dispatchGetService(model: model)
+                }
+                else{
+                    self.view.endEditing(true)
+                    self.view.makeToast("Çekmek istediğiniz tutar hesabınızda yok")
+                }
+            }
+            else{
+                self.view.endEditing(true)
+                self.self.view.makeToast("Lütfen bilgileri eksiksiz doldurunuz")
+            }
+            
         } else {
+            self.view.endEditing(true)
             self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
             //message Göster
         }
@@ -49,10 +64,9 @@ class PopUpTransferController: BaseController {
     private func addTapped(){
         
         let closePopUpGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.closePopUp))
-        self.view.isUserInteractionEnabled = true
-        self.view.addGestureRecognizer(closePopUpGesture)
+        self.blurView.isUserInteractionEnabled = true
+        self.blurView.addGestureRecognizer(closePopUpGesture)
         
-       
     }
     func closePopUp(){
         
@@ -68,11 +82,12 @@ class PopUpTransferController: BaseController {
     }
     
     var transferService : TransferService = TransferService()
-
+    var userPrice = 0
     
     @IBOutlet weak var lblGSM: UITextField!
     @IBOutlet weak var lblIBAN: UITextField!
     
+    @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var okeyButton: UIButton!
     @IBOutlet weak var blurView: UIView!
@@ -85,6 +100,11 @@ extension PopUpTransferController : TransferServiceDelegate {
         self.removeProgress(customView: self.view)
         if status == "true" {
             self.view.makeToast("işleminiz başarı ile gerçekleştrildi.")
+            let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.closePopUp()
+            }
+            
         } else {
             self.view.makeToast("işleminiz şuanda gerçekleştirilemiyor")
         }

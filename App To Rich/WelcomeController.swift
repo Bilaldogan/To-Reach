@@ -47,7 +47,6 @@ class WelcomeController: BaseController {
         self.view.endEditing(true)
     }
     
-    
     @IBAction func facebookLoginAction(_ sender: Any) {
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile,.email ], viewController: self) { loginResult in
@@ -87,7 +86,13 @@ class WelcomeController: BaseController {
                     sendModel.UserEmail = userEmail
                     sendModel.UserName = userName
                     sendModel.MacId = UIDevice.current.identifierForVendor!.uuidString
-                    sendModel.OneSignalId = UserPrefence.getOneSignalId()
+                    if UserPrefence.getOneSignalId() != "" {
+                        sendModel.OneSignalId = UserPrefence.getOneSignalId()
+                    }
+                    else{
+                        sendModel.OneSignalId = "040404"
+                    }
+                    
                     sendModel.RefNo = self.texFieldReferenceCode.text!
                     sendModel.FaceBookId = facebookId
                     
@@ -151,6 +156,7 @@ extension WelcomeController : RegisterServiceDelegate {
     func getRegisterService(response: RegisterServiceResponseModel) {
         self.removeProgress(customView: self.view)
         if response.Error == "false" {
+            UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: response._id)
             performSegue(withIdentifier: "goToMainController", sender: nil)
         }

@@ -25,6 +25,7 @@ class TransferService : ConnectionDelegate
         soapMessage += "<UserId>\(UserPrefence.getUserId())</UserId>"
         soapMessage += "<Iban>\(model.ibanNo)</Iban>"
         soapMessage += "<Gsm>\(model.gSM)</Gsm>"
+        soapMessage += "<Price>\(model.amount)</Price>"
         soapMessage += "</UserMoneyService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         

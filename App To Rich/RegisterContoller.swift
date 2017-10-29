@@ -17,6 +17,8 @@ class RegisterController: BaseController{
         self.renderigSozlesmesi()
         self.textFieldsProperties()
         self.bufferFunc()
+        self.configure()
+        print(referenceCode)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -113,6 +115,7 @@ class RegisterController: BaseController{
     }
     
     
+    @IBOutlet weak var backArrowButton: UIButton!
     @IBOutlet weak var kullaniciSozlesmesiImageView: UIImageView!
     @IBOutlet weak var againPassImageView: UIImageView!
     @IBOutlet weak var girisYapButton: UIButton!
@@ -144,11 +147,13 @@ extension RegisterController : RegisterServiceDelegate {
             UserPrefence.saveUserMail(mail: response.Email )
             UserPrefence.saveUserLoginStatus(isLogin: true)
             UserPrefence.saveUserId(id: response._id)
+            UserPrefence.saveRefNo(id: response.RefNo)
             performSegue(withIdentifier: "goToMainController", sender: nil)
             GlobalData.bufferEmail = ""
             GlobalData.bufferName = ""
             GlobalData.bufferPass = ""
             GlobalData.bufferAgainPass = ""
+            GlobalData.kullaniciSozlesmesiKey = ""
         }
         else{
             self.view.makeToast(response.Message)

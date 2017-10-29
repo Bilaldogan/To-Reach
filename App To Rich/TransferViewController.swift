@@ -22,7 +22,15 @@ class TransferViewController: BaseController {
         downView.layer.cornerRadius = 20.0
     }
     @IBAction func confirmButtonTapped(_ sender: Any) {
-            showTransferPopup()
+//        if Int(Double(self.lblCoins.text!)!) < 100000 {
+//            self.view.makeToast("Transfer edebilmek için yeterli puanınız bulunmamaktadır.")
+//        }
+//        else{
+//            showTransferPopup()
+//        }
+        
+        showTransferPopup()
+        
     }
     
     func startProfileService(){
@@ -62,8 +70,9 @@ extension TransferViewController {
         DispatchQueue.main.async {
             let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpTrasferController") as! PopUpTransferController
             popOverVC.view.tag = 101
+            popOverVC.userPrice = Int(Double(self.lblCoins.text!)!)
             self.addChildViewController(popOverVC)
-            popOverVC.view.frame = self.view.frame
+            popOverVC.view.frame = self.calculatePopupFrame()
             self.view.addSubview(popOverVC.view)
             popOverVC.didMove(toParentViewController: self)
             

@@ -73,7 +73,9 @@ extension RegisterController {
         }
     }
     
-    
+    func configure(){
+        self.backArrowButton.buttonImageRendering(imageNamed: "ok-sol", imageColor: UIColor.white)
+    }
     //TextField Animated Function'ss
     internal func renderigKullanici() {
         isimIconUIimageView.imageViewRendering(imageNamed: "kullanici", imageColor: ColorUtil.pinkColor)
@@ -153,13 +155,13 @@ extension RegisterController {
         againPasswordTextField.style.marginPosition = self.againPassImageView.frame.width
         againPasswordTextField.contentInset = UIEdgeInsetsMake(22.5, 0, 0, 0)
         
-        nameTextField.addResponsiveFont(fontSize: 13)
+        nameTextField.addResponsiveFont(fontSize: 15)
         nameTextField.style.placeholderSelfPosition = 22.5 + (self.isimIconUIimageView.frame.height / 4)
-        passTextField.addResponsiveFont(fontSize: 13)
+        passTextField.addResponsiveFont(fontSize: 15)
         passTextField.style.placeholderSelfPosition = 22.5 + (self.againPassImageView.frame.height / 4)
-        mailTextField.addResponsiveFont(fontSize: 13)
+        mailTextField.addResponsiveFont(fontSize: 15)
         mailTextField.style.placeholderSelfPosition = 22.5 + (self.againPassImageView.frame.height / 4)
-        againPasswordTextField.addResponsiveFont(fontSize: 13)
+        againPasswordTextField.addResponsiveFont(fontSize: 15)
         againPasswordTextField.style.placeholderSelfPosition = 22.5 + (self.againPassImageView.frame.height / 4)
         
     }
@@ -179,5 +181,10 @@ extension RegisterController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? KullaniciSozlesmesiController {
+            destinationVC.referenceCode = self.referenceCode
+        }
+    }
     
 }

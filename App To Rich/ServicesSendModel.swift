@@ -35,6 +35,7 @@ struct ClickAdwerdSendData {
 }
 
 struct TransferServiceSendData {
+    var amount = ""
     var ibanNo = ""
     var gSM = ""
 }

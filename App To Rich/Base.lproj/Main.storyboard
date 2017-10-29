@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Qr-ng-M5i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Qr-ng-M5i">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -31,10 +32,10 @@
                         <viewControllerLayoutGuide type="bottom" id="XpB-2C-TVy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gY4-fC-uvl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="18" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6mB-aC-Bua">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="116" sectionHeaderHeight="18" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="6mB-aC-Bua">
                                 <rect key="frame" x="0.0" y="90.5" width="320" height="413.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -42,7 +43,7 @@
                                         <rect key="frame" x="0.0" y="18" width="320" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FUk-l4-lz9" id="geM-vN-cvj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-1K-YNm">
@@ -72,21 +73,31 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tey-m5-t42">
                                                     <rect key="frame" x="97" y="58" width="128" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     </variation>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nq4-P7-YLE">
+                                                    <rect key="frame" x="0.0" y="114.5" width="320" height="1"/>
+                                                    <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="tW2-1s-IwF"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9df-b8-gP1" secondAttribute="trailing" id="24a-rt-tnt"/>
                                                 <constraint firstItem="vhR-6R-BqF" firstAttribute="centerY" secondItem="9nc-Sh-mzq" secondAttribute="centerY" id="2a8-SB-ZLq"/>
+                                                <constraint firstAttribute="trailing" secondItem="nq4-P7-YLE" secondAttribute="trailing" id="3Gi-MO-6b3"/>
                                                 <constraint firstItem="vhR-6R-BqF" firstAttribute="centerX" secondItem="9nc-Sh-mzq" secondAttribute="centerX" id="97y-Zv-wXc"/>
                                                 <constraint firstItem="9df-b8-gP1" firstAttribute="centerY" secondItem="geM-vN-cvj" secondAttribute="centerY" id="DmB-UL-eQD"/>
+                                                <constraint firstAttribute="bottom" secondItem="nq4-P7-YLE" secondAttribute="bottom" id="LWR-R5-REm"/>
                                                 <constraint firstItem="vhR-6R-BqF" firstAttribute="width" secondItem="9nc-Sh-mzq" secondAttribute="width" multiplier="0.5" id="MYx-Dl-KOh"/>
                                                 <constraint firstItem="9df-b8-gP1" firstAttribute="height" secondItem="geM-vN-cvj" secondAttribute="height" multiplier="0.2" id="REh-zn-6on"/>
+                                                <constraint firstItem="nq4-P7-YLE" firstAttribute="leading" secondItem="geM-vN-cvj" secondAttribute="leading" id="SOx-fg-Rw9"/>
                                                 <constraint firstItem="0cX-1K-YNm" firstAttribute="centerY" secondItem="geM-vN-cvj" secondAttribute="centerY" id="TXl-V9-iNf"/>
                                                 <constraint firstItem="9nc-Sh-mzq" firstAttribute="centerY" secondItem="geM-vN-cvj" secondAttribute="centerY" id="U48-DP-cH1"/>
                                                 <constraint firstItem="0cX-1K-YNm" firstAttribute="leading" secondItem="geM-vN-cvj" secondAttribute="leadingMargin" id="aeg-NV-fwH"/>
@@ -155,7 +166,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="ZyC-hq-nhb"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ZyC-hq-nhb"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="6mB-aC-Bua" id="8z6-wZ-hz2"/>
@@ -175,7 +186,7 @@
                         <viewControllerLayoutGuide type="bottom" id="h3b-1C-zrd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Buq-Cy-2f8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="54" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rhj-4M-H83">
@@ -203,13 +214,19 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAĞLANTILARIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id1-Gh-rqC">
-                                            <rect key="frame" x="50" y="388.5" width="220" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                            <color key="textColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAĞLANTILARIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Id1-Gh-rqC">
+                                            <rect key="frame" x="0.0" y="395" width="320" height="25"/>
+                                            <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="b3q-yh-8HU">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                </constraint>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=regular">
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             </variation>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold2" translatesAutoresizingMaskIntoConstraints="NO" id="adV-Ht-pFe">
@@ -333,12 +350,12 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="CdN-a8-UDE" secondAttribute="trailing" constant="50" id="2EQ-SZ-GGJ"/>
                                         <constraint firstItem="eNm-5v-hOT" firstAttribute="centerY" secondItem="adV-Ht-pFe" secondAttribute="centerY" id="2Pn-39-VOn"/>
-                                        <constraint firstAttribute="trailing" secondItem="Id1-Gh-rqC" secondAttribute="trailing" constant="50" id="5gh-Jv-qX4"/>
+                                        <constraint firstAttribute="trailing" secondItem="Id1-Gh-rqC" secondAttribute="trailing" id="5gh-Jv-qX4"/>
                                         <constraint firstItem="5Qn-te-mZD" firstAttribute="leading" secondItem="nKm-6T-5MP" secondAttribute="leading" constant="100" id="8Qf-8B-yUp"/>
                                         <constraint firstItem="CdN-a8-UDE" firstAttribute="leading" secondItem="nKm-6T-5MP" secondAttribute="leading" constant="50" id="9bl-Ve-NUn"/>
                                         <constraint firstItem="iew-jB-ap6" firstAttribute="width" secondItem="nKm-6T-5MP" secondAttribute="width" multiplier="0.7" id="9l2-jD-whJ"/>
                                         <constraint firstItem="iew-jB-ap6" firstAttribute="height" secondItem="nKm-6T-5MP" secondAttribute="height" multiplier="0.38" id="G00-hw-1kA"/>
-                                        <constraint firstItem="Id1-Gh-rqC" firstAttribute="leading" secondItem="nKm-6T-5MP" secondAttribute="leading" constant="50" id="GBM-mH-y9h"/>
+                                        <constraint firstItem="Id1-Gh-rqC" firstAttribute="leading" secondItem="nKm-6T-5MP" secondAttribute="leading" id="GBM-mH-y9h"/>
                                         <constraint firstItem="CdN-a8-UDE" firstAttribute="top" secondItem="nKm-6T-5MP" secondAttribute="top" constant="15" id="LNj-O3-TXe"/>
                                         <constraint firstItem="mlX-e4-mma" firstAttribute="height" secondItem="THj-sh-hFw" secondAttribute="height" multiplier="0.5" id="LqO-2w-Rgh"/>
                                         <constraint firstAttribute="trailing" secondItem="5Qn-te-mZD" secondAttribute="trailing" constant="100" id="OH2-5R-yzZ"/>
@@ -352,7 +369,7 @@
                                         <constraint firstItem="mlX-e4-mma" firstAttribute="leading" secondItem="iew-jB-ap6" secondAttribute="trailing" constant="5" id="fLb-Kq-85C"/>
                                         <constraint firstItem="adV-Ht-pFe" firstAttribute="centerX" secondItem="nKm-6T-5MP" secondAttribute="centerX" id="fpf-u9-bQV"/>
                                         <constraint firstItem="iew-jB-ap6" firstAttribute="centerX" secondItem="nKm-6T-5MP" secondAttribute="centerX" multiplier="0.9" id="gEn-vq-MMt"/>
-                                        <constraint firstAttribute="bottom" secondItem="Id1-Gh-rqC" secondAttribute="bottom" constant="10" id="ggg-JR-PEb"/>
+                                        <constraint firstAttribute="bottom" secondItem="Id1-Gh-rqC" secondAttribute="bottom" id="ggg-JR-PEb"/>
                                         <constraint firstItem="5Qn-te-mZD" firstAttribute="top" secondItem="iew-jB-ap6" secondAttribute="bottom" constant="10" id="sYj-a7-iKO"/>
                                         <constraint firstItem="mlX-e4-mma" firstAttribute="centerY" secondItem="THj-sh-hFw" secondAttribute="centerY" id="xSz-zV-gzQ"/>
                                         <constraint firstItem="eNm-5v-hOT" firstAttribute="height" secondItem="adV-Ht-pFe" secondAttribute="height" multiplier="0.6" id="ycS-WN-LSW"/>
@@ -360,10 +377,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="childUserCell" rowHeight="109" id="0IX-en-FG6" customClass="ChildUserCell" customModule="App_To_Rich" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="476" width="320" height="109"/>
+                                        <rect key="frame" x="0.0" y="475.5" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0IX-en-FG6" id="cUb-pN-EVi">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="108.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Z70-FX-vgT">
@@ -439,6 +456,7 @@
                         <outlet property="refNoLabel" destination="THj-sh-hFw" id="6SZ-YR-Q6k"/>
                         <outlet property="shareButton" destination="mlX-e4-mma" id="cVU-rJ-vIg"/>
                         <outlet property="tableView" destination="Rhj-4M-H83" id="XrA-4A-wN0"/>
+                        <outlet property="yourConnectLabel" destination="Id1-Gh-rqC" id="AAX-Gy-mXo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bB-GD-Ah4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,11 +472,12 @@
                         <viewControllerLayoutGuide type="bottom" id="3af-TD-LBZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UiC-gZ-AwM">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coinlerinizi nakite çevirmek için aşağıdaki adımları uygulayın" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9GX-DB-JgP">
-                                <rect key="frame" x="66" y="90.5" width="188" height="232.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9GX-DB-JgP">
+                                <rect key="frame" x="16" y="90.5" width="288" height="232.5"/>
+                                <string key="text">1000 puan 1 TL’ye denk gelmekte ve puan transferi sadece 100 TL üzeri puan ve kişinin kimlik bilgilerinin doğrulanmasından sonra kişinin hesabına aktarılacaktır. Transfer 3 iş günü içerisinde yapılacaktır. Puan Transferi için aşağıdaki butona tıklayıp gerekli yerleri doldurmanız yeterli olacaktır.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -467,10 +486,10 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKW-aj-GtS">
-                                <rect key="frame" x="16" y="333" width="288" height="151"/>
+                                <rect key="frame" x="24" y="333" width="272" height="151"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkG-LC-sLP">
-                                        <rect key="frame" x="179" y="57" width="52" height="52.5"/>
+                                        <rect key="frame" x="170" y="57" width="52" height="52.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VkG-LC-sLP" secondAttribute="height" id="y6I-fR-nbT"/>
@@ -482,7 +501,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coin Sayısı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fE6-OW-OA4">
-                                        <rect key="frame" x="0.0" y="38" width="158.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="38" width="149.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -491,7 +510,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="few-zk-PNw">
-                                        <rect key="frame" x="0.5" y="76" width="158.5" height="30"/>
+                                        <rect key="frame" x="0.5" y="76" width="149.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -500,7 +519,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="HuX-Gf-DB9">
-                                        <rect key="frame" x="213" y="85" width="70" height="14.5"/>
+                                        <rect key="frame" x="204" y="85" width="63" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -509,7 +528,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Et" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-8P-P8K">
-                                        <rect key="frame" x="242" y="101.5" width="12" height="14"/>
+                                        <rect key="frame" x="230" y="101.5" width="12" height="14"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -558,15 +577,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="DWN-1i-cl1" secondAttribute="trailing" id="03y-nR-t9w"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9GX-DB-JgP" secondAttribute="trailing" constant="50" id="6oN-UF-jOP"/>
+                            <constraint firstItem="9GX-DB-JgP" firstAttribute="width" secondItem="UiC-gZ-AwM" secondAttribute="width" multiplier="0.9" id="1hf-Wr-b8g"/>
                             <constraint firstItem="DWN-1i-cl1" firstAttribute="leading" secondItem="UiC-gZ-AwM" secondAttribute="leading" id="95Y-Fd-8np"/>
+                            <constraint firstItem="RKW-aj-GtS" firstAttribute="centerX" secondItem="UiC-gZ-AwM" secondAttribute="centerX" id="DiG-RW-e8a"/>
                             <constraint firstItem="3af-TD-LBZ" firstAttribute="top" secondItem="RKW-aj-GtS" secondAttribute="bottom" constant="20" id="Dzk-gi-rqQ"/>
                             <constraint firstItem="DWN-1i-cl1" firstAttribute="top" secondItem="Gnh-7d-oeQ" secondAttribute="bottom" id="HYs-M4-D5H"/>
                             <constraint firstItem="RKW-aj-GtS" firstAttribute="height" secondItem="UiC-gZ-AwM" secondAttribute="height" multiplier="0.3" id="NeI-Du-Sbf"/>
                             <constraint firstItem="DWN-1i-cl1" firstAttribute="height" secondItem="UiC-gZ-AwM" secondAttribute="height" multiplier="0.16" id="Qgc-Lb-CNL"/>
-                            <constraint firstItem="9GX-DB-JgP" firstAttribute="leading" secondItem="UiC-gZ-AwM" secondAttribute="leadingMargin" constant="50" id="VWf-UZ-nPC"/>
-                            <constraint firstItem="RKW-aj-GtS" firstAttribute="leading" secondItem="UiC-gZ-AwM" secondAttribute="leadingMargin" id="W3Y-3q-hum"/>
-                            <constraint firstItem="RKW-aj-GtS" firstAttribute="trailing" secondItem="UiC-gZ-AwM" secondAttribute="trailingMargin" id="XYb-eu-bDx"/>
+                            <constraint firstItem="9GX-DB-JgP" firstAttribute="centerX" secondItem="UiC-gZ-AwM" secondAttribute="centerX" id="ZBg-3t-6e2"/>
+                            <constraint firstItem="RKW-aj-GtS" firstAttribute="width" secondItem="UiC-gZ-AwM" secondAttribute="width" multiplier="0.85" id="eIw-DL-U47"/>
                             <constraint firstItem="9GX-DB-JgP" firstAttribute="top" secondItem="DWN-1i-cl1" secondAttribute="bottom" constant="10" id="jf0-Vn-seI"/>
                             <constraint firstItem="RKW-aj-GtS" firstAttribute="top" secondItem="9GX-DB-JgP" secondAttribute="bottom" constant="10" id="pTt-8x-j6y"/>
                         </constraints>
@@ -580,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yp2-WR-zwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3889.8550724637685" y="447.554347826087"/>
+            <point key="canvasLocation" x="3888.75" y="446.83098591549299"/>
         </scene>
         <!--Pop Up Transfer Controller-->
         <scene sceneID="DY9-Il-BsZ">
@@ -594,27 +613,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72k-Rn-rb8">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72k-Rn-rb8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5J-s7-WG1">
-                                <rect key="frame" x="32" y="142.5" width="256" height="284"/>
+                                <rect key="frame" x="32" y="114" width="256" height="341"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IBAN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9k-bq-gdI">
-                                        <rect key="frame" x="25" y="147" width="205.5" height="43"/>
+                                        <rect key="frame" x="25" y="144.5" width="205.5" height="43"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GSM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYQ-dH-XZ4">
-                                        <rect key="frame" x="25" y="92.5" width="205.5" height="42.5"/>
+                                        <rect key="frame" x="25" y="89.5" width="205.5" height="43"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6h-pv-TKr">
-                                        <rect key="frame" x="68.5" y="241" width="119" height="35"/>
+                                        <rect key="frame" x="69.5" y="298.5" width="117" height="34.5"/>
                                         <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="G6h-pv-TKr" secondAttribute="height" multiplier="188:55" id="Gmb-2D-dws"/>
@@ -637,23 +656,33 @@
                                         <color key="textColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Çekmek istediğiniz miktar ?" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="4oa-Af-Dhf">
+                                        <rect key="frame" x="25" y="199.5" width="205.5" height="43"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="width" secondItem="tYQ-dH-XZ4" secondAttribute="width" id="0Sc-LX-cID"/>
-                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="centerY" secondItem="B5J-s7-WG1" secondAttribute="centerY" multiplier="0.8" id="3VJ-jz-nck"/>
+                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="centerY" secondItem="B5J-s7-WG1" secondAttribute="centerY" multiplier="0.65" id="3VJ-jz-nck"/>
                                     <constraint firstItem="G6h-pv-TKr" firstAttribute="centerX" secondItem="B5J-s7-WG1" secondAttribute="centerX" id="9kQ-oJ-wud"/>
                                     <constraint firstItem="3Zb-eb-SSz" firstAttribute="top" secondItem="B5J-s7-WG1" secondAttribute="top" constant="8" id="EEK-Sv-tOY"/>
+                                    <constraint firstItem="4oa-Af-Dhf" firstAttribute="top" secondItem="x9k-bq-gdI" secondAttribute="bottom" constant="12" id="L5d-c4-GDc"/>
                                     <constraint firstItem="tYQ-dH-XZ4" firstAttribute="width" secondItem="B5J-s7-WG1" secondAttribute="width" multiplier="0.8" id="LOa-zG-H0u"/>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="height" secondItem="tYQ-dH-XZ4" secondAttribute="height" id="MQx-bi-Crd"/>
                                     <constraint firstItem="tYQ-dH-XZ4" firstAttribute="centerX" secondItem="B5J-s7-WG1" secondAttribute="centerX" id="Ozb-Bf-dWv"/>
+                                    <constraint firstItem="4oa-Af-Dhf" firstAttribute="centerX" secondItem="x9k-bq-gdI" secondAttribute="centerX" id="RFT-w9-XZa"/>
                                     <constraint firstItem="3Zb-eb-SSz" firstAttribute="width" secondItem="B5J-s7-WG1" secondAttribute="width" multiplier="0.8" id="TSR-OH-jg0"/>
                                     <constraint firstItem="G6h-pv-TKr" firstAttribute="height" secondItem="x9k-bq-gdI" secondAttribute="height" multiplier="0.8" id="VR0-ea-LbR"/>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="centerX" secondItem="tYQ-dH-XZ4" secondAttribute="centerX" id="bbd-g4-jeq"/>
-                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="height" secondItem="B5J-s7-WG1" secondAttribute="height" multiplier="0.15" id="hUu-9O-bCr"/>
+                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="height" secondItem="B5J-s7-WG1" secondAttribute="height" multiplier="0.125" id="hUu-9O-bCr"/>
+                                    <constraint firstItem="4oa-Af-Dhf" firstAttribute="width" secondItem="x9k-bq-gdI" secondAttribute="width" id="jV1-uC-8Ze"/>
                                     <constraint firstAttribute="bottom" secondItem="G6h-pv-TKr" secondAttribute="bottom" constant="8" id="nme-67-3G2"/>
                                     <constraint firstItem="3Zb-eb-SSz" firstAttribute="centerX" secondItem="B5J-s7-WG1" secondAttribute="centerX" id="pR9-QQ-0Uc"/>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="top" secondItem="tYQ-dH-XZ4" secondAttribute="bottom" constant="12" id="vec-zf-H0A"/>
+                                    <constraint firstItem="4oa-Af-Dhf" firstAttribute="height" secondItem="x9k-bq-gdI" secondAttribute="height" id="zHQ-R6-UCV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -664,12 +693,13 @@
                             <constraint firstItem="B5J-s7-WG1" firstAttribute="centerY" secondItem="72k-Rn-rb8" secondAttribute="centerY" id="Kif-9o-Tsj"/>
                             <constraint firstItem="B5J-s7-WG1" firstAttribute="width" secondItem="72k-Rn-rb8" secondAttribute="width" multiplier="0.8" id="QeD-8J-fSV"/>
                             <constraint firstItem="B5J-s7-WG1" firstAttribute="centerX" secondItem="72k-Rn-rb8" secondAttribute="centerX" id="URV-Il-Hyc"/>
-                            <constraint firstItem="B5J-s7-WG1" firstAttribute="height" secondItem="72k-Rn-rb8" secondAttribute="height" multiplier="0.5" id="q6h-L5-byP"/>
+                            <constraint firstItem="B5J-s7-WG1" firstAttribute="height" secondItem="72k-Rn-rb8" secondAttribute="height" multiplier="0.6" id="q6h-L5-byP"/>
                             <constraint firstItem="72k-Rn-rb8" firstAttribute="top" secondItem="TJ1-YL-yHN" secondAttribute="top" id="sCZ-X0-igd"/>
                             <constraint firstAttribute="trailing" secondItem="72k-Rn-rb8" secondAttribute="trailing" id="zFs-PC-geb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amountTextField" destination="4oa-Af-Dhf" id="pmx-5y-YVE"/>
                         <outlet property="blurView" destination="72k-Rn-rb8" id="D4u-1f-yVG"/>
                         <outlet property="lblGSM" destination="tYQ-dH-XZ4" id="Or8-a9-Dse"/>
                         <outlet property="lblIBAN" destination="x9k-bq-gdI" id="Tj9-6d-yfa"/>
@@ -694,7 +724,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hO5-l5-aXS" customClass="ColorChangeImageView" customModule="App_To_Rich" customModuleProvider="target">
-                                <rect key="frame" x="32" y="20" width="256" height="164.5"/>
+                                <rect key="frame" x="32" y="40" width="256" height="164.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hO5-l5-aXS" secondAttribute="height" multiplier="374:241" id="Xpw-5I-GY7"/>
                                 </constraints>
@@ -705,7 +735,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppToRich' e Hoşgeldin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-MO-7pC">
-                                <rect key="frame" x="46" y="204.5" width="228" height="30"/>
+                                <rect key="frame" x="46" y="224.5" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -713,17 +743,17 @@
                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tastecard gives 50% Off Food at Yazu Sushi in Mayfair, London. Join over 3450000 members by taking our FREE 30 day trial NOW!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-Re-jjr">
-                                <rect key="frame" x="36" y="251.5" width="248" height="96.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppToRich ile günde birkaç dakika ayırarak ve arkadaşlarına önererek zengin olmaya ne dersin?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-Re-jjr">
+                                <rect key="frame" x="36" y="271.5" width="248" height="96.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="27"/>
+                                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="25"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-zb-ZbW" customClass="CustomButton" customModule="App_To_Rich" customModuleProvider="target">
-                                <rect key="frame" x="32" y="410" width="108" height="33.5"/>
+                                <rect key="frame" x="32" y="430" width="108" height="33.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Giriş Yap">
                                     <color key="titleColor" red="0.96862745098039216" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
@@ -744,7 +774,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiR-LG-Lot" customClass="CustomButton" customModule="App_To_Rich" customModuleProvider="target">
-                                <rect key="frame" x="181" y="410" width="107" height="33.5"/>
+                                <rect key="frame" x="181" y="430" width="107" height="33.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Kayıt Ol">
                                     <color key="titleColor" red="0.96862745100000003" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -765,7 +795,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZl-z6-b5V">
-                                <rect key="frame" x="32" y="493.5" width="256" height="34.5"/>
+                                <rect key="frame" x="32" y="513.5" width="256" height="34.5"/>
                                 <color key="backgroundColor" red="0.043137254901960784" green="0.35686274509803922" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="FACEBOOK İLE GİRİŞ YAP">
@@ -776,17 +806,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ya da" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPx-Bl-gok">
-                                <rect key="frame" x="140" y="458.5" width="41" height="20"/>
+                                <rect key="frame" x="140" y="478.5" width="41" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.73725490199999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Referans Numarası" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WMA-0i-llr" customClass="CustomTextField" customModule="App_To_Rich" customModuleProvider="target">
-                                <rect key="frame" x="32" y="368" width="256" height="34"/>
+                                <rect key="frame" x="32" y="388" width="256" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -873,7 +903,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vHc-RB-Oox" id="jrS-4t-egJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="108.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pu7-Az-c21">
@@ -1315,16 +1345,29 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="57"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KAYIT OL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViO-aG-R5t">
-                                        <rect key="frame" x="107" y="13.5" width="107" height="30"/>
+                                        <rect key="frame" x="107.5" y="13.5" width="106" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ek-cO-iYn">
+                                        <rect key="frame" x="8" y="11.5" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9Ek-cO-iYn" secondAttribute="height" id="0cE-1t-r1x"/>
+                                        </constraints>
+                                        <state key="normal" image="ok-sol"/>
+                                        <connections>
+                                            <segue destination="UjE-fY-ckj" kind="show" id="4E7-q3-ee6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ViO-aG-R5t" firstAttribute="centerY" secondItem="e7q-ez-U5a" secondAttribute="centerY" id="32Q-Ot-kkT"/>
+                                    <constraint firstItem="9Ek-cO-iYn" firstAttribute="leading" secondItem="e7q-ez-U5a" secondAttribute="leading" constant="8" id="Qvp-x0-aKN"/>
                                     <constraint firstItem="ViO-aG-R5t" firstAttribute="centerX" secondItem="e7q-ez-U5a" secondAttribute="centerX" id="awI-Vp-96r"/>
+                                    <constraint firstItem="9Ek-cO-iYn" firstAttribute="height" secondItem="e7q-ez-U5a" secondAttribute="height" multiplier="0.6" id="uBl-PN-g5D"/>
+                                    <constraint firstItem="9Ek-cO-iYn" firstAttribute="centerY" secondItem="e7q-ez-U5a" secondAttribute="centerY" id="vep-aS-aKB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1347,6 +1390,7 @@
                     <connections>
                         <outlet property="againPassImageView" destination="elo-ra-yAc" id="umP-kp-Hlb"/>
                         <outlet property="againPasswordTextField" destination="mhC-Nm-K5p" id="5Jq-zG-Hjo"/>
+                        <outlet property="backArrowButton" destination="9Ek-cO-iYn" id="Uga-C7-PRb"/>
                         <outlet property="emailImageView" destination="hdH-rf-iO1" id="Xce-1Z-nR0"/>
                         <outlet property="girisYapButton" destination="JOE-9C-ZRU" id="2db-kP-TaJ"/>
                         <outlet property="gsmImageView" destination="AuI-DZ-k3v" id="07x-Ox-vIg"/>
@@ -1381,7 +1425,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="153.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppToRich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEr-5V-tUY">
-                                        <rect key="frame" x="172.5" y="108" width="135.5" height="33.5"/>
+                                        <rect key="frame" x="176.5" y="108" width="131.5" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1420,7 +1464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dt5-89-wfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918.84057971014499" y="-260.054347826087"/>
+            <point key="canvasLocation" x="919" y="-285"/>
         </scene>
         <!--Right Side Menu Controller-->
         <scene sceneID="jik-v1-xQZ">
@@ -1437,16 +1481,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jdn-bz-whF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920" y="495"/>
+            <point key="canvasLocation" x="919" y="420"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dl1-IH-Lk4">
             <objects>
                 <navigationController storyboardIdentifier="contentViewController" automaticallyAdjustsScrollViewInsets="NO" id="cWM-gq-ivS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SlT-Ea-n4u">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="SlT-Ea-n4u">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1635,11 +1681,24 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilh-Dr-qep">
+                                        <rect key="frame" x="8" y="11.5" width="34" height="34.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ilh-Dr-qep" secondAttribute="height" id="4Dd-LD-R2K"/>
+                                        </constraints>
+                                        <state key="normal" image="ok-sol"/>
+                                        <connections>
+                                            <segue destination="UjE-fY-ckj" kind="show" id="i57-IY-4WB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ilh-Dr-qep" firstAttribute="height" secondItem="n0f-s0-dkK" secondAttribute="height" multiplier="0.6" id="532-kq-wsl"/>
                                     <constraint firstItem="IK7-Mp-qHs" firstAttribute="centerY" secondItem="n0f-s0-dkK" secondAttribute="centerY" id="BiN-aZ-afL"/>
+                                    <constraint firstItem="ilh-Dr-qep" firstAttribute="centerY" secondItem="n0f-s0-dkK" secondAttribute="centerY" id="TX7-YW-IT4"/>
                                     <constraint firstItem="IK7-Mp-qHs" firstAttribute="centerX" secondItem="n0f-s0-dkK" secondAttribute="centerX" id="j9b-eQ-UNX"/>
+                                    <constraint firstItem="ilh-Dr-qep" firstAttribute="leading" secondItem="n0f-s0-dkK" secondAttribute="leading" constant="8" id="mUX-v7-anu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1661,6 +1720,7 @@
                     <navigationItem key="navigationItem" id="fYM-Oz-LcK"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backArrowButton" destination="ilh-Dr-qep" id="64P-kr-ED4"/>
                         <outlet property="emailImageView" destination="Wh4-im-wJy" id="K4m-ff-wzS"/>
                         <outlet property="gsmImageView" destination="dPa-OY-oUr" id="Wrm-ub-gE1"/>
                         <outlet property="loginButton" destination="uj6-XD-ne1" id="yfB-5e-Rxp"/>
@@ -1683,7 +1743,7 @@
                         <viewControllerLayoutGuide type="bottom" id="j7W-lD-7nB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MwE-yM-aHU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-9E-a2c">
@@ -1729,8 +1789,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zoi-J0-8Sy">
                                 <rect key="frame" x="28" y="213" width="264" height="142"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7N-VQ-kWv">
+                                        <rect key="frame" x="26" y="46" width="211" height="43"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-yn-t5v" customClass="AnimatedTextInput" customModule="App_To_Rich" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="0.0" width="186" height="43"/>
+                                                <color key="backgroundColor" white="0.7807477679" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="at" translatesAutoresizingMaskIntoConstraints="NO" id="Cul-VM-3bj">
+                                                <rect key="frame" x="0.0" y="22" width="26" height="16"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Cul-VM-3bj" firstAttribute="top" secondItem="p7N-VQ-kWv" secondAttribute="top" constant="22" id="6iD-D2-PTI"/>
+                                            <constraint firstAttribute="trailing" secondItem="6HI-yn-t5v" secondAttribute="trailing" id="9bs-Jn-Cdk"/>
+                                            <constraint firstAttribute="bottom" secondItem="6HI-yn-t5v" secondAttribute="bottom" id="OhD-0p-n3x"/>
+                                            <constraint firstItem="6HI-yn-t5v" firstAttribute="leading" secondItem="Cul-VM-3bj" secondAttribute="trailing" constant="-1" id="QBE-dx-Y9h"/>
+                                            <constraint firstItem="6HI-yn-t5v" firstAttribute="top" secondItem="p7N-VQ-kWv" secondAttribute="top" id="amy-nH-b9G"/>
+                                            <constraint firstItem="6HI-yn-t5v" firstAttribute="width" secondItem="p7N-VQ-kWv" secondAttribute="width" multiplier="0.88" id="bH6-hC-UNI"/>
+                                            <constraint firstItem="Cul-VM-3bj" firstAttribute="leading" secondItem="p7N-VQ-kWv" secondAttribute="leading" id="eRw-up-ZSl"/>
+                                            <constraint firstAttribute="bottom" secondItem="Cul-VM-3bj" secondAttribute="bottom" constant="5" id="gqM-ob-UG2"/>
+                                            <constraint firstAttribute="bottom" secondItem="6HI-yn-t5v" secondAttribute="bottom" id="thn-2P-fds"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-25-aBo">
-                                        <rect key="frame" x="0.0" y="113.5" width="264" height="28.5"/>
+                                        <rect key="frame" x="0.0" y="113" width="264" height="29"/>
                                         <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <state key="normal" title="YOLLA">
@@ -1747,47 +1830,25 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="akJ-25-aBo" secondAttribute="bottom" id="0Fh-Zj-RaJ"/>
+                                    <constraint firstItem="p7N-VQ-kWv" firstAttribute="centerX" secondItem="Zoi-J0-8Sy" secondAttribute="centerX" id="3FY-nk-dha"/>
                                     <constraint firstItem="akJ-25-aBo" firstAttribute="leading" secondItem="Zoi-J0-8Sy" secondAttribute="leading" id="5W6-qd-I9A"/>
+                                    <constraint firstItem="p7N-VQ-kWv" firstAttribute="height" secondItem="Zoi-J0-8Sy" secondAttribute="height" multiplier="0.3" id="Sxc-dW-7VS"/>
                                     <constraint firstItem="akJ-25-aBo" firstAttribute="width" secondItem="Zoi-J0-8Sy" secondAttribute="width" id="TK2-hD-CKI"/>
                                     <constraint firstItem="akJ-25-aBo" firstAttribute="height" secondItem="Zoi-J0-8Sy" secondAttribute="height" multiplier="0.2" id="dTx-id-QEK"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7N-VQ-kWv">
-                                <rect key="frame" x="54.5" y="248.5" width="211" height="42.5"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-yn-t5v" customClass="AnimatedTextInput" customModule="App_To_Rich" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="0.0" width="186" height="42"/>
-                                        <color key="backgroundColor" white="0.7807477679" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="at" translatesAutoresizingMaskIntoConstraints="NO" id="Cul-VM-3bj">
-                                        <rect key="frame" x="0.0" y="22" width="26" height="15"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Cul-VM-3bj" firstAttribute="top" secondItem="p7N-VQ-kWv" secondAttribute="top" constant="22" id="6iD-D2-PTI"/>
-                                    <constraint firstAttribute="trailing" secondItem="6HI-yn-t5v" secondAttribute="trailing" id="9bs-Jn-Cdk"/>
-                                    <constraint firstAttribute="bottom" secondItem="6HI-yn-t5v" secondAttribute="bottom" id="OhD-0p-n3x"/>
-                                    <constraint firstItem="6HI-yn-t5v" firstAttribute="leading" secondItem="Cul-VM-3bj" secondAttribute="trailing" constant="-1" id="QBE-dx-Y9h"/>
-                                    <constraint firstItem="6HI-yn-t5v" firstAttribute="top" secondItem="p7N-VQ-kWv" secondAttribute="top" id="amy-nH-b9G"/>
-                                    <constraint firstItem="6HI-yn-t5v" firstAttribute="width" secondItem="p7N-VQ-kWv" secondAttribute="width" multiplier="0.88" id="bH6-hC-UNI"/>
-                                    <constraint firstItem="Cul-VM-3bj" firstAttribute="leading" secondItem="p7N-VQ-kWv" secondAttribute="leading" id="eRw-up-ZSl"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cul-VM-3bj" secondAttribute="bottom" constant="5" id="gqM-ob-UG2"/>
-                                    <constraint firstAttribute="bottom" secondItem="6HI-yn-t5v" secondAttribute="bottom" id="thn-2P-fds"/>
+                                    <constraint firstItem="p7N-VQ-kWv" firstAttribute="centerX" secondItem="akJ-25-aBo" secondAttribute="centerX" id="kXN-5I-QFz"/>
+                                    <constraint firstItem="p7N-VQ-kWv" firstAttribute="centerY" secondItem="Zoi-J0-8Sy" secondAttribute="centerY" multiplier="0.95" id="u98-gQ-RfI"/>
+                                    <constraint firstItem="p7N-VQ-kWv" firstAttribute="width" secondItem="Zoi-J0-8Sy" secondAttribute="width" multiplier="0.8" id="x8D-1P-Bxo"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83482530379999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Y8n-Iz-7ag" firstAttribute="centerY" secondItem="jdI-Ee-NW4" secondAttribute="centerY" id="4yD-0W-ccj"/>
-                            <constraint firstItem="p7N-VQ-kWv" firstAttribute="height" secondItem="Zoi-J0-8Sy" secondAttribute="height" multiplier="0.3" id="54p-se-WQT"/>
                             <constraint firstItem="Zoi-J0-8Sy" firstAttribute="height" secondItem="jdI-Ee-NW4" secondAttribute="height" multiplier="0.25" id="RIL-N1-jyQ"/>
                             <constraint firstItem="Zoi-J0-8Sy" firstAttribute="width" secondItem="jdI-Ee-NW4" secondAttribute="width" multiplier="0.825" id="XOY-rF-uiM"/>
                             <constraint firstItem="Y8n-Iz-7ag" firstAttribute="centerX" secondItem="jdI-Ee-NW4" secondAttribute="centerX" id="dBy-go-fjC"/>
                             <constraint firstItem="Y8n-Iz-7ag" firstAttribute="width" secondItem="jdI-Ee-NW4" secondAttribute="width" id="gTl-5f-vVR"/>
-                            <constraint firstItem="p7N-VQ-kWv" firstAttribute="width" secondItem="Zoi-J0-8Sy" secondAttribute="width" multiplier="0.8" id="iRu-RQ-O93"/>
-                            <constraint firstItem="p7N-VQ-kWv" firstAttribute="centerX" secondItem="Zoi-J0-8Sy" secondAttribute="centerX" id="o2j-um-Ck0"/>
                             <constraint firstItem="Zoi-J0-8Sy" firstAttribute="centerY" secondItem="jdI-Ee-NW4" secondAttribute="centerY" id="wUd-b0-Ojw"/>
-                            <constraint firstItem="p7N-VQ-kWv" firstAttribute="centerY" secondItem="Zoi-J0-8Sy" secondAttribute="centerY" multiplier="0.95" id="y3R-o7-PF7"/>
                             <constraint firstItem="Y8n-Iz-7ag" firstAttribute="height" secondItem="jdI-Ee-NW4" secondAttribute="height" id="zTz-gH-9d3"/>
                             <constraint firstItem="Zoi-J0-8Sy" firstAttribute="centerX" secondItem="jdI-Ee-NW4" secondAttribute="centerX" id="zV4-i8-mAm"/>
                         </constraints>
@@ -1802,7 +1863,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfc-Jh-FRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-359" y="-1346"/>
+            <point key="canvasLocation" x="-623" y="-1295"/>
         </scene>
         <!--Kullanici Sozlesmesi Controller-->
         <scene sceneID="ing-9X-e9a">
@@ -1846,8 +1907,8 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">AppToRich provides you access to its online service (the “Service”) on www.AppToRich.com (the “AppToRich Website”) and the related AppToRich software on your mobile device or other computing device. The Service is a social networking based suite of integrated mobile and web applications that allow partner Advertisers to provide Users with offers (“Opportunities”) to earn credits that are redeemable for cash if they perform specified tasks or comply with certain requirements set forth in such Offers. Your use of the Service is subject to your acceptance of and compliance with these terms of service (the “Terms of Service” or the “Agreement”). If you do not agree to these Terms of Service, please do not use the Service. These Terms of Service shall apply to all transactions conducted through the Service. The term of the Agreement will commence on the date you enroll as a User and will end when terminated by either party in accordance with the terms of the Agreement (the “Term”).
-</mutableString>
+                                        <string key="content">AppToRich provides you access to its online service (the “Service”) on www.AppToRich.com (the “AppToRich Website”) and the related AppToRich software on your mobile device or other computing device. The Service is a social networking based suite of integrated mobile and web applications that allow partner Advertisers to provide Users with offers (“Opportunities”) to earn credits that are redeemable for cash if they perform specified tasks or comply with certain requirements set forth in such Offers. Your use of the Service is subject to your acceptance of and compliance with these terms of service (the “Terms of Service” or the “Agreement”). If you do not agree to these Terms of Service, please do not use the Service. These Terms of Service shall apply to all transactions conducted through the Service. The term of the Agreement will commence on the date you enroll as a User and will end when terminated by either party in accordance with the terms of the Agreement (the “Term”).
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -1877,9 +1938,9 @@ All Contests prizes and “rewards” given by AppToRich are not affiliated with
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 Participating Advertisers create and list Offers on the Service, which allow Users the chance to receive Rewards from the Advertiser in exchange for performing specified tasks or complying with the requirements (such tasks and/or requirements constituting the “Requirements”) set forth in the Offer. Each Opportunity listing contains a description of the Requirements and the corresponding Reward to be provided by the Advertiser. AppToRich provides the Service to facilitate the relationship between Advertisers and Users. Advertisers are solely responsible for the content of their Offers listings and for the payment of any identified Rewards to Users.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -1893,9 +1954,9 @@ Participating Advertisers create and list Offers on the Service, which allow Use
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 Advertisers in their sole discretion shall determine whether a particular User has fulfilled the Requirements and is entitled to receive the associated Rewards. If you do not comply with the Requirements you will not be entitled to the Reward associated with such Opportunity. You agree that all Rewards will be forfeited if your account is terminated for any reason, or if AppToRich discontinues providing the Service. Rewards are not gift certificates and in no way will be paid with any apple products AppToRich does not recognize transfers of Rewards or related points or the purported sale, gift or trade in the “real world” of anything related to the Rewards or the Service. Accordingly you may not buy or sell Rewards or otherwise exchange items for value. Any attempt to do so is in violation of these Terms of Use and will result in the termination of your account.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -1909,7 +1970,7 @@ Advertisers in their sole discretion shall determine whether a particular User h
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 You may not use the Service for any other purpose than that for which AppToRich makes it available. AppToRich reserves the right in its sole discretion to investigate, terminate your membership and take appropriate legal action if you violate this provision or otherwise misuse the Service, or behave in a way which AppToRich regards as inappropriate or which is unlawful or illegal. The following is a list of the type of actions that you may not engage in with respect to the Service:
 You will not use the Service for any illegal purpose, including engaging in any criminal or tortious activity, including without limitation child pornography, fraud, trafficking in obscene material, drug dealing, gambling, harassment, stalking, spamming or theft of trade secrets.
 You will not express or imply that any statements you make are endorsed by AppToRich without our specific prior written consent.
@@ -1922,7 +1983,7 @@ You will not forge headers or otherwise manipulate identifiers in order to disgu
 You will not “frame” or “mirror” any part of the Service, or otherwise take elements of the Service and reformat or display them.
 You will not modify, adapt, sublicense, translate, sell, reverse engineer, decipher, decompile or otherwise disassemble any portion of the Service or any software used on or for the Service or cause others to do so.
 You will not collect or gather other people’s personal information (including account information) from the Service.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -1938,9 +1999,9 @@ A. USER REGISTRATION.</string>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 As a condition to using the Service, and in order to receive monetary payments in connection with Rewards, you will be required to register and you will be required to provide valid PayPal account information. You shall provide AppToRich with accurate, complete, and updated registration information. Failure to do so will constitute a breach of these Terms of Use, which may result in termination of account. You shall not (i) select or use a screen name of another person with the intent to impersonate that person, (ii) use a screen name subject to any rights of a person other than you without the proper authorization, or (iii) use as a screen name a name that is otherwise offensive, vulgar or obscene. AppToRich reserves the right to refuse registration of, or cancel a Users account in its sole discretion. You are solely responsible for the activity that occurs on your account and shall be responsible for maintaining the confidentiality of your password. You shall immediately notify AppToRich of any unauthorized use of your account, or other account related security breach of which you are aware.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -1954,9 +2015,9 @@ As a condition to using the Service, and in order to receive monetary payments i
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 User acknowledges and agrees that the obligation to provide Rewards earned by Users in connection with Offers resides with the Advertiser, not AppToRich. AppToRich merely facilitates such Rewards on behalf of the Advertisers. User waives any and all claims or rights of action against AppToRich relating to the failure of an Advertiser to pay User a Reward. In addition, User acknowledges that User is: (i) not an employee of AppToRich, (ii) responsible for the payment of all taxes on compensation received from an Advertiser, (iii) responsible for any reporting requirements imposed by the federal, state or local government, and (iv) responsible for compliance with all other applicable laws and regulations.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -1970,9 +2031,9 @@ User acknowledges and agrees that the obligation to provide Rewards earned by Us
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 By participating in the Service and accepting Rewards, User grants AppToRich and the specific Advertiser providing the Reward a worldwide, royalty-free, non-exclusive, sub-licensable, unconditional, perpetual and transferable license to use, display, perform, reproduce, republish, and distribute any content or any portion thereof (“Content”) provided by a User in connection with the Service or an Opportunity in all forms of media and through any media channels (now known or hereafter developed), including but not limited to television, radio, print, Internet site and other electronic communications. You acknowledge and agree that the Content you submit, post or display may be viewed by other Users of the Service and through third party services. You should only provide Content that you are comfortable sharing under these terms.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -1986,9 +2047,9 @@ By participating in the Service and accepting Rewards, User grants AppToRich and
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 You must be eighteen (18) years or older to use the Service. By using the Service, you are representing and warranting that all information you submit is truthful and accurate, and that you agree to maintain the accuracy of such information. You understand and agree that in accordance with the terms of the AppToRich Privacy Policy (“Privacy Policy”), which is integrated into and included as part of these Terms of Service. AppToRich accounts are not transferable, assignable or resalable under any circumstances.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -2018,9 +2079,9 @@ Children under the age of thirteen (13) are not be the target audience of AppToR
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 “Confidential Information” means any information disclosed to an Advertiser or User by AppToRich, either directly or indirectly, in writing, orally or by inspection of tangible objects, other than information that you can establish: (i) was publicly known and made generally available in the public domain prior to the time of disclosure to you by AppToRich; (ii) becomes publicly known and made generally available after disclosure to you by AppToRich other than through your action or inaction; or (iii) is in your possession, without confidentiality restrictions, prior to the time of disclosure by AppToRich as shown by your files and records. Advertiser and/or User shall not at any time (a) disclose, sell, license, transfer or otherwise make available to any person or entity any Confidential Information (except to your employees and agents who have a legitimate need to know such information and are bound in writing by confidentiality and non-use restrictions not less protective than those contained herein), or (b) use, reproduce or copy any Confidential Information, except as necessary in connection with the purpose for which such Confidential Information is disclosed to you and in accordance with the Agreement. Advertiser and/or User agrees to take all measures to protect the secrecy, and avoid disclosure and unauthorized use, of the Confidential Information. Advertiser and/or User may disclose Confidential Information if required by law to disclose the Confidential Information, provided that such Advertiser of User gives AppToRich prompt written notice of such requirement prior to such disclosure and assistance in obtaining an order protecting the information from public disclosure, and provided further that any such disclosure is limited to the minimum extent necessary to comply with the legal requirement. All Confidential Information shall remain AppToRich personal property and all documents, electronic media and other tangible items containing or relating to any Confidential Information shall be delivered to AppToRich immediately upon AppToRich request, and also, upon termination of the Agreement. Nothing contained in the Agreement will prevent AppToRich, its parent and/or affiliates from complying with privacy laws and regulations, and if there is any conflict between the Agreement and the terms of the applicable AppToRich Privacy Policy (as posted on or linked from the AppToRich Website), the Agreement shall control. Advertiser and User may not issue any press release or other public statement regarding the Agreement, AppToRich, its parent and/or its affiliates without AppToRich prior written consent.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -2034,7 +2095,7 @@ Children under the age of thirteen (13) are not be the target audience of AppToR
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 There are just a few rules you need to follow in order to avoid any problems and suspensions:
 Don’t create multiple and/or fake accounts.
 Don’t use VPNs or proxys to fake your IP address or location.
@@ -2063,7 +2124,7 @@ Any dispute referring or relating to the Agreement or between the parties shall 
 15. MISCELLANEOUS.
 The Agreement constitutes the entire agreement and understanding between the parties regarding the subject matter contained herein and supersedes all previous and contemporaneous agreements, proposals and communications in all forms of media (including all instructions, advertisements, messages and policies), written and oral, between you and AppToRich regarding the subject matter contained herein. Only a written instrument executed by the party waiving compliance may waive the terms or covenants of the Agreement. No waiver by either party of a breach of any provision hereof shall be taken or held to be a waiver of any succeeding breach of such provision or as a waiver of the provision itself. If any provision of the Agreement is held or made invalid or unenforceable for any reason, such invalidity shall not affect the remainder of the Agreement, and the invalid or unenforceable provisions shall be replaced by a mutually acceptable provision, which being valid, legal and enforceable comes closest to the original intentions of the parties to the Agreement and has like economic effect. AppToRich shall have no liability under the Agreement by reason of any failure or delay in the performance of its obligations on account of strikes, shortages, riots, acts of terrorism, insurrection, fires, flood, storm, explosions, earthquakes, Internet outages, computer virus, Acts of God, war, governmental action, or any other cause that is beyond its reasonable control. The parties are independent contractors and nothing in the Agreement shall be construed to create, evidence, or imply any agency, employment, partnership, or joint venture between the parties. Neither Advertisers nor Users are employees of AppToRich. None of AppToRich, Advertisers or Users shall have any right, power, or authority to create any obligation or responsibility on behalf of the other. The Agreement is not intended to benefit, nor shall it be deemed to give rise to any rights in, any third party. You may not assign or transfer the Agreement, or sublicense, assign or delegate any right or duty under the Agreement without AppToRich prior written consent. Any assignment, transfer or attempted assignment or transfer in violation of this Section shall be void and of no force and effect. AppToRich and its subsequent assignees may assign the Agreement, in whole or in part, or any of its rights or delegate any of its duties, under the Agreement to any party. Any rights not expressly granted in the Agreement are reserved by AppToRich, and all implied licenses are disclaimed. Headings used in the Agreement are for reference purposes only and in no way affect the Agreement. The term “including” is a term of enlargement meaning “including without limitation,” and does not denote exclusivity. AppToRich may change the Agreement and/or the Privacy Policy at any time upon notice published on its Website. Any use by you, your Affiliates, agents, representatives, employees, or any person or entity acting on your behalf, of the Service after such notice shall be deemed to be continued acceptance by you of the Agreement and Privacy Policy, including any amendments and modifications thereto. All information or material in connection with a Service must be submitted in the form requested by AppToRich. AppToRich reserves the right to discontinue offering, and/or modify the Service at any time. Except as otherwise specified by AppToRich, you agree that you will direct all communications relating to the Service or your participation therein directly to AppToRich and not to any other entity. The organization, specifications, structure or appearance of any AppToRich property or any page where your information (including listings) may be displayed may be redesigned or modified at any time.
 
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" paragraphSpacing="6" paragraphSpacingBefore="6" tighteningFactorForTruncation="0.0"/>
@@ -2103,7 +2164,7 @@ The Agreement constitutes the entire agreement and understanding between the par
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.1215686275" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hNW-XK-SCb" firstAttribute="top" secondItem="wck-D1-RYf" secondAttribute="bottom" id="4Zh-N2-0sR"/>
                             <constraint firstItem="QuR-C9-1yd" firstAttribute="top" secondItem="c95-SE-mJr" secondAttribute="bottom" id="6nq-tB-vW4"/>
@@ -2129,6 +2190,93 @@ The Agreement constitutes the entire agreement and understanding between the par
             </objects>
             <point key="canvasLocation" x="-3034" y="-661"/>
         </scene>
+        <!--Notice Popup Controller-->
+        <scene sceneID="lss-8D-Uhm">
+            <objects>
+                <viewController storyboardIdentifier="NoticePopupControllerID" id="h7s-R6-Zah" customClass="NoticePopupController" customModule="App_To_Rich" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="92H-Gf-5Xy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fdh-tx-pvD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u6O-1h-oE5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pre-xw-OH3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylC-R7-65g">
+                                <rect key="frame" x="28" y="213" width="264" height="142"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ÜZGÜNÜZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlM-dd-XOe">
+                                        <rect key="frame" x="26.5" y="10" width="211" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRu-D1-fna">
+                                        <rect key="frame" x="0.0" y="113" width="264" height="29"/>
+                                        <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="TAMAM">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="34"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="OkeyButtonAction:" destination="h7s-R6-Zah" eventType="touchUpInside" id="Yn8-A4-KyP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Yz3-Lz-3Nd">
+                                        <rect key="frame" x="13" y="38" width="238" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PlM-dd-XOe" firstAttribute="width" secondItem="ylC-R7-65g" secondAttribute="width" multiplier="0.8" id="4GP-Qr-RZY"/>
+                                    <constraint firstItem="aRu-D1-fna" firstAttribute="width" secondItem="ylC-R7-65g" secondAttribute="width" id="KSG-L2-eSG"/>
+                                    <constraint firstItem="aRu-D1-fna" firstAttribute="top" secondItem="Yz3-Lz-3Nd" secondAttribute="bottom" constant="10" id="Mei-f5-2Gh"/>
+                                    <constraint firstItem="aRu-D1-fna" firstAttribute="leading" secondItem="ylC-R7-65g" secondAttribute="leading" id="Ra0-tZ-ti9"/>
+                                    <constraint firstItem="PlM-dd-XOe" firstAttribute="centerX" secondItem="ylC-R7-65g" secondAttribute="centerX" id="Rya-VF-YEx"/>
+                                    <constraint firstItem="Yz3-Lz-3Nd" firstAttribute="width" secondItem="ylC-R7-65g" secondAttribute="width" multiplier="0.9" id="SXw-fW-ZtX"/>
+                                    <constraint firstItem="PlM-dd-XOe" firstAttribute="height" secondItem="ylC-R7-65g" secondAttribute="height" multiplier="0.125" id="dgZ-WK-nON"/>
+                                    <constraint firstAttribute="bottom" secondItem="aRu-D1-fna" secondAttribute="bottom" id="jGe-FR-q1c"/>
+                                    <constraint firstItem="aRu-D1-fna" firstAttribute="height" secondItem="ylC-R7-65g" secondAttribute="height" multiplier="0.2" id="q7U-BN-uRk"/>
+                                    <constraint firstItem="Yz3-Lz-3Nd" firstAttribute="centerX" secondItem="ylC-R7-65g" secondAttribute="centerX" id="qSY-B6-TIU"/>
+                                    <constraint firstItem="PlM-dd-XOe" firstAttribute="top" secondItem="ylC-R7-65g" secondAttribute="top" constant="10" id="qev-u8-iZw"/>
+                                    <constraint firstItem="Yz3-Lz-3Nd" firstAttribute="top" secondItem="PlM-dd-XOe" secondAttribute="bottom" constant="10" id="xfH-gM-lI6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.83482530379999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ylC-R7-65g" firstAttribute="width" secondItem="u6O-1h-oE5" secondAttribute="width" multiplier="0.825" id="OyS-YV-c1E"/>
+                            <constraint firstItem="pre-xw-OH3" firstAttribute="centerX" secondItem="u6O-1h-oE5" secondAttribute="centerX" id="R6N-8M-W7m"/>
+                            <constraint firstItem="pre-xw-OH3" firstAttribute="centerY" secondItem="u6O-1h-oE5" secondAttribute="centerY" id="TDI-0V-OIQ"/>
+                            <constraint firstItem="pre-xw-OH3" firstAttribute="height" secondItem="u6O-1h-oE5" secondAttribute="height" id="VSR-af-Rb4"/>
+                            <constraint firstItem="ylC-R7-65g" firstAttribute="centerY" secondItem="u6O-1h-oE5" secondAttribute="centerY" id="W0v-SF-B3z"/>
+                            <constraint firstItem="ylC-R7-65g" firstAttribute="height" secondItem="u6O-1h-oE5" secondAttribute="height" multiplier="0.25" id="d1X-tF-OZ9"/>
+                            <constraint firstItem="ylC-R7-65g" firstAttribute="centerX" secondItem="u6O-1h-oE5" secondAttribute="centerX" id="rYE-Mi-5GS"/>
+                            <constraint firstItem="pre-xw-OH3" firstAttribute="width" secondItem="u6O-1h-oE5" secondAttribute="width" id="xx8-22-7nH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="pre-xw-OH3" id="tYU-fD-a7d"/>
+                        <outlet property="descLabel" destination="Yz3-Lz-3Nd" id="ftm-BS-Xgl"/>
+                        <outlet property="okeyButton" destination="aRu-D1-fna" id="DzT-wX-aZ6"/>
+                        <outlet property="popUpView" destination="ylC-R7-65g" id="fLK-s6-eFo"/>
+                        <outlet property="titleLabel" destination="PlM-dd-XOe" id="dVZ-hO-Ggq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gV4-x5-nMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="-1295"/>
+        </scene>
     </scenes>
     <resources>
         <image name="at" width="100" height="100"/>
@@ -2139,13 +2287,15 @@ The Agreement constitutes the entire agreement and understanding between the par
         <image name="kilit" width="100" height="100"/>
         <image name="kullanici" width="100" height="100"/>
         <image name="logo" width="205" height="112"/>
+        <image name="ok-sol" width="75" height="75"/>
         <image name="paylas" width="80" height="80"/>
         <image name="right-arrow" width="21" height="21"/>
         <image name="transfer" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pK4-iT-HRV"/>
-        <segue reference="hNJ-NB-7eH"/>
         <segue reference="NLq-ll-ZL7"/>
+        <segue reference="hNJ-NB-7eH"/>
+        <segue reference="fT5-LI-eVb"/>
+        <segue reference="4E7-q3-ee6"/>
     </inferredMetricsTieBreakers>
 </document>
