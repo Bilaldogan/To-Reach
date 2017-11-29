@@ -29,6 +29,8 @@ class LoginService : ConnectionDelegate
         soapMessage += "</LoginService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
+        
+        
         let serviceUrl : String = HttpAdress.staticLink + HttpAdress.loginServiceLink
         connection.cineDBMakePostConnection(soapMessage: soapMessage, serviceUrl: serviceUrl)
     }
@@ -45,9 +47,11 @@ class LoginService : ConnectionDelegate
         soapMessage += "<AdminPass>\(GlobalData.adminPass.rawValue)</AdminPass>"
         soapMessage += "<UserEmail>\(mail)</UserEmail>"
         soapMessage += "<UserPass>\(password)</UserPass>"
+        soapMessage += "<FacebookId></FacebookId>"
         soapMessage += "</LoginService>"
         soapMessage += "</soap:Body></soap:Envelope>"
         
+        print(soapMessage)
         let serviceUrl : String = HttpAdress.staticLink + HttpAdress.loginServiceLink
         connection.cineDBMakePostConnection(soapMessage: soapMessage, serviceUrl: serviceUrl)
     }

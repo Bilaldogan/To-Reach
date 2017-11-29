@@ -9,10 +9,11 @@
 import UIKit
 
 class TransferViewController: BaseController {
-
+    
     @IBOutlet weak var downView: UIView!
     
     var userprofileService : UserProfileService = UserProfileService()
+    var transferService : TransferService = TransferService()
     
     @IBOutlet weak var lblCoins: UILabel!
     
@@ -20,17 +21,26 @@ class TransferViewController: BaseController {
         super.viewDidLoad()
         startProfileService()
         downView.layer.cornerRadius = 20.0
+        transferService.serviceDelegate = self
     }
     @IBAction func confirmButtonTapped(_ sender: Any) {
-//        if Int(Double(self.lblCoins.text!)!) < 100000 {
-//            self.view.makeToast("Transfer edebilmek için yeterli puanınız bulunmamaktadır.")
-//        }
-//        else{
-//            showTransferPopup()
-//        }
-        
-        showTransferPopup()
-        
+        if Int(Double(self.lblCoins.text!)!) < 100000 {
+            self.view.makeToast("İletişime geçebilmek için yeterli puanınız bulunmamaktadır.")
+        }
+        else{
+//            if hasConnectivity() {
+//                self.showProgressView()
+//                var model = TransferServiceSendData()
+//                model.amount = ""
+//                model.ibanNo = ""
+//                model.gSM = ""
+//                transferService.dispatchGetService(model: model)
+//            } else {
+//                self.view.endEditing(true)
+//                self.view.makeToast("Lütfen internet bağlantınızı kontrol ediniz.")
+//            }
+            showTransferPopup()
+        }
     }
     
     func startProfileService(){
@@ -44,7 +54,7 @@ class TransferViewController: BaseController {
         }
     }
     
-   }
+}
 
 extension TransferViewController: UserProfileServiceDelegate {
     func getError() {
@@ -61,8 +71,17 @@ extension TransferViewController: UserProfileServiceDelegate {
         self.removeProgress(customView: self.view)
         print(response)
     }
+}
 
-    
+extension TransferViewController : TransferServiceDelegate {
+    func getTrasnferService(status: String) {
+        self.removeProgress(customView: self.view)
+        if status == "true" {
+            self.view.makeToast("işleminiz başarı ile gerçekleştrildi.")
+        } else {
+            self.view.makeToast("işleminiz şuanda gerçekleştirilemiyor")
+        }
+    }
 }
 extension TransferViewController {
     
@@ -104,5 +123,5 @@ extension TransferViewController {
             }
         }
     }
-
+    
 }

@@ -114,6 +114,7 @@
 		950095131F7B086500D7EBEC /* imageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewExtension.swift; sourceTree = "<group>"; };
 		950095161F7B08CA00D7EBEC /* ColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		950095191F7B0A8900D7EBEC /* LCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCExtension.swift; sourceTree = "<group>"; };
+		9535BB871FC7656C0085845A /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AF69EB1FA3CAFA00D9B84D /* NoticePopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticePopupController.swift; sourceTree = "<group>"; };
 		95C28BF21F8EE18600C9F4AC /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		95C28BF41F8EE8CA00C9F4AC /* ClickAdwerdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickAdwerdService.swift; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 		4B54A1F869AA23A4EDFBD688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9535BB871FC7656C0085845A /* Toast_Swift.framework */,
 				35BC5E42BCC97DEAB071C05C /* Pods_App_To_Rich.framework */,
 			);
 			name = Frameworks;

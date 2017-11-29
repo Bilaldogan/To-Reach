@@ -49,6 +49,13 @@ class AccounDetailController: BaseController {
     
     func configure(){
         self.shareButton.buttonImageRendering(imageNamed: "paylas", imageColor: ColorUtil.pinkColor)
+        switch UIDevice.current.userInterfaceIdiom{
+        case .pad:
+            let HEADER_HEIGHT = 700
+            tableView.tableHeaderView?.frame.size = CGSize(width: tableView.frame.width, height: CGFloat(HEADER_HEIGHT))
+        default:
+            break
+        }
     }
     
     @IBAction func shareButtonAction(_ sender: Any) {
@@ -72,6 +79,7 @@ extension AccounDetailController :UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(self.calculateTableCellHeight(rate: 0.263))
     }
+
 }
 
 extension AccounDetailController : UserProfileServiceDelegate {

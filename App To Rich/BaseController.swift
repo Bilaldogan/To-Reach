@@ -64,7 +64,10 @@ class BaseController: UIViewController {
     
     func calculatePopupFrame() -> CGRect{
         let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height - (self.navigationController?.navigationBar.intrinsicContentSize.height)! - UIApplication.shared.statusBarFrame.height
+        var screenHeight : CGFloat = 0
+        if self.navigationController?.navigationBar != nil {
+        screenHeight = UIScreen.main.bounds.height - (self.navigationController?.navigationBar.intrinsicContentSize.height)! - UIApplication.shared.statusBarFrame.height
+        }
         let rect = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         return rect
     }
@@ -82,7 +85,9 @@ class BaseController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = UIColor.clear
         imageView.image = UIImage(named: "money")
-        let label = UILabel(frame: CGRect(x: 35, y: 0, width: 50, height: 35))
+        let label = UILabel(frame: CGRect(x: 30, y: 0, width: 50, height: 35))
+        label.minimumScaleFactor = 3.0 / 10.0
+        label.adjustsFontSizeToFitWidth = true
         label.text = amount
         label.baselineAdjustment = .alignCenters
         label.textColor = UIColor.white
@@ -112,7 +117,7 @@ class BaseController: UIViewController {
         //set image for button
         button.buttonImageRendering(imageNamed: "menu", imageColor: UIColor.white)
         //set frame
-        button.frame = CGRect(x: 0, y: 0, width: 40, height: 31)
+        button.frame = CGRect(x: 0, y: 0, width: 20, height: 31)
         let barButton = UIBarButtonItem(customView: button)
         button.addTarget(self, action: #selector(self.presentRightMenuViewController(_:)), for: .touchUpInside)
         //assign button to navigationbar

@@ -35,19 +35,13 @@ class PopUpTransferController: BaseController {
     
     @IBAction func okeyTapped(_ sender: UIButton) {
          if hasConnectivity() {
-            if amountTextField.text?.isEmpty == false || lblGSM.text?.isEmpty == false || lblIBAN.text?.isEmpty == false {
-                if self.userPrice >= Int(amountTextField.text!)! {
+            if lblGSM.text?.isEmpty == false {
                     self.showProgressView()
                     var model = TransferServiceSendData()
-                    model.amount = amountTextField.text!
-                    model.ibanNo = lblIBAN.text!
+                    model.amount = ""
+                    model.ibanNo = ""
                     model.gSM = lblGSM.text!
                     transferService.dispatchGetService(model: model)
-                }
-                else{
-                    self.view.endEditing(true)
-                    self.view.makeToast("Çekmek istediğiniz tutar hesabınızda yok")
-                }
             }
             else{
                 self.view.endEditing(true)

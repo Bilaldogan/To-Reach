@@ -477,7 +477,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9GX-DB-JgP">
                                 <rect key="frame" x="16" y="90.5" width="288" height="232.5"/>
-                                <string key="text">1000 puan 1 TL’ye denk gelmekte ve puan transferi sadece 100 TL üzeri puan ve kişinin kimlik bilgilerinin doğrulanmasından sonra kişinin hesabına aktarılacaktır. Transfer 3 iş günü içerisinde yapılacaktır. Puan Transferi için aşağıdaki butona tıklayıp gerekli yerleri doldurmanız yeterli olacaktır.</string>
+                                <string key="text">1000 puan 1 TL’ye denk gelmekte ve puan transferi sadece 100 TL üzeri puan ve kişinin kimlik bilgilerinin doğrulanmasından sonra hediye kisinin hesabina tanimlanabilecektir. Sizinle irtibata gecebilmemiz icin lutfen formu doldurun.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -518,8 +518,8 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="HuX-Gf-DB9">
-                                        <rect key="frame" x="204" y="85" width="63" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İletişime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="HuX-Gf-DB9">
+                                        <rect key="frame" x="204" y="92" width="63" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -527,8 +527,8 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Et" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-8P-P8K">
-                                        <rect key="frame" x="230" y="101.5" width="12" height="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geç" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.45000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-8P-P8K">
+                                        <rect key="frame" x="224.5" y="108.5" width="23" height="14"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -548,7 +548,7 @@
                                     <constraint firstItem="Hik-8P-P8K" firstAttribute="centerX" secondItem="HuX-Gf-DB9" secondAttribute="centerX" id="SgY-dx-4lQ"/>
                                     <constraint firstItem="few-zk-PNw" firstAttribute="centerX" secondItem="fE6-OW-OA4" secondAttribute="centerX" id="Wfa-Tn-ntL"/>
                                     <constraint firstItem="HuX-Gf-DB9" firstAttribute="leading" secondItem="VkG-LC-sLP" secondAttribute="trailing" constant="-18" id="X3k-87-omI"/>
-                                    <constraint firstItem="HuX-Gf-DB9" firstAttribute="bottom" secondItem="VkG-LC-sLP" secondAttribute="bottom" constant="-10" id="do4-1K-uWN"/>
+                                    <constraint firstItem="HuX-Gf-DB9" firstAttribute="bottom" secondItem="VkG-LC-sLP" secondAttribute="bottom" constant="-3" id="do4-1K-uWN"/>
                                     <constraint firstItem="VkG-LC-sLP" firstAttribute="centerY" secondItem="RKW-aj-GtS" secondAttribute="centerY" multiplier="1.1" id="ime-AI-Stm"/>
                                     <constraint firstItem="fE6-OW-OA4" firstAttribute="width" secondItem="RKW-aj-GtS" secondAttribute="width" multiplier="0.55" id="jgf-vg-I5V"/>
                                     <constraint firstItem="Hik-8P-P8K" firstAttribute="top" secondItem="HuX-Gf-DB9" secondAttribute="bottom" constant="2" id="ozD-KQ-b75"/>
@@ -618,22 +618,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5J-s7-WG1">
-                                <rect key="frame" x="32" y="114" width="256" height="341"/>
+                                <rect key="frame" x="32" y="171" width="256" height="227"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IBAN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9k-bq-gdI">
-                                        <rect key="frame" x="25" y="144.5" width="205.5" height="43"/>
+                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IBAN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9k-bq-gdI">
+                                        <rect key="frame" x="25" y="123" width="205.5" height="39.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GSM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYQ-dH-XZ4">
-                                        <rect key="frame" x="25" y="89.5" width="205.5" height="43"/>
+                                        <rect key="frame" x="25" y="71" width="205.5" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6h-pv-TKr">
-                                        <rect key="frame" x="69.5" y="298.5" width="117" height="34.5"/>
+                                        <rect key="frame" x="73" y="187" width="110" height="32"/>
                                         <color key="backgroundColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="G6h-pv-TKr" secondAttribute="height" multiplier="188:55" id="Gmb-2D-dws"/>
@@ -656,8 +656,8 @@
                                         <color key="textColor" red="0.8862745098" green="0.34901960780000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Çekmek istediğiniz miktar ?" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="4oa-Af-Dhf">
-                                        <rect key="frame" x="25" y="199.5" width="205.5" height="43"/>
+                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Çekmek istediğiniz miktar ?" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="4oa-Af-Dhf">
+                                        <rect key="frame" x="25" y="123" width="205.5" height="39.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -666,10 +666,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="width" secondItem="tYQ-dH-XZ4" secondAttribute="width" id="0Sc-LX-cID"/>
-                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="centerY" secondItem="B5J-s7-WG1" secondAttribute="centerY" multiplier="0.65" id="3VJ-jz-nck"/>
+                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="centerY" secondItem="B5J-s7-WG1" secondAttribute="centerY" multiplier="0.8" id="3VJ-jz-nck"/>
                                     <constraint firstItem="G6h-pv-TKr" firstAttribute="centerX" secondItem="B5J-s7-WG1" secondAttribute="centerX" id="9kQ-oJ-wud"/>
                                     <constraint firstItem="3Zb-eb-SSz" firstAttribute="top" secondItem="B5J-s7-WG1" secondAttribute="top" constant="8" id="EEK-Sv-tOY"/>
-                                    <constraint firstItem="4oa-Af-Dhf" firstAttribute="top" secondItem="x9k-bq-gdI" secondAttribute="bottom" constant="12" id="L5d-c4-GDc"/>
                                     <constraint firstItem="tYQ-dH-XZ4" firstAttribute="width" secondItem="B5J-s7-WG1" secondAttribute="width" multiplier="0.8" id="LOa-zG-H0u"/>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="height" secondItem="tYQ-dH-XZ4" secondAttribute="height" id="MQx-bi-Crd"/>
                                     <constraint firstItem="tYQ-dH-XZ4" firstAttribute="centerX" secondItem="B5J-s7-WG1" secondAttribute="centerX" id="Ozb-Bf-dWv"/>
@@ -677,8 +676,9 @@
                                     <constraint firstItem="3Zb-eb-SSz" firstAttribute="width" secondItem="B5J-s7-WG1" secondAttribute="width" multiplier="0.8" id="TSR-OH-jg0"/>
                                     <constraint firstItem="G6h-pv-TKr" firstAttribute="height" secondItem="x9k-bq-gdI" secondAttribute="height" multiplier="0.8" id="VR0-ea-LbR"/>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="centerX" secondItem="tYQ-dH-XZ4" secondAttribute="centerX" id="bbd-g4-jeq"/>
-                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="height" secondItem="B5J-s7-WG1" secondAttribute="height" multiplier="0.125" id="hUu-9O-bCr"/>
+                                    <constraint firstItem="tYQ-dH-XZ4" firstAttribute="height" secondItem="B5J-s7-WG1" secondAttribute="height" multiplier="0.175" id="hUu-9O-bCr"/>
                                     <constraint firstItem="4oa-Af-Dhf" firstAttribute="width" secondItem="x9k-bq-gdI" secondAttribute="width" id="jV1-uC-8Ze"/>
+                                    <constraint firstItem="4oa-Af-Dhf" firstAttribute="top" secondItem="tYQ-dH-XZ4" secondAttribute="bottom" constant="12" id="lvt-IZ-4ue"/>
                                     <constraint firstAttribute="bottom" secondItem="G6h-pv-TKr" secondAttribute="bottom" constant="8" id="nme-67-3G2"/>
                                     <constraint firstItem="3Zb-eb-SSz" firstAttribute="centerX" secondItem="B5J-s7-WG1" secondAttribute="centerX" id="pR9-QQ-0Uc"/>
                                     <constraint firstItem="x9k-bq-gdI" firstAttribute="top" secondItem="tYQ-dH-XZ4" secondAttribute="bottom" constant="12" id="vec-zf-H0A"/>
@@ -693,7 +693,7 @@
                             <constraint firstItem="B5J-s7-WG1" firstAttribute="centerY" secondItem="72k-Rn-rb8" secondAttribute="centerY" id="Kif-9o-Tsj"/>
                             <constraint firstItem="B5J-s7-WG1" firstAttribute="width" secondItem="72k-Rn-rb8" secondAttribute="width" multiplier="0.8" id="QeD-8J-fSV"/>
                             <constraint firstItem="B5J-s7-WG1" firstAttribute="centerX" secondItem="72k-Rn-rb8" secondAttribute="centerX" id="URV-Il-Hyc"/>
-                            <constraint firstItem="B5J-s7-WG1" firstAttribute="height" secondItem="72k-Rn-rb8" secondAttribute="height" multiplier="0.6" id="q6h-L5-byP"/>
+                            <constraint firstItem="B5J-s7-WG1" firstAttribute="height" secondItem="72k-Rn-rb8" secondAttribute="height" multiplier="0.4" id="q6h-L5-byP"/>
                             <constraint firstItem="72k-Rn-rb8" firstAttribute="top" secondItem="TJ1-YL-yHN" secondAttribute="top" id="sCZ-X0-igd"/>
                             <constraint firstAttribute="trailing" secondItem="72k-Rn-rb8" secondAttribute="trailing" id="zFs-PC-geb"/>
                         </constraints>
@@ -1461,6 +1461,9 @@
                             <constraint firstItem="hod-Dy-oX1" firstAttribute="height" secondItem="7qt-di-WBv" secondAttribute="height" multiplier="0.27" id="teZ-2l-iz1"/>
                         </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="panGestureLeftEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dt5-89-wfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
